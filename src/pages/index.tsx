@@ -59,8 +59,11 @@ const Home: NextPage = () => {
             <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://www.youtube.com/embed/EdrQPJZ77vY"></iframe>
             <div className="mx-auto max-w-[19.875rem] lg:max-w-[53.25rem] ">
               <div className="mt-5 w-full text-center">
-                <button className="w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-white hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
+                <a href="https://instagram.com/carolina.procaci">
+                <button className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-white hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
                   Quero aumentar minha <br/> produção de leite</button>
+
+                </a>
                 <Image className="mx-auto bg-cream h-10 px-4" alt="Meios de Pagamento" src="/pagamentos.svg" width={340} height={20} ></Image>
               </div>
             </div>
