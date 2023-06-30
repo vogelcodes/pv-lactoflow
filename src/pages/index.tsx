@@ -1,5 +1,7 @@
 import { type NextPage } from "next";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, useState } from 'react'
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,6 +9,16 @@ import Image from "next/image";
 import { api } from "@/utils/api";
 
 const Home: NextPage = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
+
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
   return (
@@ -59,14 +71,64 @@ const Home: NextPage = () => {
             <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://www.youtube.com/embed/EdrQPJZ77vY"></iframe>
             <div className="mx-auto max-w-[19.875rem] lg:max-w-[53.25rem] ">
               <div className="mt-5 w-full text-center">
-                <a href="https://instagram.com/carolina.procaci">
-                <button className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-white hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
+                {/* <a href="https://instagram.com/carolina.procaci"> */}
+                <button onClick={openModal} hidden={isOpen} className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-white hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
                   Quero aumentar minha <br/> produção de leite</button>
 
-                </a>
+                {/* </a> */}
                 <Image className="mx-auto bg-cream h-10 px-4" alt="Meios de Pagamento" src="/pagamentos.svg" width={340} height={20} ></Image>
               </div>
             </div>
+            <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-md bg-green transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Title
+                    as="h3"
+                    className="text-lg font-medium leading-6 text-blue"
+                  >
+                    Cadastre-se para receber nosso suporte especializado
+                  </Dialog.Title>
+                  <div className="mt-2">
+                    <form className="flex flex-col mb-8">
+                      <label htmlFor="celular">Email</label>
+                      <input type="text" name="email" placeholder="maeincrivel@gmail.com"/>
+                      <label htmlFor="celular">Celular</label>
+                      <input type="text" name="Celular" />
+                    </form>
+                      <a href="https://instagram.com/carolina.procaci">
+                      <button className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-cream hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
+                        Quero aumentar minha produção de leite</button>
+                      </a>
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
                   
 
         </div>
