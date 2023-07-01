@@ -48,17 +48,17 @@ const Home: NextPage = () => {
             <div className="mx-2">
             <div className="flex items-center gap-x-4 mt-6 lg:mt-4">
               <div><div className="relative w-[36px] h-[36px] ">
-                <Image src="/1.svg" alt="One" height={36} width={36} />
-              </div></div>
-              <p className="font-medium text-[15.67px] lg:text-[16.75px] leading-[22.9px] tracking-[-25]">
-                Como fazer uma ordenha manual?</p>
-            </div>
-            <div className="flex items-center gap-x-4 mt-6 lg:mt-4">
-              <div><div className="relative w-[36px] h-[36px] ">
-              <Image src="/2.svg" alt="two" height={36} width={36} />
+              <Image src="/1.svg" alt="one" height={36} width={36} />
               </div></div>
               <p className="font-medium text-[15.67px] lg:text-[16.75px] leading-[22.9px] tracking-[-25]">
                 Quais os benefícios da amamentação?</p>
+            </div>
+            <div className="flex items-center gap-x-4 mt-6 lg:mt-4">
+              <div><div className="relative w-[36px] h-[36px] ">
+                <Image src="/2.svg" alt="Two" height={36} width={36} />
+              </div></div>
+              <p className="font-medium text-[15.67px] lg:text-[16.75px] leading-[22.9px] tracking-[-25]">
+                Como fazer uma ordenha manual?</p>
             </div>
             <div className="flex items-center gap-x-4 mt-6 lg:mt-4">
               <div><div className="relative w-[36px] h-[36px] ">
@@ -78,7 +78,9 @@ const Home: NextPage = () => {
                 {/* </a> */}
                 <Image className="mx-auto bg-cream h-10 px-4" alt="Meios de Pagamento" src="/pagamentos.svg" width={340} height={20} ></Image>
               </div>
+              <Image src={"/vtsd-pv.png"} height={762} width={623}></Image>
             </div>
+
             <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
@@ -90,11 +92,11 @@ const Home: NextPage = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-25" />
+            <div className="fixed inset-0 bg-black bg-opacity-75" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="flex min-h-full items-center bg-blue bg-opacity-70 justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
