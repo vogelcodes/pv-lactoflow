@@ -72,7 +72,7 @@ const Home: NextPage = () => {
             <div className="mx-auto max-w-[19.875rem] lg:max-w-[53.25rem] ">
               <div className="mt-5 w-full text-center">
                 {/* <a href="https://instagram.com/carolina.procaci"> */}
-                <button onClick={openModal} hidden={isOpen} className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-white hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
+                <button onClick={openModal} className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-white hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
                   Quero aumentar minha <br/> produção de leite</button>
 
                 {/* </a> */}
