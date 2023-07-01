@@ -78,7 +78,7 @@ const Home: NextPage = () => {
                 {/* </a> */}
                 <Image className="mx-auto bg-cream h-10 px-4" alt="Meios de Pagamento" src="/pagamentos.svg" width={340} height={20} ></Image>
               </div>
-              <Image alt="checklist" src={"/vtsd-pv.png"} height={762} width={623}></Image>
+              <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image>
             </div>
 
             <Transition appear show={isOpen} as={Fragment}>
