@@ -5,6 +5,7 @@ import { Fragment, useState } from 'react'
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 
@@ -36,7 +37,17 @@ const Home: NextPage = () => {
         <title>LactoFlow</title>
         <meta name="description" content="Método para aumentar a produção de leite materno" />
         <link rel="icon" href="/favicon.ico" />
+        
       </Head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6T6HHESNG2"></Script>
+        <Script id="google-analytics"
+      dangerouslySetInnerHTML={{
+        __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6T6HHESNG2');`,}} />
       <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c]">
         <div className="container bg-blue flex text-cream flex-col items-center justify-center px-2 py-10">
           <div className="w-[128px] sm:w-[256px]">
