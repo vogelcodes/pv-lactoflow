@@ -49,10 +49,10 @@ const Home: NextPage = () => {
 
   gtag('config', 'G-6T6HHESNG2');`,}} />
       <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c]">
-        <div className="container bg-blue flex text-cream flex-col items-center justify-center px-2 py-10">
-          <div className="w-[128px] sm:w-[256px]">
+        <div className="bg-blue flex text-cream flex-col items-center justify-center py-2 sm:py-10">
+          <div className="w-[300px] sm:w-[500px]">
 
-          <Image src="/logo.svg" alt="logo" width={256} height={256}/>
+          <Image src="/logo2.svg" alt="logo" width={500} height={200}/>
           </div>
           <h4 hidden className="text-center text-3xl text-[#fcfaef]">Conheça o Método</h4>
           <h1 hidden className="text-center text-5xl font-extrabold tracking-tight text-cream sm:text-[5rem]">
@@ -61,11 +61,11 @@ const Home: NextPage = () => {
           <h1 className="sm:w-1/2 uppercase font-extrabold text-cream text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px]">
             Aprenda como <span className="text-red text-[35px]">aumentar a sua produção</span> de leite e ofereça o <span className="text-green text-[35px]">melhor alimento do mundo</span> ao seu bebê.
           </h1>
-          <p className="mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
+          <p className="mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center px-2">
             Nesse vídeo eu te ensino estratégias para aumentar a sua produção de leite <span className="text-red uppercase text-[18px]">hoje mesmo.</span></p>
           <p className="mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
           <span className="text-green text-[35px] uppercase">E mais:</span></p>
-            <div className="mx-2">
+            <div className="ml-4">
             <div className="flex items-center gap-x-4 mt-6 lg:mt-4">
               <div><div className="relative w-[36px] h-[36px] ">
               <Image src="/1.svg" alt="one" height={36} width={36} />
@@ -89,18 +89,18 @@ const Home: NextPage = () => {
             </div>
             </div>
             <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe>
-            <div className="mx-auto max-w-[19.875rem] lg:max-w-[53.25rem] ">
+            <div className="w-full rounded-sm bg-cream text-blue mt-2">
               <div className="mt-5 w-full text-center">
                 {/* <a href="https://instagram.com/carolina.procaci"> */}
-                <button onClick={openModal} className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-white hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
+                <button onClick={openModal} className="hover:scale-[104%] w-auto rounded-lg border-b-4 text-cream border-b-[#236C0F] bg-[#46B21E] my-2 py-3 text-[13.6px] font-extrabold uppercase text-white hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
                   Quero aumentar minha <br/> produção de leite</button>
 
                 {/* </a> */}
                 <p>12x 
-                  <span className="uppercase font-extrabold text-cream text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px]">
+                  <span className="uppercase font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px]">
                     R$49,70</span> <br/> ou R$497,00 à vista
                 </p>
-                <Image className="mx-auto bg-cream h-10 px-4" alt="Meios de Pagamento" src="/pagamentos.svg" width={340} height={20} ></Image>
+                <Image className="mx-auto h-10 px-4" alt="Meios de Pagamento" src="/pagamentos.svg" width={340} height={20} ></Image>
               </div>
               {/* <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image> */}
             </div>
