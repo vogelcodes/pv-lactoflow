@@ -38,13 +38,13 @@ const Home: NextPage = () => {
           <h1 hidden className="text-center text-5xl font-extrabold tracking-tight text-cream sm:text-[5rem]">
             Lacto<span className="text-green">Flow</span>{" "}
           </h1>
-          <h1 className="sm:w-1/2 font-extrabold text-cream text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px]">
-            Aprenda como aumentar a sua produção de leite e ofereça o melhor alimento do mundo ao seu bebê.
+          <h1 className="sm:w-1/2 uppercase font-extrabold text-cream text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px]">
+            Aprenda como <span className="text-red text-[35px]">aumentar a sua produção</span> de leite e ofereça o <span className="text-green text-[35px]">melhor alimento do mundo</span> ao seu bebê.
           </h1>
           <p className="mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
-            Nesse vídeo eu te ensino como aumentar a sua produção de leite hoje mesmo.</p>
+            Nesse vídeo eu te ensino como aumentar a sua produção de leite <span className="text-red uppercase text-[18px]">hoje mesmo.</span></p>
           <p className="mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
-            E mais:</p>
+          <span className="text-green text-[35px] uppercase">E mais:</span></p>
             <div className="mx-2">
             <div className="flex items-center gap-x-4 mt-6 lg:mt-4">
               <div><div className="relative w-[36px] h-[36px] ">
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
                 As melhores técnicas para aumentar sua coleta de leite</p>
             </div>
             </div>
-            <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://www.youtube.com/embed/EdrQPJZ77vY"></iframe>
+            <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe>
             <div className="mx-auto max-w-[19.875rem] lg:max-w-[53.25rem] ">
               <div className="mt-5 w-full text-center">
                 {/* <a href="https://instagram.com/carolina.procaci"> */}
@@ -120,7 +120,7 @@ const Home: NextPage = () => {
                       <label htmlFor="celular">Celular</label>
                       <input type="text" name="Celular" />
                     </form>
-                      <a href="https://instagram.com/carolina.procaci">
+                      <a href="https://pay.hotmart.com/O84147403X">
                       <button className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-cream hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
                         Quero aumentar minha produção de leite</button>
                       </a>
