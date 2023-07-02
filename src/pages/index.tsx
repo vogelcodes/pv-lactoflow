@@ -5,11 +5,17 @@ import { Fragment, useState } from 'react'
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 
 import { api } from "@/utils/api";
 
+
 const Home: NextPage = () => {
+  type E164Number = string | undefined;
+
   const [isOpen, setIsOpen] = useState(false)
+  const [value, setValue] = useState<E164Number | undefined>()
 
   function closeModal() {
     setIsOpen(false)
@@ -18,8 +24,11 @@ const Home: NextPage = () => {
   function openModal() {
     setIsOpen(true)
   }
+  function handleSubmit() {
+    console.log(value)
+  }
 
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  // const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
   return (
     <>
@@ -42,7 +51,7 @@ const Home: NextPage = () => {
             Aprenda como <span className="text-red text-[35px]">aumentar a sua produção</span> de leite e ofereça o <span className="text-green text-[35px]">melhor alimento do mundo</span> ao seu bebê.
           </h1>
           <p className="mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
-            Nesse vídeo eu te ensino como aumentar a sua produção de leite <span className="text-red uppercase text-[18px]">hoje mesmo.</span></p>
+            Nesse vídeo eu te ensino estratégias para aumentar a sua produção de leite <span className="text-red uppercase text-[18px]">hoje mesmo.</span></p>
           <p className="mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
           <span className="text-green text-[35px] uppercase">E mais:</span></p>
             <div className="mx-2">
@@ -76,9 +85,13 @@ const Home: NextPage = () => {
                   Quero aumentar minha <br/> produção de leite</button>
 
                 {/* </a> */}
+                <p>12x 
+                  <span className="uppercase font-extrabold text-cream text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px]">
+                    R$49,70</span> <br/> ou R$497,00 à vista
+                </p>
                 <Image className="mx-auto bg-cream h-10 px-4" alt="Meios de Pagamento" src="/pagamentos.svg" width={340} height={20} ></Image>
               </div>
-              <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image>
+              {/* <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image> */}
             </div>
 
             <Transition appear show={isOpen} as={Fragment}>
@@ -118,10 +131,10 @@ const Home: NextPage = () => {
                       <label htmlFor="celular">Email</label>
                       <input type="text" name="email" placeholder="maeincrivel@gmail.com"/>
                       <label htmlFor="celular">Celular</label>
-                      <input type="text" name="Celular" />
+                      <PhoneInput placeholder="11 2345678" value={value} defaultCountry="BR" onChange={setValue}/>
                     </form>
                       <a href="https://pay.hotmart.com/O84147403X">
-                      <button className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-cream hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
+                      <button onClick={handleSubmit} className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-cream hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
                         Quero aumentar minha produção de leite</button>
                       </a>
                   </div>
