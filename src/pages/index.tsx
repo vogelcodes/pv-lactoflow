@@ -8,8 +8,10 @@ import Image from "next/image";
 import Script from "next/script";
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
-
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 import { api } from "@/utils/api";
+
 
 
 const Home: NextPage = () => {
@@ -89,8 +91,17 @@ const Home: NextPage = () => {
                 As melhores técnicas para aumentar sua coleta de leite</p>
             </div>
             </div>
-            <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe>
+            {/* <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe> */}
+            <div className="w-full aspect-video max-w-[22rem] lg:max-w-[53.25rem] rounded-md">
+
+            <LiteYouTubeEmbed
+                id="IVKkQA9p7go"
+                title="Método LactoFlow"
+                />
+                </div>
+            
             <div className="w-full rounded-sm bg-cream text-blue mt-2">
+
               <div className="mt-5 w-full text-center">
                 {/* <a href="https://instagram.com/carolina.procaci"> */}
                 <button onClick={openModal} className="hover:scale-[104%] w-auto rounded-lg border-b-4 text-cream border-b-[#236C0F] bg-[#46B21E] my-2 py-3 text-[13.6px] font-extrabold uppercase text-white hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
