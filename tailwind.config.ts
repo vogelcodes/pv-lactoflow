@@ -6,6 +6,7 @@ export default {
     colors: {
       'green': '#76b1af',
       'red': '#c6302c',
+      'red-300': '#f9605b',
       'blue': '#122e49',
       'cream': '#fcfaef'
     },

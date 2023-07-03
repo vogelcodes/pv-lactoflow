@@ -39,6 +39,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         
       </Head>
+      
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6T6HHESNG2"></Script>
         <Script id="google-analytics"
       dangerouslySetInnerHTML={{
@@ -50,23 +51,23 @@ const Home: NextPage = () => {
   gtag('config', 'G-6T6HHESNG2');`,}} />
       <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c]">
         <div className="bg-blue flex text-cream flex-col items-center justify-center py-2 sm:py-10">
-          <div className="w-[300px] sm:w-[500px]">
+          <div className="w-[180px] sm:w-[300px]">
 
-          <Image src="/logo2.svg" alt="logo" width={500} height={200}/>
+          <Image src="/logo3.svg" alt="logo" width={300} height={120}/>
           </div>
           <h4 hidden className="text-center text-3xl text-[#fcfaef]">Conheça o Método</h4>
           <h1 hidden className="text-center text-5xl font-extrabold tracking-tight text-cream sm:text-[5rem]">
             Lacto<span className="text-green">Flow</span>{" "}
           </h1>
-          <h1 className="sm:w-1/2 uppercase font-extrabold text-cream text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px]">
-            Aprenda como <span className="text-red text-[35px]">aumentar a sua produção</span> de leite e ofereça o <span className="text-green text-[35px]">melhor alimento do mundo</span> ao seu bebê.
+          <h1 className="sm:w-2/3 uppercase font-extrabold text-cream text-[18px] sm:text-[31.25px] text-center mt-6 leading-[29px] sm:leading-[36px] tracking-[-25] mb-[14.4px] px-4 sm:px-0">
+            Aprenda como <span className="text-red-300 text-[25px] sm:text-[35px]">aumentar a sua produção</span> de leite e ofereça o <span className="text-green text-[25px] sm:text-[35px]">melhor alimento do mundo</span> ao seu bebê.
           </h1>
-          <p className="mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center px-2">
-            Nesse vídeo eu te ensino estratégias para aumentar a sua produção de leite <span className="text-red uppercase text-[18px]">hoje mesmo.</span></p>
-          <p className="mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
+          <p className="sm:mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center px-4 sm:px-2">
+            Nesse vídeo eu te ensino estratégias para aumentar a sua produção de leite <span className="text-red-300 uppercase text-[18px]">hoje mesmo.</span></p>
+          <p className="mt-4 sm:mt-7 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
           <span className="text-green text-[35px] uppercase">E mais:</span></p>
             <div className="ml-4">
-            <div className="flex items-center gap-x-4 mt-6 lg:mt-4">
+            <div className="flex items-center gap-x-4 mt-4 lg:mt-6">
               <div><div className="relative w-[36px] h-[36px] ">
               <Image src="/1.svg" alt="one" height={36} width={36} />
               </div></div>
@@ -120,7 +121,7 @@ const Home: NextPage = () => {
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center bg-blue bg-opacity-70 justify-center p-4 text-center">
+            <div className="flex min-h-full items-start bg-blue bg-opacity-70 justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -130,7 +131,7 @@ const Home: NextPage = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md bg-green transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-md mt-16 bg-green transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
                     className="text-lg font-medium leading-6 text-blue"
