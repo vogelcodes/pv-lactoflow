@@ -7,10 +7,13 @@ import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
 import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
+import PhoneInput, { formatPhoneNumber } from 'react-phone-number-input'
+import ptBR from 'react-phone-number-input/locale/pt-BR.json'
+import flags from 'react-phone-number-input/flags'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 import { api } from "@/utils/api";
+import CTA from "./components/cta";
 
 
 
@@ -92,28 +95,17 @@ const Home: NextPage = () => {
             </div>
             </div>
             {/* <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe> */}
-            <div className="w-full aspect-video max-w-[22rem] lg:max-w-[53.25rem] rounded-md">
+            <div className="w-full aspect-video max-w-[22rem] lg:max-w-[53.25rem] rounded-md mt-8 mx-auto">
 
             <LiteYouTubeEmbed
                 id="IVKkQA9p7go"
                 title="Método LactoFlow"
+                poster="maxresdefault"
                 />
                 </div>
             
             <div className="w-full rounded-sm bg-cream text-blue mt-2">
-
-              <div className="mt-5 w-full text-center">
-                {/* <a href="https://instagram.com/carolina.procaci"> */}
-                <button onClick={openModal} className="hover:scale-[104%] w-auto rounded-lg border-b-4 text-cream border-b-[#236C0F] bg-[#46B21E] my-2 py-3 text-[13.6px] font-extrabold uppercase text-white hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
-                  Quero aumentar minha <br/> produção de leite</button>
-
-                {/* </a> */}
-                <p>12x 
-                  <span className="uppercase font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px]">
-                    R$49,70</span> <br/> ou R$497,00 à vista
-                </p>
-                <Image className="mx-auto h-10 px-4" alt="Meios de Pagamento" src="/pagamentos.svg" width={340} height={20} ></Image>
-              </div>
+              <CTA openModal={openModal} />
               {/* <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image> */}
             </div>
 
@@ -152,9 +144,9 @@ const Home: NextPage = () => {
                   <div className="mt-2">
                     <form className="flex flex-col mb-8">
                       <label htmlFor="celular">Email</label>
-                      <input type="text" name="email" placeholder="maeincrivel@gmail.com"/>
+                      <input className="pl-2" type="text" name="email" placeholder="maeincrivel@email.com"/>
                       <label htmlFor="celular">Celular</label>
-                      <PhoneInput placeholder="11 2345678" value={value} defaultCountry="BR" onChange={setValue}/>
+                      <PhoneInput labels={ptBR} flags={flags} value={value} defaultCountry="BR" onChange={setValue}/>
                     </form>
                       <a href="https://pay.hotmart.com/O84147403X">
                       <button onClick={handleSubmit} className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-cream hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
