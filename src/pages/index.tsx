@@ -93,7 +93,7 @@ const Home: NextPage = () => {
             </div>
             </div>
             {/* <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe> */}
-            <div className="w-full aspect-video max-w-[22rem] lg:max-w-[53.25rem] rounded-md mt-8 mx-auto">
+            <div className="w-full aspect-video max-w-[22rem] lg:max-w-[53.25rem] rounded-md my-8 mx-auto">
 
             <LiteYouTubeEmbed
                 id="IVKkQA9p7go"

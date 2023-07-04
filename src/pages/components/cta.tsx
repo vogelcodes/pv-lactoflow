@@ -18,8 +18,8 @@ const CTA = ({ openModal, price=false, label="Quero aumentar minha produção de
                 {/* </a> */}
                 {price ? 
                 <p>12x 
-                  <span className="uppercase font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px]">
-                    R$49,70</span> <br/> ou R$497,00 à vista
+                  <span className="uppercase font-extrabold text-[25px] lg:text-[31.25px] text-center ml-1 mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px]">
+                    R$49,60</span> <br/> ou R$497,00 à vista
                 </p> : <></>
                 }
                 <div className="">
