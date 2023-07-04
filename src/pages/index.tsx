@@ -1,13 +1,11 @@
 import { type NextPage } from "next";
-import { signIn, signOut, useSession } from "next-auth/react";
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
 import 'react-phone-number-input/style.css'
-import PhoneInput, { formatPhoneNumber } from 'react-phone-number-input'
+import PhoneInput from 'react-phone-number-input'
 import ptBR from 'react-phone-number-input/locale/pt-BR.json'
 import flags from 'react-phone-number-input/flags'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
@@ -68,7 +66,7 @@ const Home: NextPage = () => {
             Aprenda como <span className="text-red-300 text-[25px] sm:text-[35px]">aumentar a sua produção</span> de leite e ofereça o <span className="text-green text-[25px] sm:text-[35px]">melhor alimento do mundo</span> ao seu bebê.
           </h1>
           <p className="sm:mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center px-4 sm:px-2">
-            Nesse vídeo eu te ensino estratégias para aumentar a sua produção de leite <span className="text-red-300 uppercase text-[18px]">hoje mesmo.</span></p>
+            Nesse vídeo eu te ensino estratégias para começar a aumentar a sua produção de leite <span className="text-red-300 uppercase text-[18px]">hoje mesmo.</span></p>
           <p className="mt-4 sm:mt-7 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
           <span className="text-green text-[35px] uppercase">E mais:</span></p>
             <div className="ml-4">
@@ -91,7 +89,7 @@ const Home: NextPage = () => {
               <Image src="/3.svg" alt="three" height={36} width={36} />
               </div></div>
               <p className="font-medium text-[15.67px] lg:text-[16.75px] leading-[22.9px] tracking-[-25]">
-                As melhores técnicas para aumentar sua coleta de leite</p>
+                As melhores técnicas para aumentar sua produção de leite materno</p>
             </div>
             </div>
             {/* <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe> */}
@@ -104,10 +102,31 @@ const Home: NextPage = () => {
                 />
                 </div>
             
-            <div className="w-full rounded-sm bg-cream text-blue mt-2">
               <CTA openModal={openModal} />
               {/* <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image> */}
-            </div>
+              
+                
+            
+            <section>
+              <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
+                Veja o que estão falando sobre o método LactoFlow:
+              </h1>
+            </section>
+            <CTA openModal={openModal} label="Também quero esses resultados" />
+            <section>
+
+              <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
+                Argumentos Incontestáveis
+              </h1>
+            </section>
+            <section>
+
+              <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
+                Explicação do método
+              </h1>
+            </section>
+
+
 
             <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -168,27 +187,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
-const AuthShowcase: React.FC = () => {
-  const { data: sessionData } = useSession();
-
-  const { data: secretMessage } = api.example.getSecretMessage.useQuery(
-    undefined, // no input
-    { enabled: sessionData?.user !== undefined }
-  );
-
-  return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <p className="text-center text-2xl text-white">
-        {sessionData && <span>Logged in as {sessionData.user?.name}</span>}
-        {secretMessage && <span> - {secretMessage}</span>}
-      </p>
-      <button
-        className="rounded-full bg-white/10 px-10 py-3 font-semibold text-white no-underline transition hover:bg-white/20"
-        onClick={sessionData ? () => void signOut() : () => void signIn()}
-      >
-        {sessionData ? "Sign out" : "Sign in"}
-      </button>
-    </div>
-  );
-};
