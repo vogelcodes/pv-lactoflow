@@ -131,6 +131,7 @@ const Home: NextPage = () => {
                 Explicação do método
               </h1>
             </section>
+            <CTA openModal={openModal} price />
 
 
 
