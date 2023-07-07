@@ -20,6 +20,8 @@ const Home: NextPage = () => {
 
   const [isOpen, setIsOpen] = useState(false)
   const [value, setValue] = useState<E164Number | undefined>()
+  const [email, setEmail] = useState("")
+  const { mutate } = api.example.saveLead.useMutation()
 
   function closeModal() {
     setIsOpen(false)
@@ -30,6 +32,8 @@ const Home: NextPage = () => {
   }
   function handleSubmit() {
     console.log(value)
+    
+    mutate({email, phoneNumber: value?.toString() || ""})
   }
 
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -172,14 +176,14 @@ const Home: NextPage = () => {
                   <div className="mt-2">
                     <form className="flex flex-col mb-8">
                       <label htmlFor="celular">Email</label>
-                      <input className="pl-2" type="text" name="email" placeholder="maeincrivel@email.com"/>
+                      <input className="pl-2" type="text" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="maeincrivel@email.com"/>
                       <label htmlFor="celular">Celular</label>
                       <PhoneInput labels={ptBR} flags={flags} value={value} defaultCountry="BR" onChange={setValue}/>
                     </form>
-                      <a href="https://pay.hotmart.com/O84147403X">
+                      {/* <a href="https://pay.hotmart.com/O84147403X"> */}
                       <button onClick={handleSubmit} className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-cream hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
                         Quero aumentar minha produção de leite</button>
-                      </a>
+                      {/* </a> */}
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
