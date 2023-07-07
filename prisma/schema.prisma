@@ -62,7 +62,8 @@ model VerificationToken {
 }
 
 model Lead {
-    id    String @id @default(cuid())
-    email String
-    phone String
+    id        String   @id @default(cuid())
+    email     String?
+    phone     String?
+    createdAt DateTime @default(now())
 }

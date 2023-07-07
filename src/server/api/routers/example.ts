@@ -19,7 +19,7 @@ export const exampleRouter = createTRPCRouter({
     return ctx.prisma.lead.findMany();
   }),
   saveLead: publicProcedure.input(z.object(
-    {email: z.string().email(), phoneNumber: z.string()}
+    {email: z.string(), phoneNumber: z.string()}
   )).mutation(async ({ctx, input }) => {
       const lead = await ctx.prisma.lead.create({
         data: {
