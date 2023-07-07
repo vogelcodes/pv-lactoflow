@@ -112,16 +112,18 @@ const Home: NextPage = () => {
                 Veja o que estão falando sobre o método LactoFlow:
               </h1>
               <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-2">
-                <Image width={300} height={500} src='/depoimentos/3.jpg' alt="depoimento"></Image>
-                <Image width={300} height={500} src='/depoimentos/3.jpg' alt="depoimento"></Image>
-                <Image width={300} height={500} src='/depoimentos/3.jpg' alt="depoimento"></Image>
-              
+                <Image width={300} height={500} src='/depoimentos/metodo/1.jpg' alt="depoimento"></Image>
+                <Image width={300} height={500} src='/depoimentos/metodo/2.jpg' alt="depoimento"></Image>
+                <Image width={300} height={500} src='/depoimentos/metodo/3.jpg' alt="depoimento"></Image>
+                <Image width={300} height={500} src='/depoimentos/metodo/4.jpg' alt="depoimento"></Image>
+                <Image width={300} height={500} src='/depoimentos/metodo/5.jpg' alt="depoimento"></Image>
+                <Image width={300} height={500} src='/depoimentos/metodo/6.jpg' alt="depoimento"></Image>
               </div>
             </section>
-            <CTA openModal={openModal} label="Também quero esses resultados" />
+            <CTA openModal={openModal} label="Também quero esses resultados" price/>
             <section>
 
-              <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
+              {/* <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
                 Argumentos Incontestáveis
               </h1>
             </section>
@@ -129,9 +131,9 @@ const Home: NextPage = () => {
 
               <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
                 Explicação do método
-              </h1>
+              </h1> */}
             </section>
-            <CTA openModal={openModal} price />
+            {/* <CTA openModal={openModal} price /> */}
 
 
 
