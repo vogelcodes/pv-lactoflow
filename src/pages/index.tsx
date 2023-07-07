@@ -170,7 +170,7 @@ const Home: NextPage = () => {
                 <Dialog.Panel className="w-full max-w-md mt-16 bg-green transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
-                    className="text-lg font-medium leading-6 text-blue"
+                    className="text-2xl font-medium leading-6 text-blue"
                   >
                     Cadastre-se para receber nosso suporte especializado
                   </Dialog.Title>

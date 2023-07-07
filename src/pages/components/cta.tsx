@@ -26,7 +26,7 @@ const CTA = ({ openModal, price=false, label="Quero aumentar minha produção de
                 <Image className="mx-auto h-10 px-4" alt="Meios de Pagamento" src="/pagamentos.svg" width={529} height={30} ></Image>
                 </div>
               </div>
-            <div className="w-full max-w-sm lg:max-w-3xl flex justify-between m-4 px-4">
+            <div className="w-full max-w-sm lg:max-w-3xl grid grid-cols-3 m-4 px-4">
             <div className="flex flex-col items-center">
               <Image alt="acesso-imediato" width={44} src={"/call-center-desk.svg"} height={44}></Image>
               <p className="text-center text-[9.79px] font-bold lg:text-[20.6px]">Acesso Imediato</p>
