@@ -34,6 +34,7 @@ const Home: NextPage = () => {
     console.log(value)
     
     mutate({email, phoneNumber: value?.toString() || ""})
+    
   }
 
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -180,10 +181,10 @@ const Home: NextPage = () => {
                       <label htmlFor="celular">Celular</label>
                       <PhoneInput labels={ptBR} flags={flags} value={value} defaultCountry="BR" onChange={setValue}/>
                     </form>
-                      {/* <a href="https://pay.hotmart.com/O84147403X"> */}
+                      <a href="https://pay.hotmart.com/O84147403X">
                       <button onClick={handleSubmit} className="hover:scale-[104%] w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] py-3 text-[13.6px] font-extrabold uppercase text-cream hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
                         Quero aumentar minha produção de leite</button>
-                      {/* </a> */}
+                      </a>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
