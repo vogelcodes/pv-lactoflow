@@ -1,4 +1,5 @@
 import Document, { Html, type DocumentContext, type DocumentInitialProps, Head, Main, NextScript } from 'next/document'
+import Image from "next/image"
  
 class MyDocument extends Document {
   static async getInitialProps(
@@ -13,9 +14,10 @@ class MyDocument extends Document {
         <Html>
             <Head>
             <noscript>
-          <img
+          <Image
             height="1"
             width="1"
+            alt='fb'
             style={{ display: 'none' }}
             src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID}&ev=PageView&noscript=1`}
           />
