@@ -57,7 +57,7 @@ const Home: NextPage = () => {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1938234943200161');
+            fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || ""}');
             fbq('track', 'PageView');
           
           `,}} />
@@ -132,12 +132,9 @@ const Home: NextPage = () => {
                 Veja o que estão falando sobre o método LactoFlow:
               </h1>
               <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-2">
-                <Image width={300} height={500} src='/depoimentos/metodo/1.jpg' alt="depoimento"></Image>
-                <Image width={300} height={500} src='/depoimentos/metodo/2.jpg' alt="depoimento"></Image>
-                <Image width={300} height={500} src='/depoimentos/metodo/3.jpg' alt="depoimento"></Image>
-                <Image width={300} height={500} src='/depoimentos/metodo/4.jpg' alt="depoimento"></Image>
-                <Image width={300} height={500} src='/depoimentos/metodo/5.jpg' alt="depoimento"></Image>
-                <Image width={300} height={500} src='/depoimentos/metodo/6.jpg' alt="depoimento"></Image>
+                {[1,2,3,4,5,6].map(number=>{
+                  return <Image key={number} width={300} height={500} src={`/depoimentos/metodo/${number}.jpg`} alt="depoimento"/>
+                })}
               </div>
             </section>
             <CTA openModal={openModal} label="Também quero esses resultados" price/>
@@ -183,6 +180,7 @@ const Home: NextPage = () => {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md mt-16 bg-green transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <span className="absolute top-3 right-5 text-blue font-extrabold cursor-pointer" onClick={closeModal}>✖</span>
                   <Dialog.Title
                     as="h3"
                     className="text-2xl font-medium leading-6 text-blue"
