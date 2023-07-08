@@ -1,4 +1,4 @@
-import Document, { Html, type DocumentContext, type DocumentInitialProps, Head, Main, NextScript } from 'next/document'
+import Document, { Html, type DocumentContext, type DocumentInitialProps, Head, Main, NextScript,  } from 'next/document'
 import Image from "next/image"
 
 const fbp = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || ""
@@ -15,7 +15,7 @@ class MyDocument extends Document {
     return(
         <Html>
             <Head>
-            <noscript>
+            {/* <noscript>
           <Image
             height="1"
             width="1"
@@ -23,7 +23,7 @@ class MyDocument extends Document {
             style={{ display: 'none' }}
             src={`https://www.facebook.com/tr?id=${fbp}&ev=PageView&noscript=1`}
           />
-        </noscript>
+        </noscript> */}
             </Head>
             <body>
         <Main />
