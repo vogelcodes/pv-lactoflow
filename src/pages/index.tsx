@@ -147,7 +147,7 @@ const Home: NextPage = () => {
             
             <section>
               <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
-                Veja o que estão falando sobre o método LactoFlow:
+                Depoimento das alunas que seguiram o método LactoFlow:
               </h1>
               <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-2">
                 {[1,2,3,4,5,6].map(number=>{
