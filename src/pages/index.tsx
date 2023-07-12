@@ -181,10 +181,11 @@ const Home: NextPage = () => {
                       <div key={i[0]} className=" flex items-center">
                         <div className="flex items-center justify-center w-1/5">
 
-                    <div className={`${i[1] || ""} w-16 h-16 md:w-32 md:h-32 rounded-full self-center flex items-center justify-center font-extrabold text-6xl`} key={i[0]}>
-                      <span className="text-4xl md:text-6xl ">
-                        {i[0]}
-                      </span>
+                    <div className={`${i[1] || ""} text-4xl md:text-6xl text-center w-16 h-16 md:w-32 md:h-32 rounded-full drop-shadow-lg dro
+                     self-center flex items-center justify-center font-extrabold`} key={i[0]}>
+                        <span className="text-center leading-tight w-1/2 -translate-y-0.5 -translate-x-0.1">
+                          {i[0]}
+                        </span>
                       
 
                     </div>
