@@ -145,7 +145,7 @@ const Home: NextPage = () => {
             <div className="w-full aspect-video max-w-[22rem] lg:max-w-[53.25rem] rounded-md my-8 mx-auto">
 
             <LiteYouTubeEmbed
-                id="TV9ZvW6x3Jg"
+                id="eXp3-bclWPs"
                 title="Método LactoFlow"
                 poster="maxresdefault"
                 />
@@ -166,19 +166,51 @@ const Home: NextPage = () => {
                 })}
               </div>
             </section>
-            <CTA openModal={openModal} label="Também quero esses resultados" price/>
-            <section>
-
-              {/* <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
-                Argumentos Incontestáveis
-              </h1>
-            </section>
             <section>
 
               <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
-                Explicação do método
-              </h1> */}
+                O método LactoFlow se divide em 3 pilares:
+                  </h1>
+                <div className="mx-2 sm:p-2">
+                  <div className="flex flex-col gap-2">
+
+                    {[['C','bg-[#14A3FE]','Conhecimento de Base','Conhecendo todo o funcionamento da "Fantástica Fábrica de Leite Materno" para uma produção de leite abundante.'],
+                      ['D', 'bg-[#FF3131]', 'Defesa Infalível', 'Identificando e eliminando todos os sabotadores da "Fantástica Fábrica de Leite Materno".'],
+                      ['A','bg-[#2ADCAA]', 'Ação Estratégica', 'Aprendendo as estratégias eficientes para maximizar a ação da "Fantástica Fábrica de Leite Materno" e ter uma produção de leite abundante.']
+                     ].map(i=>
+                      <div key={i[0]} className=" flex items-center">
+                        <div className="flex items-center justify-center w-1/5">
+
+                    <div className={`${i[1] || ""} w-16 h-16 md:w-32 md:h-32 rounded-full self-center flex items-center justify-center font-extrabold text-6xl`} key={i[0]}>
+                      <span className="text-4xl md:text-6xl ">
+                        {i[0]}
+                      </span>
+                      
+
+                    </div>
+                        </div>
+                    <div className="bg-cream ml-3 min-h-[8rem] w-4/5 p-2 rounded-md text-blue">
+                      <h1 className=" uppercase font-bold">{i[2]}</h1>
+                      <p className="ml-1">
+                        {i[3]}
+                      </p>
+                    </div>
+
+                      </div>
+                    )}
+                    
+                  </div>
+                    
+                
+                </div>
             </section>
+            {/* <section>
+
+<h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
+Explicação do método
+</h1>
+</section> */}
+<CTA openModal={openModal} label="Também quero esses resultados" price/>
             {/* <CTA openModal={openModal} price /> */}
 
 
