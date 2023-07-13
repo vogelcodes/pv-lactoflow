@@ -91,18 +91,17 @@ const Home: NextPage = () => {
       <main className="flex min-h-screen flex-col font-sans items-center bg-gradient-to-b from-[#122e49] to-[#15162c]">
         <div className="bg-blue flex text-cream flex-col items-center justify-center py-2 sm:py-10">
           <div className="w-[180px] sm:w-[300px]">
-
-          <Image src="/logo3.svg" alt="logo" width={300} height={120}/>
+            <Image src="/logo3.svg" alt="logo" width={300} height={120}/>
           </div>
           <h4 hidden className="text-center text-3xl text-[#fcfaef]">Conheça o Método</h4>
           <h1 hidden className="text-center text-5xl font-extrabold tracking-tight text-cream sm:text-[5rem]">
             Lacto<span className="text-green">Flow</span>{" "}
           </h1>
           <h1 className="sm:w-2/3 uppercase font-extrabold text-cream text-[18px] sm:text-[31.25px] text-center mt-6 leading-[29px] sm:leading-[36px] tracking-[-25] mb-[14.4px] px-4 sm:px-0">
-            Aprenda como <span className="text-red-300 text-[25px] sm:text-[35px]">aumentar a sua produção</span> de leite e ofereça o <span className="text-green text-[25px] sm:text-[35px]">melhor alimento do mundo</span> ao seu bebê.
+            Aprenda como <span className="text-red text-[25px] sm:text-[35px]">aumentar a sua produção</span> de leite e ofereça o <span className="text-green text-[25px] sm:text-[35px]">melhor alimento do mundo</span> ao seu bebê.
           </h1>
           <p className="sm:mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center px-4 sm:px-2">
-            Nesse vídeo eu te ensino estratégias para começar a aumentar a sua produção de leite <span className="text-red-300 uppercase text-[24px]">hoje mesmo.</span></p>
+            Nesse vídeo eu te ensino estratégias para começar a aumentar a sua produção de leite <span className="text-red uppercase text-[24px]">hoje mesmo.</span></p>
             <div className="flex items-end">
             <p className="mt-4 sm:mt-7 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
           <span className="text-green text-[35px] uppercase">E mais: </span></p><Image className="animate-bounce ml-2" src="/arrow-down.svg" alt="one" height={36} width={36} />
@@ -148,12 +147,13 @@ const Home: NextPage = () => {
             
             <section>
 
-              <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
+              <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] px-4 sm:px-2">
                 O método LactoFlow se divide em 3 pilares:
                   </h1>
                 <div className="mx-2 sm:p-2">
-                  <div className="flex flex-col gap-2">
-
+               
+                  <div className="flex flex-col gap-2 hidden">
+                    <Image src={'/defesa.svg'} alt="D" width={44} height={44} />
                     {[['C','bg-[#14A3FE]','Conhecimento de Base','Conhecendo todo o funcionamento da "Fantástica Fábrica de Leite Materno" para uma produção de leite abundante.'],
                       ['D', 'bg-[#FF3131]', 'Defesa Infalível', 'Identificando e eliminando todos os sabotadores da "Fantástica Fábrica de Leite Materno".'],
                       ['A','bg-[#2ADCAA]', 'Ação Estratégica', 'Aprendendo as estratégias eficientes para maximizar a ação da "Fantástica Fábrica de Leite Materno" e ter uma produção de leite abundante.']
@@ -161,7 +161,7 @@ const Home: NextPage = () => {
                       <div key={i[0]} className=" flex items-center">
                         <div className="flex items-center justify-center w-1/5">
 
-                    <div className={`${i[1] || ""} text-4xl md:text-6xl text-center w-16 h-16 md:w-32 md:h-32 rounded-full drop-shadow-lg dro
+                    <div className={`${i[1] || ""} text-4xl md:text-6xl text-center w-12 h-12 xs:w-16 xs:h-16 md:w-32 md:h-32 rounded-full drop-shadow-lg dro
                      self-center flex items-center justify-center font-extrabold`} key={i[0]}>
                         <span className="text-center leading-tight w-1/2 -translate-y-0.5 -translate-x-0.1">
                           {i[0]}
@@ -181,7 +181,40 @@ const Home: NextPage = () => {
                     )}
                     
                   </div>
+                  <div className="flex flex-col gap-2 max-w-3xl">
+                    {[['C','/conhecimento.svg','Conhecimento de Base','Conhecendo todo o funcionamento da "Fantástica Fábrica de Leite Materno" para uma produção de leite abundante.','Bê-a-bá da amamentação', 'Base sólida da Fantástica Fábrica de Leite Materno'],
+                      ['D', '/defesa.svg', 'Defesa Infalível', 'Identificando e eliminando todos os sabotadores da "Fantástica Fábrica de Leite Materno".','Os sabotadores da Fantástica Fábrica de Leite Materno', 'Oferta segura fora do peito da mãe'],
+                      ['A','/acao.svg', 'Ação Estratégica', 'Aprendendo as estratégias eficientes para maximizar a ação da "Fantástica Fábrica de Leite Materno" e ter uma produção de leite abundante.','Passo a passo para o aumento da produção de leite materno', 'O fluxo de uma amamentação segura']
+                     ].map(i=>
+                      <div key={i[0]} className=" flex items-center -ml-2">
+                        <div className="flex items-center justify-center w-1/5">
+
+                      <div className="w-12 h-12 xs:w-16 xs:h-16 md:w-32 md:h-32">
+
+                        <Image src={`${i[1] || ""}`} alt="D" width={128} height={128} />
+                        </div>
                     
+                        </div>
+                    <div className="bg-cream ml-3 min-h-[8rem] w-4/5 p-2 rounded-md text-blue">
+                      <div className="flex flex-col items-center justify-center gap-4">
+
+                      <h1 className=" uppercase text-center font-extrabold">{i[2]}</h1>
+                      {/* <p className="ml-1 text-center font-normal">
+                        {i[3]}
+                      </p> */}
+                      <ul className="text-center">
+
+                        <li>{i[4]}</li>
+                        <li>{i[5]}</li>
+                        
+                      </ul>
+                      </div>
+                    </div>
+
+                      </div>
+                    )}
+                    
+                  </div>
                 
                 </div>
             </section>
@@ -206,7 +239,7 @@ Explicação do método
 
 
 
-            <Transition appear show={isOpen} as={Fragment}>
+            {/* <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
@@ -256,7 +289,7 @@ Explicação do método
             </div>
           </div>
         </Dialog>
-      </Transition>
+      </Transition> */}
                   
 
         </div>
