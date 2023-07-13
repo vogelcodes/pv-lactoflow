@@ -49,20 +49,6 @@ const Home: NextPage = () => {
                 
         
       </Head>
-        {/* <Script id="facebook-pixel" dangerouslySetInnerHTML={{
-          __html: `
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || ""}');
-            fbq('track', 'PageView');
-          
-          `,}} /> */}
           <Script id='hj' dangerouslySetInnerHTML={{
                         __html: `
                   (function(h,o,t,j,a,r){
@@ -92,8 +78,6 @@ const Home: NextPage = () => {
             `,
             }}
           />
-          
-
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-6T6HHESNG2"></Script>        
         <Script id="google-analytics"
       dangerouslySetInnerHTML={{
@@ -102,7 +86,8 @@ const Home: NextPage = () => {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-6T6HHESNG2');`,}} />
+           gtag('config', 'G-6T6HHESNG2');`,}}
+         />
       <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c]">
         <div className="bg-blue flex text-cream flex-col items-center justify-center py-2 sm:py-10">
           <div className="w-[180px] sm:w-[300px]">
@@ -159,16 +144,6 @@ const Home: NextPage = () => {
                 
             
             <section>
-              <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
-                Depoimento das alunas que seguiram o método LactoFlow:
-              </h1>
-              <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-2">
-                {[1,2,3,4,5,6].map(number=>{
-                  return <Image key={number} width={300} height={500} src={`/depoimentos/metodo/${number}.jpg`} alt="depoimento"/>
-                })}
-              </div>
-            </section>
-            <section>
 
               <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
                 O método LactoFlow se divide em 3 pilares:
@@ -213,6 +188,16 @@ const Home: NextPage = () => {
 Explicação do método
 </h1>
 </section> */}
+<section>
+  <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
+    Depoimento das alunas que seguiram o método LactoFlow:
+  </h1>
+  <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-2">
+    {[1,2,3,4,5,6].map(number=>{
+      return <Image key={number} width={300} height={500} src={`/depoimentos/metodo/${number}.jpg`} alt="depoimento"/>
+    })}
+  </div>
+</section>
 <CTA openModal={openModal} label="Também quero esses resultados" price/>
             {/* <CTA openModal={openModal} price /> */}
 
