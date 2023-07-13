@@ -88,7 +88,7 @@ const Home: NextPage = () => {
 
            gtag('config', 'G-6T6HHESNG2');`,}}
          />
-      <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c]">
+      <main className="flex min-h-screen flex-col font-sans items-center bg-gradient-to-b from-[#122e49] to-[#15162c]">
         <div className="bg-blue flex text-cream flex-col items-center justify-center py-2 sm:py-10">
           <div className="w-[180px] sm:w-[300px]">
 
