@@ -102,9 +102,12 @@ const Home: NextPage = () => {
             Aprenda como <span className="text-red-300 text-[25px] sm:text-[35px]">aumentar a sua produção</span> de leite e ofereça o <span className="text-green text-[25px] sm:text-[35px]">melhor alimento do mundo</span> ao seu bebê.
           </h1>
           <p className="sm:mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center px-4 sm:px-2">
-            Nesse vídeo eu te ensino estratégias para começar a aumentar a sua produção de leite <span className="text-red-300 uppercase text-[18px]">hoje mesmo.</span></p>
-          <p className="mt-4 sm:mt-7 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
-          <span className="text-green text-[35px] uppercase">E mais:</span></p>
+            Nesse vídeo eu te ensino estratégias para começar a aumentar a sua produção de leite <span className="text-red-300 uppercase text-[24px]">hoje mesmo.</span></p>
+            <div className="flex items-end">
+            <p className="mt-4 sm:mt-7 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
+          <span className="text-green text-[35px] uppercase">E mais: </span></p><Image className="animate-bounce ml-2" src="/arrow-down.svg" alt="one" height={36} width={36} />
+            </div>
+          
             <div className="ml-4">
             <div className="flex items-center gap-x-4 mt-4 lg:mt-6">
               <div><div className="relative w-[36px] h-[36px] ">
@@ -189,7 +192,7 @@ Explicação do método
 </h1>
 </section> */}
 <section>
-  <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
+  <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] px-4 sm:px-2">
     Depoimento das alunas que seguiram o método LactoFlow:
   </h1>
   <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-2">
