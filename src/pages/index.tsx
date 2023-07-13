@@ -45,6 +45,8 @@ const Home: NextPage = () => {
         <title>LactoFlow</title>
         <meta name="description" content="Método para aumentar a produção de leite materno" />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.cdnfonts.com/css/gotham-6" rel="stylesheet"/>
+                
         
       </Head>
         {/* <Script id="facebook-pixel" dangerouslySetInnerHTML={{

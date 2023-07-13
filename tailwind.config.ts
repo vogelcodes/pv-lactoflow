@@ -1,4 +1,5 @@
 import { type Config } from "tailwindcss";
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -9,6 +10,9 @@ export default {
       'red-300': '#f9605b',
       'blue': '#122e49',
       'cream': '#fcfaef'
+    },
+    fontFamily: {
+      'sans': ['Gotham', ...defaultTheme.fontFamily.sans]
     },
     extend: {},
   },
