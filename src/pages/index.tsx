@@ -91,7 +91,7 @@ const Home: NextPage = () => {
       <main className="flex min-h-screen flex-col font-sans items-center bg-gradient-to-b from-[#122e49] to-[#15162c]">
         <div className="bg-blue flex text-cream flex-col items-center justify-center py-2 sm:py-10">
           <div className="w-[180px] sm:w-[300px]">
-            <Image src="/logo3.svg" alt="logo" width={300} height={120}/>
+            <Image src="/logo-portrait.svg" alt="logo" width={300} height={120}/>
           </div>
           <h4 hidden className="text-center text-3xl text-[#fcfaef]">Conheça o Método</h4>
           <h1 hidden className="text-center text-5xl font-extrabold tracking-tight text-cream sm:text-[5rem]">
