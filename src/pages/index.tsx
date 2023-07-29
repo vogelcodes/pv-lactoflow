@@ -189,13 +189,14 @@ const Home: NextPage = () => {
                       <div key={i[0]} className=" flex items-center -ml-2">
                         <div className="flex items-center justify-center w-1/5">
 
-                      <div className="w-12 h-12 xs:w-16 xs:h-16 md:w-32 md:h-32">
+                      {/* <div className="w-12 z-10 h-12 xs:w-16 xs:h-16 md:w-32 md:h-32"> */}
+                      <div className="w-[min(10vw,32)] z-10 h-[min(10vw,32)]">
 
-                        <Image src={`${i[1] || ""}`} alt="D" width={128} height={128} />
+                        <Image className="" src={`${i[1] || ""}`} alt="D" width={128} height={128} />
                         </div>
                     
                         </div>
-                    <div className="bg-cream ml-3 min-h-[8rem] w-4/5 p-2 rounded-md text-blue">
+                    <div className="bg-cream -ml-6 md:-ml-8 -z-0 min-h-[8rem] w-4/5 p-2 rounded-md text-blue">
                       <div className="flex flex-col items-center justify-center gap-4">
 
                       <h1 className=" uppercase text-center font-extrabold">{i[2]}</h1>
