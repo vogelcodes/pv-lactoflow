@@ -181,8 +181,8 @@ const Home: NextPage = () => {
                     )}
                     
                   </div>
-                  <div className="flex flex-col gap-2 max-w-3xl">
-                    {[['C','/conhecimento.svg','Conhecimento de Base','Conhecendo todo o funcionamento da "Fantástica Fábrica de Leite Materno" para uma produção de leite abundante.','Bê-a-bá da amamentação', 'Base sólida da Fantástica Fábrica de Leite Materno'],
+                  <div className="flex flex-col ml-6 md:ml-8  gap-2 max-w-3xl">
+                    {[['C','/conhecimento2.svg','Conhecimento de Base','Conhecendo todo o funcionamento da "Fantástica Fábrica de Leite Materno" para uma produção de leite abundante.','Bê-a-bá da amamentação', 'Base sólida da Fantástica Fábrica de Leite Materno'],
                       ['D', '/defesa.svg', 'Defesa Infalível', 'Identificando e eliminando todos os sabotadores da "Fantástica Fábrica de Leite Materno".','Os sabotadores da Fantástica Fábrica de Leite Materno', 'Oferta segura fora do peito da mãe'],
                       ['A','/acao.svg', 'Ação Estratégica', 'Aprendendo as estratégias eficientes para maximizar a ação da "Fantástica Fábrica de Leite Materno" e ter uma produção de leite abundante.','Passo a passo para o aumento da produção de leite materno', 'O fluxo de uma amamentação segura']
                      ].map(i=>
@@ -196,7 +196,7 @@ const Home: NextPage = () => {
                         </div>
                     
                         </div>
-                    <div className="bg-cream -ml-6 md:-ml-8 -z-0 min-h-[8rem] w-4/5 p-2 rounded-md text-blue">
+                    <div className="bg-cream -ml-6 md:-ml-8 -z-0 min-h-[8rem] w-4/5 p-2 pl-4 rounded-md text-blue">
                       <div className="flex flex-col items-center justify-center gap-4">
 
                       <h1 className=" uppercase text-center font-extrabold">{i[2]}</h1>
