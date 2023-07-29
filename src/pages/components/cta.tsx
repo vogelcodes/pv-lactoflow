@@ -12,10 +12,11 @@ const CTA = ({ openModal, price=false, label="Quero aumentar minha produção de
 
         <div className="mt-5 w-full text-center">
                 {/* <a href="https://instagram.com/carolina.procaci"> */}
-                <a href="https://pay.hotmart.com/O84147403X">
+                {/* <a href="https://pay.hotmart.com/O84147403X"> */}
 
                 <button onClick={openModal} className="hover:scale-[104%] max-w-[250px] lg:max-w-md rounded-lg border-b-4 text-cream border-b-[#236C0F] bg-[#46B21E] my-2 py-3 text-[13.6px] font-extrabold uppercase text-white hover:border-b-[#44972d] hover:bg-[#236C0F] px-2 lg:py-5 lg:text-[22.6px]">
-                  {label}</button></a>
+                  {label}</button>
+                  {/* </a> */}
 
                 {/* </a> */}
                 {price ? 

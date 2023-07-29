@@ -245,11 +245,11 @@ Explicação do método
   </div>
 </section>
 <CTA openModal={openModal} label="Também quero esses resultados" price/>
-            {/* <CTA openModal={openModal} price /> */}
+            <CTA openModal={openModal} price />
 
 
 
-            {/* <Transition appear show={isOpen} as={Fragment}>
+            <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
@@ -299,7 +299,7 @@ Explicação do método
             </div>
           </div>
         </Dialog>
-      </Transition> */}
+      </Transition>
                   
 
         </div>
