@@ -37,7 +37,7 @@ const CTA = ({ openModal, price=false, label="Quero aumentar minha produção de
             <div className="flex flex-col items-center">
 
               <Image alt="zoom" width={44} src={"/zoom-desk.svg"} height={44}></Image>
-              <p className="text-center text-[9.79px] font-bold lg:text-[20.6px]">Suporte ao vivo no ZOOM</p>
+              <p className="text-center text-[9.79px] font-bold lg:text-[20.6px]">Suporte quinzenal no ZOOM</p>
             </div>
               <div className="flex flex-col items-center">
 
