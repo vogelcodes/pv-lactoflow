@@ -97,17 +97,25 @@ const Home: NextPage = () => {
           <h1 hidden className="text-center text-5xl font-extrabold tracking-tight text-cream sm:text-[5rem]">
             Lacto<span className="text-green">Flow</span>{" "}
           </h1>
-          <h1 className="sm:w-2/3 uppercase font-extrabold text-cream text-[18px] sm:text-[31.25px] text-center mt-6 leading-[29px] sm:leading-[36px] tracking-[-25] mb-[14.4px] px-4 sm:px-0">
-            Aprenda como <span className="text-red text-[25px] sm:text-[35px]">aumentar a sua produção</span> de leite e ofereça o <span className="text-green text-[25px] sm:text-[35px]">melhor alimento do mundo</span> ao seu bebê.
-          </h1>
-          <p className="sm:mt-7 lg:mt-5 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center px-4 sm:px-2">
-            Nesse vídeo eu te ensino estratégias para começar a aumentar a sua produção de leite <span className="text-red uppercase text-[24px]">hoje mesmo.</span></p>
+          <h1 className="sm:w-2/3 uppercase font-extrabold text-balance text-cream text-[18px] sm:text-[31.25px] text-center mt-6 leading-[29px] sm:leading-[36px] tracking-[-25] mb-[14.4px] px-4 sm:px-0">
+            <span className="text-red text-[25px] sm:text-[35px]">Aumente a sua produção</span><br/> de leite materno
+            <p className="mt-4">
+              ofereça o <span className="text-green text-[25px] sm:text-[35px]">melhor alimento do mundo</span> ao seu bebê
+              </p>
+            </h1>
+          
+          <div className="mt-4 flex flex-col items-center">
+
+          <p className="sm:mt-7 lg:mt-5 mb-4 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center px-4 sm:px-2">
+            <span className="text-red uppercase text-[24px]"> comece hoje mesmo</span></p>
             <div className="flex items-end">
-            <p className="mt-4 sm:mt-7 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
-          <span className="text-green text-[35px] uppercase">E mais: </span></p><Image className="animate-bounce ml-2" src="/arrow-down.svg" alt="one" height={36} width={36} />
+            {/* <p className="mt-4 sm:mt-7 font-bold text-[16.67px] lg:text-[18.75px] leading-[22.9px] tracking-[-25] text-center">
+          <span className="text-green text-[35px] uppercase">E mais: </span></p> */}
+          <Image className="animate-bounce ml-2" src="/arrow-down.svg" alt="one" height={36} width={36} />
+          </div>
             </div>
           
-            <div className="ml-4">
+            {/* <div className="ml-4">
             <div className="flex items-center gap-x-4 mt-4 lg:mt-6">
               <div><div className="relative w-[36px] h-[36px] ">
               <Image src="/1.svg" alt="one" height={36} width={36} />
@@ -129,7 +137,7 @@ const Home: NextPage = () => {
               <p className="font-medium text-[15.67px] lg:text-[16.75px] leading-[22.9px] tracking-[-25]">
                 As melhores técnicas para aumentar sua produção de leite materno</p>
             </div>
-            </div>
+            </div> */}
             {/* <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe> */}
             <div className="w-full aspect-video max-w-[22rem] lg:max-w-[53.25rem] my-8 mx-auto">
 
@@ -137,7 +145,7 @@ const Home: NextPage = () => {
                 id="eXp3-bclWPs"
                 title="Método LactoFlow"
                 poster="maxresdefault"
-
+                
                 />
                 </div>
             
