@@ -243,7 +243,7 @@ const Home: NextPage = () => {
                     'Conhecendo todo o funcionamento da "Fantástica Fábrica de Leite Materno" para uma produção de leite abundante.',
                     "Bê-a-bá da amamentação",
                     "Base sólida da Fantástica Fábrica de Leite Materno",
-                    "green"
+                    "bg-green"
                   ],
                   [
                     "D",
@@ -252,7 +252,7 @@ const Home: NextPage = () => {
                     'Identificando e eliminando todos os sabotadores da "Fantástica Fábrica de Leite Materno".',
                     "Os sabotadores da Fantástica Fábrica de Leite Materno",
                     "Oferta segura fora do peito da mãe",
-                    "red"
+                    "bg-red"
                   ],
                   [
                     "A",
@@ -261,7 +261,7 @@ const Home: NextPage = () => {
                     'Aprendendo as estratégias eficientes para maximizar a ação da "Fantástica Fábrica de Leite Materno" e ter uma produção de leite abundante.',
                     "Passo a passo para o aumento da produção de leite materno",
                     "O fluxo de uma amamentação segura",
-                    "cream"
+                    "bg-cream"
                   ],
                 ].map((i) => (
                   <div key={i[0]} className=" -ml-2 flex items-stretch">
@@ -277,7 +277,7 @@ const Home: NextPage = () => {
                         />
                       </div>
                     </div>
-                    <div className="-z-0 -ml-6 min-h-[8rem] w-4/5 rounded-l-md bg-cream p-2 pl-4 text-blue md:-ml-8 after:translate-x-2 after:bg-red">
+                    <div className="-z-0 -ml-6 min-h-[8rem] w-4/5 rounded-l-md bg-cream p-2 pl-4 text-blue md:-ml-8">
                       <div className="flex flex-col items-start justify-center gap-2">
                         <h1 className=" text-left font-extrabold uppercase">
                           {i[2]}
@@ -289,7 +289,7 @@ const Home: NextPage = () => {
                         </ul> */}
                       </div>
                     </div>
-                    <div className={`relative bg-${i[6]||""} brightness-75 w-3 rounded-r-md`}></div>
+                    <div className={`relative ${i[6]||""} brightness-[80%] w-3 rounded-r-md`}></div>
                   </div>
                 ))}
               </div>
