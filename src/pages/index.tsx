@@ -252,7 +252,7 @@ const Home: NextPage = () => {
                     'Identificando e eliminando todos os sabotadores da "Fantástica Fábrica de Leite Materno".',
                     "Os sabotadores da Fantástica Fábrica de Leite Materno",
                     "Oferta segura fora do peito da mãe",
-                    "red-300"
+                    "red"
                   ],
                   [
                     "A",
