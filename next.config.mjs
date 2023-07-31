@@ -8,7 +8,7 @@
 const config = {
   reactStrictMode: true,
   images: {
-    domains: ['www.facebook.com']
+    domains: ["www.facebook.com"],
   },
 
   /**

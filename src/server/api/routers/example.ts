@@ -18,19 +18,17 @@ export const exampleRouter = createTRPCRouter({
   getAll: publicProcedure.query(({ ctx }) => {
     return ctx.prisma.lead.findMany();
   }),
-  saveLead: publicProcedure.input(z.object(
-    {email: z.string(), phoneNumber: z.string()}
-  )).mutation(async ({ctx, input }) => {
+  saveLead: publicProcedure
+    .input(z.object({ email: z.string(), phoneNumber: z.string() }))
+    .mutation(async ({ ctx, input }) => {
       const lead = await ctx.prisma.lead.create({
         data: {
           email: input.email,
-          phone: input.phoneNumber
-        }
-      }
-        
-      )
-      return lead
-  }),
+          phone: input.phoneNumber,
+        },
+      });
+      return lead;
+    }),
 
   getSecretMessage: protectedProcedure.query(() => {
     return "you can now see this secret message!";
