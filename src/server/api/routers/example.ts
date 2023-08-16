@@ -26,7 +26,17 @@ export const exampleRouter = createTRPCRouter({
           email: input.email,
           phone: input.phoneNumber,
         },
+
       });
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbw72hugYvfvgDz18Ce4yxv9fU0XMtTcSmsgNV4My6rol2vvtN89OqiBlp7yGgDpAfHoDw/exec'
+      const formData = new FormData();
+      formData.append("email", input.email)
+      formData.append("phone", input.phoneNumber)
+      const gSheets = await fetch(scriptURL, { method: 'POST', headers: {
+      }, body: formData})
+      console.log(gSheets)
+
+
       return lead;
     }),
 
