@@ -18,7 +18,7 @@ export default {
       cream: "#fcfaef",
     },
     fontFamily: {
-      sans: ["Gotham", ...defaultTheme.fontFamily.sans],
+      sans: ['var(--font-gotham)'],
     },
     extend: {},
   },
