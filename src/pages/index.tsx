@@ -338,6 +338,8 @@ Explicação do método
           </div> */}
           {/* <CTA openModal={openModal} price /> */}
               <div onClick={openModal} className=" fixed right-5 bottom-5 cursor-pointer"><div className="relative w-[60px] h-[60px]"><span><Image width={60} height={60} alt="whats logo" src="/whatsapp-logo.svg" decoding="async" data-nimg="fill" /></span></div></div>
+              <div className="font-[gotham]">
+
           <Transition appear show={isOpen} as={Fragment}>
             <Dialog as="div" className="relative z-10 font-[gotham]" onClose={closeModal}>
               <Transition.Child
@@ -372,7 +374,7 @@ Explicação do método
                       </span>
                       <Dialog.Title
                         as="h3"
-                        className="text-2xl  leading-6 text-blue"
+                        className="text-2xl leading-6 text-blue"
                       >
                         Cadastre-se para receber nosso suporte especializado
                       </Dialog.Title>
@@ -386,7 +388,7 @@ Explicação do método
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="maeincrivel@email.com"
-                          />
+                            />
                           <label htmlFor="celular">Celular</label>
                           <PhoneInput
                             labels={ptBR}
@@ -394,18 +396,18 @@ Explicação do método
                             value={value}
                             defaultCountry="BR"
                             onChange={setValue}
-                          />
+                            />
                         </form>
                         <a
                           target="_blank"
                           href={`https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
                             value?.toString() || ""
                           }`}
-                        >
+                          >
                           <button
                             onClick={handleSubmit}
                             className="w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
-                          >
+                            >
                             Quero aumentar minha produção de leite
                           </button>
                         </a>
@@ -416,6 +418,7 @@ Explicação do método
               </div>
             </Dialog>
           </Transition>
+                            </div>
         </div>
     </>
   );
