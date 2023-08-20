@@ -22,7 +22,7 @@ const gotham = localFont({
     {
       path: '../styles/Gotham-Black.otf',
       weight: '700',
-      style: 'bolder',
+      style: 'extrabold',
     },
     
   ],
@@ -35,7 +35,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      <main className={`${gotham.variable} font-sans flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c] font-sans`}>
+      <main className={`${gotham.variable} flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c] font-sans`}>
         <Component {...pageProps} />
       </main>
 
