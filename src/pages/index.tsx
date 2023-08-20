@@ -338,10 +338,10 @@ Explicação do método
           </div> */}
           {/* <CTA openModal={openModal} price /> */}
               <div onClick={openModal} className=" fixed right-5 bottom-5 cursor-pointer"><div className="relative w-[60px] h-[60px]"><span><Image width={60} height={60} alt="whats logo" src="/whatsapp-logo.svg" decoding="async" data-nimg="fill" /></span></div></div>
-              <div className="font-[gotham]">
+              <div className="">
 
           <Transition appear show={isOpen} as={Fragment}>
-            <Dialog as="div" className="relative z-10 font-[gotham]" onClose={closeModal}>
+            <Dialog as="div" className="relative z-10" onClose={closeModal}>
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
