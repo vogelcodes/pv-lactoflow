@@ -35,6 +35,11 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
+      <style jsx global>{`
+        html {
+          font-family: ${gotham.style.fontFamily};
+        }
+      `}</style>
       <main className={`${gotham.variable} flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c] font-sans`}>
         <Component {...pageProps} />
       </main>
