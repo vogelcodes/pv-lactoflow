@@ -14,6 +14,8 @@ export default {
     colors: {
       green: "#76b1af",
       red: "#c6302c",
+      "red-100": "#F9B8AC",
+      "red-400": "#F55D4E",
       blue: "#122e49",
       cream: "#fcfaef",
     },

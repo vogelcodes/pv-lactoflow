@@ -114,7 +114,7 @@ const Home: NextPage = () => {
           </h1>
           <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[18px] font-extrabold uppercase leading-[29px] tracking-[-25] text-cream sm:w-2/3 sm:px-0 sm:text-[31.25px] sm:leading-[36px]">
             Aprenda como{" "}
-            <span className="text-[25px] text-red sm:text-[35px]">
+            <span className="text-[25px] text-red-400 sm:text-[35px]">
               aumentar a sua produção
             </span>{" "}
             de leite e ofereça o{" "}
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
           <p className="mx-auto w-[80%] max-w-[600px] text-center text-[16.67px] font-bold leading-[22.9px] tracking-[-25] sm:mt-7 sm:px-2 lg:mt-5 lg:text-[18.75px]">
             Nesse vídeo eu te ensino estratégias para começar a aumentar a sua
             produção de leite{" "}
-            <span className="text-[24px] uppercase text-red">hoje mesmo.</span>
+            <span className="text-[24px] uppercase text-red-400">hoje mesmo.</span>
           </p>
           <div className="flex  flex-col lg:flex-row items-center lg:items-baseline">
             <div className="flex items-center">
