@@ -33,7 +33,7 @@ export const exampleRouter = createTRPCRouter({
       formData.append("email", input.email)
       formData.append("phone", input.phoneNumber)
       formData.append('avatarUrl', lead.avatarUrl || "")
-      formData.append('data', lead.createdAt.toISOString() || "")
+      formData.append('data', new Date().toISOString() || "")
       const gSheets = await fetch(scriptURL, { method: 'POST', headers: {
       }, body: formData})
       console.log(lead)
