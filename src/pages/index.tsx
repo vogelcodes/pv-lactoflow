@@ -95,7 +95,7 @@ const Home: NextPage = () => {
         }}
       />
       <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c] font-sans">
-        <div className="flex flex-col items-center justify-center bg-blue py-2 text-cream sm:py-10">
+        <div className="flex flex-col items-center justify-center bg-blue py-2 text-cream sm:py-4">
           <div className="w-[180px] sm:w-[300px]">
             <Image
               src="/logo-portrait.svg"
@@ -129,18 +129,23 @@ const Home: NextPage = () => {
             produção de leite{" "}
             <span className="text-[24px] uppercase text-red">hoje mesmo.</span>
           </p>
-          <div className="flex items-end">
+          <div className="flex  flex-col lg:flex-row items-center lg:items-baseline">
+            <div className="flex items-center">
+
             <p className="mt-4 text-center text-[16.67px] font-bold leading-[22.9px] tracking-[-25] sm:mt-7 lg:text-[18.75px]">
               <span className="text-[35px] uppercase text-green">E mais: </span>
             </p>
+            <div className="lg:-rotate-90 lg:-mb-4 m-2">
+
             <Image
               className="ml-2 animate-bounce"
               src="/arrow-down.svg"
               alt="one"
               height={36}
               width={36}
-            />
-          </div>
+              />
+              </div>
+              </div>
 
           <div className="mx-auto w-[70%] max-w-[400px]">
             <div className="mt-4 flex items-center gap-x-4 lg:mt-6">
@@ -150,7 +155,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <p className="text-[15.67px] font-medium leading-[22.9px] tracking-[-25] lg:text-[16.75px]">
-                Quais os benefícios da amamentação?
+                Como amamentar protege a saúde do seu bebê?
               </p>
             </div>
             <div className="mt-6 flex items-center gap-x-4 lg:mt-4">
@@ -160,7 +165,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <p className="text-[15.67px] font-medium leading-[22.9px] tracking-[-25] lg:text-[16.75px]">
-                Como fazer uma ordenha manual?
+                Como fazer uma ordenha manual da forma correta e não precisar de uma bomba tira-leite?
               </p>
             </div>
             <div className="mt-6 flex items-center gap-x-4 lg:mt-4">
@@ -170,8 +175,9 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <p className="text-[15.67px] font-medium leading-[22.9px] tracking-[-25] lg:text-[16.75px]">
-                As melhores técnicas para aumentar sua produção de leite materno
+              Como uma meia velha pode aumentar a sua produção de leite (e mais 3 estratégias infalíveis).
               </p>
+            </div>
             </div>
           </div>
           {/* <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe> */}
@@ -327,8 +333,12 @@ Explicação do método
             label="Também quero esses resultados"
             price
           />
+          {/* <div className="mx-auto max-w-[19.875rem] lg:max-w-[53.25rem] ">
+              <div className="w-full border-2 border-[#4E859E] bg-[#EDF4FA] lg:bg-[#EDF4FA] rounded-lg flex gap-x-4 py-9 lg:py-6 px-3 mt-10 items-center justify-center"><div className="relative w-[32px] h-[30px]"><span><img alt="" src="https://vendatodosantodia.com.br//imgPg/icon-alert-blue.svg?auto=format&amp;fit=max&amp;w=3840" decoding="async" data-nimg="fill"  loading="lazy"/></span></div><p className="text-[16.17px] text-[#4E859E] font-regular max-w-[80%]">Com o Appbumper é mais fácil fazer o que tem que ser feito e do jeito que tem que ser feito. É quase impossível errar e você nunca fica perdido, sem saber o que fazer.</p>
+              </div>
+          </div> */}
           {/* <CTA openModal={openModal} price /> */}
-
+              <div onClick={openModal} className=" fixed right-5 bottom-5 cursor-pointer"><div className="relative w-[60px] h-[60px]"><span><Image width={60} height={60} alt="whats logo" src="/whatsapp-logo.svg" decoding="async" data-nimg="fill" /></span></div></div>
           <Transition appear show={isOpen} as={Fragment}>
             <Dialog as="div" className="relative z-10" onClose={closeModal}>
               <Transition.Child
@@ -390,7 +400,7 @@ Explicação do método
                         <a
                           target="_blank"
                           href={`https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
-                            value?.toString().slice(3) || ""
+                            value?.toString() || ""
                           }`}
                         >
                           <button
