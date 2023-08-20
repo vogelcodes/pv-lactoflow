@@ -45,7 +45,7 @@ const Home: NextPage = () => {
           content="Método para aumentar a produção de leite materno"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.cdnfonts.com/css/gotham-6" rel="stylesheet" />
+        {/* <link href="https://fonts.cdnfonts.com/css/gotham-6" rel="stylesheet" /> */}
       </Head>
       <Script
         id="hj"
@@ -94,7 +94,6 @@ const Home: NextPage = () => {
            gtag('config', 'G-6T6HHESNG2');`,
         }}
       />
-      <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c] font-sans">
         <div className="flex flex-col items-center justify-center bg-blue py-2 text-cream sm:py-4">
           <div className="w-[180px] sm:w-[300px]">
             <Image
@@ -418,7 +417,6 @@ Explicação do método
             </Dialog>
           </Transition>
         </div>
-      </main>
     </>
   );
 };
