@@ -337,7 +337,7 @@ Explicação do método
               </div>
           </div> */}
           {/* <CTA openModal={openModal} price /> */}
-              <div onClick={openModal} className=" fixed right-5 bottom-5 cursor-pointer"><div className="relative w-[60px] h-[60px]"><span><Image width={60} height={60} alt="whats logo" src="/whatsapp-logo.svg" decoding="async" data-nimg="fill" /></span></div></div>
+              <div className=" fixed right-5 bottom-5 cursor-pointer"><div className="relative w-[60px] h-[60px]"><a href="https://wa.me/5521986388688?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow."><span><Image width={60} height={60} alt="whats logo" src="/whatsapp-logo.svg" decoding="async" data-nimg="fill" /></span></a></div></div>
               <div className="">
 
           <Transition appear show={isOpen} as={Fragment}>
@@ -406,7 +406,7 @@ Explicação do método
                           >
                           <button
                             onClick={handleSubmit}
-                            className="w-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#46B21E] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
+                            className="mx-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
                             >
                             Quero aumentar minha produção de leite
                           </button>
