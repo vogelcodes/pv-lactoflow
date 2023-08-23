@@ -184,7 +184,7 @@ const Home: NextPage = () => {
 
           <section>
             <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
-              O método LactoFlow se divide em 3 pilares:
+              O método LactoFlow®️ se divide em 3 pilares:
             </h1>
             <div className="mx-2 sm:p-2">
               <div className="flex flex-col gap-2">
@@ -297,7 +297,7 @@ Explicação do método
 </section> */}
           <section>
             <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
-              Depoimento das alunas que seguiram o método LactoFlow:
+              Depoimento das alunas que seguiram o método LactoFlow®️:
             </h1>
             <div className="flex flex-col items-center gap-2 md:grid md:grid-cols-3">
               {[1, 2, 3, 4, 5, 6].map((number) => {

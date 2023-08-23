@@ -13,7 +13,7 @@ const About = () => {
                 Quem é Carolina Procaci?               
             </Header1>
 
-            <ul className="flex flex-col gap-2 m-2">
+            <ul className="flex flex-col text-xl gap-2 m-2">
             <div className="flex gap-2">🎓 <li>Carolina Procaci é biomédica formada na Universidade Federal do Estado do Rio de Janeiro</li></div>
             <div className="flex gap-2">🏥 <li>Consultora em amamentação pelo único curso reconhecido pelo MEC</li></div>
             <div className="flex gap-2">👩‍👧‍👦 <li>Mãe de 2 filhos e lactante há mais de 5 anos.</li></div>
@@ -26,11 +26,11 @@ const About = () => {
   <div className="card-body">
             <div className="max-w-2xl m-2 flex flex-col gap-4">
             <p>
-Desde a sua primeira experiência com a amamentação, em 2018, desenvolveu estratégias pessoais para aumentar a sua produção de leite. E assim, enquanto amamentava de forma exclusiva seu filho, conseguiu montar um estoque de leite materno para ele e ainda doar <span className="uppercase underline underline-offset-1 decoration-dashed">semanalmente</span> cerca de 1 litro para um banco de leite humano.
+Desde a sua primeira experiência com a amamentação, em 2018, desenvolveu estratégias pessoais para aumentar a sua produção de leite. E assim, enquanto amamentava de forma exclusiva seu filho, conseguiu montar um estoque de leite materno para ele e ainda doar <span className="uppercase underline underline-offset-4 decoration-dashed">semanalmente</span> cerca de 1 litro para um banco de leite humano.
 
             </p>             
             <p>
-Com as estratégias pessoais desenvolvidas e com a capacitação profissional na área de baixa produção de leite, desenvolveu  o <span className="text-2xl text-red">Método LactoFlow</span>: um passo a passo estratégico e simples do que é necessário fazer para aumentar a produção de leite e não precisar de fórmula infantil.
+Com as estratégias pessoais desenvolvidas e com a capacitação profissional na área de baixa produção de leite, desenvolveu  o <span className="text-2xl text-red">Método LactoFlow®️</span>: um passo a passo estratégico e simples do que é necessário fazer para aumentar a produção de leite e não precisar de fórmula infantil.
             </p> 
             </div>
             </div>

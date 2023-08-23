@@ -5,11 +5,19 @@ const Furadeira = ()=> {
     return (
         <section>
             <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
-              O método LactoFlow se divide em 3 pilares:
+              O método LactoFlow®️ se divide em 3 pilares:
             </h1>
             <div className="mx-2 sm:p-2">
               
               <div className="ml-6 flex max-w-3xl flex-col  gap-2 md:ml-8">
+                          <div className='mx-auto'>
+                      <Image
+                          alt='metodo'
+                          src={'/furadeira/furadeira-crop.webp'}
+                          width={600}
+                          height={600}
+                          />
+                          </div>
                 {[
                   [
                     "C",
@@ -18,7 +26,7 @@ const Furadeira = ()=> {
                     'Conhecendo todo o funcionamento da "Fantástica Fábrica de Leite Materno" para uma produção de leite abundante.',
                     "Bê-a-bá da amamentação",
                     "Base sólida da Fantástica Fábrica de Leite Materno",
-                    "bg-green"
+                    "bg-blue-fura"
                   ],
                   [
                     "D",
@@ -27,7 +35,7 @@ const Furadeira = ()=> {
                     'Identificando e eliminando todos os sabotadores da "Fantástica Fábrica de Leite Materno".',
                     "Os sabotadores da Fantástica Fábrica de Leite Materno",
                     "Oferta segura fora do peito da mãe",
-                    "bg-red"
+                    "bg-red-fura"
                   ],
                   [
                     "A",
@@ -36,7 +44,7 @@ const Furadeira = ()=> {
                     'Aprendendo as estratégias eficientes para maximizar a ação da "Fantástica Fábrica de Leite Materno" e ter uma produção de leite abundante.',
                     "Passo a passo para o aumento da produção de leite materno",
                     "O fluxo de uma amamentação segura",
-                    "bg-cream"
+                    "bg-green-fura"
                   ],
                 ].map((i) => (
                   <div key={i[0]} className=" -ml-2 flex items-stretch">

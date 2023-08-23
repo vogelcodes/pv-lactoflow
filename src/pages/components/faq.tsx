@@ -7,10 +7,10 @@ const faq = [
     ['Meu peito está sempre murcho, como vou conseguir aumentar a produção?','Peito murcho não significa que não tem leite! Significa apenas que essa produção está regulada de uma forma que não fica leite parado em excesso no peito. Com as estratégias corretas é completamente possível aumentar e muito essa produção.'],
     ['É possível voltar a trabalhar e continuar amamentando?','Sim, e eu explico exatamente como conseguir no módulo 6 do curso.'],
     ['Por onde começar?','Na plataforma temos um módulo chamado Comece por Aqui! Ali explicamos sobre como aproveitar e assistir as aulas da melhor maneira possível.'],
-    ['Quanto tempo de acesso eu terei?','Ao adquirir o Método LactoFlow, você passa a ter acesso a todo esse conteúdo por 2 anos.'],
-    ['Quanto tempo demora para eu ter resultado?','Isso varia caso a caso. Tem mulheres que vão notar um aumento já no primeiro dia e outras depois de 1 mês mais ou menos. Depende de como os eu corpo vai reagir aos estímulos e de como você vai ser fiel ao passo a passo ensinado.'],
+    ['Quanto tempo de acesso eu terei?','Ao adquirir o Método LactoFlow®️, você passa a ter acesso a todo esse conteúdo por 2 anos.'],
+    ['Quanto tempo demora para eu ter resultado?','Isso varia caso a caso. Tem mulheres que vão notar um aumento já no primeiro dia e outras depois de 1 mês mais ou menos. Depende de como o seu corpo vai reagir aos estímulos e de como você vai ser fiel ao passo a passo ensinado.'],
     ['Como funciona a garantia?','Você pode cancelar 21 dias a partir da compra. Caso se arrependa, é só pedir o reembolso na própria plataforma da Hotmart sem nenhuma exigência ou burocracia. Ah e o reembolso é integral.'], 
-    ['Tenho outras dúvidas, onde posso perguntar sobre elas?','Basta entrar em contato pelo <a class="link decoration-dashed text-blue" href="https://wa.me/5521986388688?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow.">Whatspp</a> que responderemos o mais rápido possível.']
+    ['Tenho outras dúvidas, onde posso perguntar sobre elas?','Basta entrar em contato pelo <a class="link decoration-dashed text-blue" href="https://wa.me/5521986388688?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow®️.">Whatspp</a> que responderemos o mais rápido possível.']
 
 ]
 

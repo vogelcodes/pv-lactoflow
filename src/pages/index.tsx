@@ -44,7 +44,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>LactoFlow</title>
+        <title>LactoFlow®️</title>
         <meta
           name="description"
           content="Método para aumentar a produção de leite materno"
@@ -188,7 +188,7 @@ const Home: NextPage = () => {
           <div className="mx-auto my-8 aspect-video w-full max-w-[22rem] lg:max-w-[53.25rem]">
             <LiteYouTubeEmbed
               id="eXp3-bclWPs"
-              title="Método LactoFlow"
+              title="Método LactoFlow®️"
               poster="maxresdefault"
             />
           </div>
@@ -205,7 +205,7 @@ Explicação do método
 </section> */}
           <section>
             <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
-              Depoimento das alunas que seguiram o método LactoFlow:
+              Depoimento das alunas que seguiram o método LactoFlow®️:
             </h1>
             <div className="flex flex-col items-center gap-4 md:grid lg:grid-cols-3 md:grid-cols-2">
               {[1, 2, 3, 4, 5, 6].map((number) => {
@@ -247,7 +247,7 @@ Explicação do método
               </div>
           </div> */}
           {/* <CTA openModal={openModal} price /> */}
-              <div className=" fixed right-5 bottom-5 cursor-pointer"><div className="relative w-[60px] h-[60px]"><a target="_blank" href="https://wa.me/5521986388688?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow."><span><Image width={60} height={60} alt="whats logo" src="/whatsapp-logo.svg" decoding="async" data-nimg="fill" /></span></a></div></div>
+              <div className=" fixed right-5 bottom-5 cursor-pointer"><div className="relative w-[60px] h-[60px]"><a target="_blank" href="https://wa.me/5521986388688?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow®️."><span><Image width={60} height={60} alt="whats logo" src="/whatsapp-logo.svg" decoding="async" data-nimg="fill" /></span></a></div></div>
               <div className="">
 
           <Transition appear show={isOpen} as={Fragment}>

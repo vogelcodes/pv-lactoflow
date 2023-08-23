@@ -43,6 +43,11 @@ const Bonus = () => {
         height={44}
         ></Image>
 <p>Comunidade exclusiva de alunas onde você tem contato direto a mim e às demais alunas do método</p>
+<Image alt="telegram-comunidade"
+    width={260}
+    height={500}
+    src={"/comunidade.webp"}
+    />
 </div>
 </div>
         </div>
