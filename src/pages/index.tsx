@@ -12,6 +12,11 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import { api } from "@/utils/api";
 import CTA from "./components/cta";
+import About from "./components/about";
+import Furadeira from "./components/furadeira";
+import Faq from "./components/faq";
+import Footer from "./components/footer";
+import Bonus from "./components/bonus";
 
 const Home: NextPage = () => {
   type E164Number = string | undefined;
@@ -191,115 +196,7 @@ const Home: NextPage = () => {
           <CTA openModal={openModal} />
           {/* <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image> */}
 
-          <section>
-            <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
-              O método LactoFlow se divide em 3 pilares:
-            </h1>
-            <div className="mx-2 sm:p-2">
-              <div className=" hidden flex-col gap-2">
-                <Image src={"/defesa.svg"} alt="D" width={44} height={44} />
-                {[
-                  [
-                    "C",
-                    "bg-[#14A3FE]",
-                    "Conhecimento de Base",
-                    'Conhecendo todo o funcionamento da "Fantástica Fábrica de Leite Materno" para uma produção de leite abundante.',
-                  ],
-                  [
-                    "D",
-                    "bg-[#FF3131]",
-                    "Defesa Infalível",
-                    'Identificando e eliminando todos os sabotadores da "Fantástica Fábrica de Leite Materno".',
-                  ],
-                  [
-                    "A",
-                    "bg-[#2ADCAA]",
-                    "Ação Estratégica",
-                    'Aprendendo as estratégias eficientes para maximizar a ação da "Fantástica Fábrica de Leite Materno" e ter uma produção de leite abundante.',
-                  ],
-                ].map((i) => (
-                  <div key={i[0]} className=" flex items-center">
-                    <div className="flex w-1/5 items-center justify-center">
-                      <div
-                        className={`${
-                          i[1] || ""
-                        } dro flex h-12 w-12 items-center justify-center self-center rounded-full text-center text-4xl font-extrabold drop-shadow-lg
-                     xs:h-16 xs:w-16 md:h-32 md:w-32 md:text-6xl`}
-                        key={i[0]}
-                      >
-                        <span className="-translate-x-0.1 w-1/2 -translate-y-0.5 text-center leading-tight">
-                          {i[0]}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="ml-3 min-h-[8rem] w-4/5 rounded-md bg-cream p-2 text-blue">
-                      <h1 className=" font-bold uppercase">{i[2]}</h1>
-                      <p className="ml-1">{i[3]}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="ml-6 flex max-w-3xl flex-col  gap-2 md:ml-8">
-                {[
-                  [
-                    "C",
-                    "/conhecimento2.svg",
-                    "Conhecimento de Base",
-                    'Conhecendo todo o funcionamento da "Fantástica Fábrica de Leite Materno" para uma produção de leite abundante.',
-                    "Bê-a-bá da amamentação",
-                    "Base sólida da Fantástica Fábrica de Leite Materno",
-                    "bg-green"
-                  ],
-                  [
-                    "D",
-                    "/defesa.svg",
-                    "Defesa Infalível",
-                    'Identificando e eliminando todos os sabotadores da "Fantástica Fábrica de Leite Materno".',
-                    "Os sabotadores da Fantástica Fábrica de Leite Materno",
-                    "Oferta segura fora do peito da mãe",
-                    "bg-red"
-                  ],
-                  [
-                    "A",
-                    "/acao.svg",
-                    "Ação Estratégica",
-                    'Aprendendo as estratégias eficientes para maximizar a ação da "Fantástica Fábrica de Leite Materno" e ter uma produção de leite abundante.',
-                    "Passo a passo para o aumento da produção de leite materno",
-                    "O fluxo de uma amamentação segura",
-                    "bg-cream"
-                  ],
-                ].map((i) => (
-                  <div key={i[0]} className=" -ml-2 flex items-stretch">
-                    <div className="flex w-1/5 items-center justify-center">
-                      {/* <div className="w-12 z-10 h-12 xs:w-16 xs:h-16 md:w-32 md:h-32"> */}
-                      <div className="z-10 h-[min(10vw,32)] w-[min(10vw,32)]">
-                        <Image
-                          className=""
-                          src={`${i[1] || ""}`}
-                          alt="D"
-                          width={128}
-                          height={128}
-                        />
-                      </div>
-                    </div>
-                    <div className="-z-0 -ml-6 min-h-[8rem] w-4/5 rounded-l-md bg-cream p-2 pl-4 text-blue md:-ml-8">
-                      <div className="flex flex-col items-start justify-center gap-2">
-                        <h1 className=" text-left font-extrabold uppercase">
-                          {i[2]}
-                        </h1>
-                        <p className="ml-1 text-left font-normal">{i[3]}</p>
-                        {/* <ul className="text-center">
-                          <li>{i[4]}</li>
-                          <li>{i[5]}</li>
-                        </ul> */}
-                      </div>
-                    </div>
-                    <div className={`relative ${i[6]||""} brightness-[80%] w-3 rounded-r-md`}></div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
+          <Furadeira />
           {/* <section>
 
 <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
@@ -315,7 +212,7 @@ Explicação do método
                 return (
                   <div className="" key={number}>
                     <Image
-                      className="rounded-xl mx-auto max-w-[300px]"
+                      className="rounded-xl mx-auto max-w-[250px]"
                       key={number}
                       width={300}
                       height={500}
@@ -331,7 +228,13 @@ Explicação do método
             openModal={openModal}
             label="Também quero esses resultados"
             price
-          />
+            />
+          <About/>
+          <Faq />
+          <Bonus/>
+          <Footer>
+          Copyright © 2023. Todos os direitos reservados.
+          </Footer>
           {/* <div className="mx-auto max-w-[19.875rem] lg:max-w-[53.25rem] ">
               <div className="w-full border-2 border-[#4E859E] bg-[#EDF4FA] lg:bg-[#EDF4FA] rounded-lg flex gap-x-4 py-9 lg:py-6 px-3 mt-10 items-center justify-center"><div className="relative w-[32px] h-[30px]"><span><img alt="" src="https://vendatodosantodia.com.br//imgPg/icon-alert-blue.svg?auto=format&amp;fit=max&amp;w=3840" decoding="async" data-nimg="fill"  loading="lazy"/></span></div><p className="text-[16.17px] text-[#4E859E] font-regular max-w-[80%]">Com o Appbumper é mais fácil fazer o que tem que ser feito e do jeito que tem que ser feito. É quase impossível errar e você nunca fica perdido, sem saber o que fazer.</p>
               </div>
