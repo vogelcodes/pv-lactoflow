@@ -337,7 +337,7 @@ Explicação do método
               </div>
           </div> */}
           {/* <CTA openModal={openModal} price /> */}
-              <div className=" fixed right-5 bottom-5 cursor-pointer"><div className="relative w-[60px] h-[60px]"><a href="https://wa.me/5521986388688?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow."><span><Image width={60} height={60} alt="whats logo" src="/whatsapp-logo.svg" decoding="async" data-nimg="fill" /></span></a></div></div>
+              <div className=" fixed right-5 bottom-5 cursor-pointer"><div className="relative w-[60px] h-[60px]"><a target="_blank" href="https://wa.me/5521986388688?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow."><span><Image width={60} height={60} alt="whats logo" src="/whatsapp-logo.svg" decoding="async" data-nimg="fill" /></span></a></div></div>
               <div className="">
 
           <Transition appear show={isOpen} as={Fragment}>
