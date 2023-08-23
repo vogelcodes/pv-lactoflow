@@ -238,7 +238,9 @@ Explicação do método
             price
             />
           <Footer>
-          Copyright © 2023. Todos os direitos reservados.
+          <div className="flex flex-col sm:flex-row text-center sm:text-left">
+            <span>Copyright © 2023</span><span className="hidden sm:block mx-3">|</span><span>Todos os direitos reservados.</span>
+          </div>
           </Footer>
           {/* <div className="mx-auto max-w-[19.875rem] lg:max-w-[53.25rem] ">
               <div className="w-full border-2 border-[#4E859E] bg-[#EDF4FA] lg:bg-[#EDF4FA] rounded-lg flex gap-x-4 py-9 lg:py-6 px-3 mt-10 items-center justify-center"><div className="relative w-[32px] h-[30px]"><span><img alt="" src="https://vendatodosantodia.com.br//imgPg/icon-alert-blue.svg?auto=format&amp;fit=max&amp;w=3840" decoding="async" data-nimg="fill"  loading="lazy"/></span></div><p className="text-[16.17px] text-[#4E859E] font-regular max-w-[80%]">Com o Appbumper é mais fácil fazer o que tem que ser feito e do jeito que tem que ser feito. É quase impossível errar e você nunca fica perdido, sem saber o que fazer.</p>

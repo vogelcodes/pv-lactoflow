@@ -25,8 +25,9 @@ const Bonus = () => {
         ></Image>
     <p className="text-lg text-center">2 encontros ao vivo todos os meses no Zoom</p>
 </div>
-    <p className="ml-2">Uma Oficina com os mais diversos temas da maternidade
-     e um encontro para tiras dúvidas do método</p>
+    <li className="">Uma Oficina com os mais diversos temas da maternidade</li>
+     <li>Um encontro para tirar as dúvidas do método</li>
+
 
   </div>
 </div>
