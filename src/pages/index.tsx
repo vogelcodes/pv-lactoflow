@@ -232,6 +232,11 @@ Explicação do método
           <About/>
           <Faq />
           <Bonus/>
+          <CTA
+            openModal={openModal}
+            label="Quero garantir meu bônus"
+            price
+            />
           <Footer>
           Copyright © 2023. Todos os direitos reservados.
           </Footer>

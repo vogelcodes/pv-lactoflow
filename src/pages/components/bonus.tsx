@@ -11,19 +11,19 @@ const Bonus = () => {
             <p className="text-center">
             Além de todas as aulas gravadas, você ainda ganha 2 bônus:
             </p>
-<div className="flex flex-col items-center gap-2 my-4">
+<div className="flex flex-col items-center mx-auto max-w-lg gap-2 my-4">
 
-<div className="card bg-base-100 shadow-xl">
+<div className="card bg-base-100 shadow-lg">
   <div className="card-body">
 
-<div className="flex items-center gap-2">
+<div className="flex flex-col items-center gap-2">
     <Image
         alt="zoom"
         width={44}
         src={"/zoom-desk.svg"}
         height={44}
         ></Image>
-    <p>2 encontros ao vivo todos os meses</p>
+    <p className="text-lg text-center">2 encontros ao vivo todos os meses no Zoom</p>
 </div>
     <p className="ml-2">Uma Oficina com os mais diversos temas da maternidade
      e um encontro para tiras dúvidas do método</p>
@@ -31,10 +31,10 @@ const Bonus = () => {
   </div>
 </div>
 
-<div className="card bg-base-100 shadow-xl">
+<div className="card bg-base-100 shadow-lg">
   <div className="card-body">
 
-     <div className="flex items-center gap-1">
+     <div className="flex items-center flex-col gap-2">
     <Image
         alt="wpp"
         width={44}
