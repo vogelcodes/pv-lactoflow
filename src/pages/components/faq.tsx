@@ -2,8 +2,8 @@ import Header1 from "./h1";
 
 const faq = [
     ["Preciso de uma bomba?","Não! É completamente possível estimular a produção de leite apenas com uma ordenha manual, desde que ela seja feita da forma correta (do jeitinho que eu expliquei no vídeo lá em cima)."],
-    ['Meu bebê precisa de fórmula, mesmo assim consigo aumentar a produção?','Sim! Você pode aumentar a sua produção de leite até um determinando momento em que a fórmula passa a não ser mais necessária. Eu explico direitinho sobre isso no curso.'],
-    ['Meu bebê mama o tempo todo, como vou produzir mais leite? ','Entendendo como funciona a Fantástica Fábrica de Leite Materno: quanto mais estímulo a gente der pro corpo do bebê mamando ou de uma ordenha, mais o corpo entende que precisa produzir leite e mais leite o corpo produz.'],
+    ['Meu bebê precisa de fórmula, mesmo assim consigo aumentar a produção?','Sim! Você pode aumentar a sua produção de leite até um determinado momento em que a fórmula passa a não ser mais necessária. Eu explico direitinho sobre isso no curso.'],
+    ['Meu bebê mama o tempo todo, como vou produzir mais leite? ','Entendendo como funciona a Fantástica Fábrica de Leite Materno: quanto mais estímulos dermos para o nosso corpo com o bebê mamando ou com uma ordenha, mais o corpo entende que precisa produzir leite e mais leite o corpo produz.'],
     ['Meu peito está sempre murcho, como vou conseguir aumentar a produção?','Peito murcho não significa que não tem leite! Significa apenas que essa produção está regulada de uma forma que não fica leite parado em excesso no peito. Com as estratégias corretas é completamente possível aumentar e muito essa produção.'],
     ['É possível voltar a trabalhar e continuar amamentando?','Sim, e eu explico exatamente como conseguir no módulo 6 do curso.'],
     ['Por onde começar?','Na plataforma temos um módulo chamado Comece por Aqui! Ali explicamos sobre como aproveitar e assistir as aulas da melhor maneira possível.'],
