@@ -4,7 +4,7 @@ import Header1 from "./h1";
 
 const Bonus = () => {
     return (
-        <section className="px-4 w-full bg-cream text-blue mt-4">
+        <section className="px-4 w-full text-2xl bg-cream text-blue mt-4">
             <Header1>
                 Bônus              
             </Header1>
@@ -23,10 +23,10 @@ const Bonus = () => {
         src={"/zoom-desk.svg"}
         height={44}
         ></Image>
-    <p className="text-lg text-center">2 encontros ao vivo todos os meses no Zoom</p>
+    <p className="text-2xl text-center">2 encontros ao vivo todos os meses no Zoom</p>
 </div>
-    <li className="">Uma Oficina com os mais diversos temas da maternidade</li>
-     <li>Um encontro para tirar as dúvidas do método</li>
+    <li className="text-lg">Uma Oficina com os mais diversos temas da maternidade</li>
+     <li className="text-lg">Um encontro para tirar as dúvidas do método</li>
 
 
   </div>
@@ -42,7 +42,7 @@ const Bonus = () => {
         src={"/telegram.svg"}
         height={44}
         ></Image>
-<p>Comunidade exclusiva de alunas onde você tem contato direto a mim e às demais alunas do método</p>
+<p className="text-center">Comunidade exclusiva de alunas onde você tem contato direto a mim e às demais alunas do método</p>
 <Image alt="telegram-comunidade"
     width={260}
     height={500}
