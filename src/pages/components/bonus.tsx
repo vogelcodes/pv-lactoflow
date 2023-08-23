@@ -39,7 +39,7 @@ const Bonus = () => {
     <Image
         alt="wpp"
         width={44}
-        src={"/whatsapp-svgrepo-com.svg"}
+        src={"/telegram.svg"}
         height={44}
         ></Image>
 <p>Comunidade exclusiva de alunas onde você tem contato direto a mim e às demais alunas do método</p>

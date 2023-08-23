@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import Header1 from "./h1";
 
 const faq = [
@@ -16,10 +14,9 @@ const faq = [
 
 ]
 
-const Accordion = ({ question="Q", answer="A", i} : {
+const Accordion = ({ question="Q", answer="A"} : {
     question: string,
     answer: string,
-    i: number
 }) => (<div className="collapse collapse-arrow bg-green">
 <input type="checkbox" /> 
 <div className="collapse-title text-xl sm:text-2xl text-blue font-medium">
@@ -39,7 +36,7 @@ const Faq = () => {
             </Header1>
             <div className="max-w-3xl mx-auto flex flex-col gap-2">
 
-            {faq.map((q,i)=> <Accordion key={i} i={i} question={q[0]||""} answer={q[1]||""}/>)}
+            {faq.map((q,i)=> <Accordion key={i} question={q[0]||""} answer={q[1]||""}/>)}
 
             </div>
             
