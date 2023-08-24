@@ -10,7 +10,7 @@ const Furadeira = ()=> {
             <div className="mx-2 sm:p-2">
               
               <div className="ml-6 flex max-w-3xl flex-col  gap-2 md:ml-8">
-                          <div className='mx-auto'>
+                          <div className='-ml-6 mx-auto '>
                       <Image
                           alt='metodo'
                           src={'/furadeira/furadeira-crop.webp'}

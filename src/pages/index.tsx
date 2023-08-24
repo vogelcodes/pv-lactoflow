@@ -185,7 +185,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           {/* <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe> */}
-          <div className="mx-auto my-8 aspect-video w-full max-w-[22rem] lg:max-w-[53.25rem]">
+          <div className="mx-auto my-8 aspect-video w-full lg:max-w-[53.25rem]">
             <LiteYouTubeEmbed
               id="eXp3-bclWPs"
               title="Método LactoFlow®️"
