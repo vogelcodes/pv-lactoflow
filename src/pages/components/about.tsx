@@ -6,7 +6,7 @@ const About = () => {
     return (
         <section className="p-4">
             <div className="flex max-w-2xl flex-col gap-3 items-center">
-            <Image width={720} height={0} alt="Carolina Procaci" className="rounded-md" src={"/seo-2.webp"}/>
+            <Image width={720} height={0} alt="Carolina Procaci" className="rounded-md" src={"/carol-close-md.webp"}/>
             <div className="card bg-cream max-w-2xl shadow-lg text-blue">
   <div className="card-body">
             <Header1>
