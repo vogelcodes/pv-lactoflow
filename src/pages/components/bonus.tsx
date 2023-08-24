@@ -13,7 +13,7 @@ const Bonus = () => {
             </p>
 <div className="flex flex-col items-center mx-auto max-w-lg gap-2 my-4">
 
-<div className="card bg-base-100 shadow-lg">
+<div className="card bg-neutral-100 shadow-lg">
   <div className="card-body">
 
 <div className="flex flex-col items-center gap-2">
@@ -32,7 +32,7 @@ const Bonus = () => {
   </div>
 </div>
 
-<div className="card bg-base-100 shadow-lg">
+<div className="card bg-neutral-100 shadow-lg">
   <div className="card-body">
 
      <div className="flex items-center flex-col gap-2">
