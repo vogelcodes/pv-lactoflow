@@ -9,9 +9,10 @@ const Furadeira = ()=> {
             </h1>
             <div className="mx-2 sm:p-2">
               
-              <div className="ml-6 flex max-w-3xl flex-col  gap-2 md:ml-8">
-                          <div className='-ml-6 mx-auto '>
+              <div className="flex max-w-3xl flex-col  gap-2">
+                          <div className='mx-auto '>
                       <Image
+                          className=''
                           alt='metodo'
                           src={'/furadeira/furadeira-crop.webp'}
                           width={600}

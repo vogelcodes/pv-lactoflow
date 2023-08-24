@@ -12,7 +12,7 @@ const CTA = ({
   label = "Quero aumentar minha produção de leite",
 }: CtaProps) => {
   return (
-    <div className="mt-2 flex w-full flex-col items-center rounded-sm bg-cream text-blue">
+    <div className="flex w-full flex-col items-center rounded-sm bg-cream text-blue">
       <div className="mt-5 w-full text-center">
         {/* <a href="https://instagram.com/carolina.procaci"> */}
         {/* <a href="https://pay.hotmart.com/O84147403X"> */}
