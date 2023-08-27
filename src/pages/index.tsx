@@ -289,10 +289,10 @@ Explicação do método
                         Cadastre-se para receber nosso suporte especializado
                       </Dialog.Title>
                       <div className="mt-2">
-                        <form className="mb-8 text-blue flex flex-col">
+                        <form className="mb-8  text-blue flex flex-col">
                           <label htmlFor="celular">Email</label>
                           <input
-                            className="pl-2"
+                            className="pl-2 dark:bg-cream"
                             type="text"
                             name="email"
                             value={email}
@@ -301,6 +301,7 @@ Explicação do método
                             />
                           <label htmlFor="celular">Celular</label>
                           <PhoneInput
+                          className=""
                             labels={ptBR}
                             flags={flags}
                             value={value}
