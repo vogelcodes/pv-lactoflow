@@ -41,7 +41,7 @@ const CTA = ({
           <Image
             className="mx-auto h-10 px-4"
             alt="Meios de Pagamento"
-            src="/pagamentos.svg"
+            src="/pagamentos2.svg"
             width={529}
             height={30}
           ></Image>
@@ -51,9 +51,9 @@ const CTA = ({
         <div className="flex flex-col items-center">
           <Image
             alt="acesso-imediato"
-            width={44}
-            src={"/icone-calendario.svg"}
-            height={44}
+            height={58.6}
+            width={58.6}
+            src={"/calendario2.svg"}
           ></Image>
           <p className="text-center text-[9.79px] font-bold lg:text-[20.6px]">
             2 anos de acesso
@@ -62,9 +62,9 @@ const CTA = ({
         <div className="flex flex-col items-center">
           <Image
             alt="zoom"
-            width={44}
-            src={"/zoom-desk.svg"}
-            height={44}
+            width={58.6}
+            src={"/zoom.svg"}
+            height={58.6}
           ></Image>
           <p className="text-center text-[9.79px] font-bold lg:text-[20.6px]">
             Suporte quinzenal no ZOOM
@@ -74,8 +74,8 @@ const CTA = ({
           <Image
             alt="garantia"
             width={44}
-            src={"/garantia-desk.svg"}
-            height={44}
+            src={"/garantia2.svg"}
+            height={58.6}
           ></Image>
           <p className="text-center text-[9.79px] font-bold lg:text-[20.6px]">
             Garantia de 21 DIAS

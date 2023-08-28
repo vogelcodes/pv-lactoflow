@@ -227,7 +227,7 @@ Explicação do método
           <CTA
             openModal={openModal}
             label="Também quero esses resultados"
-            price
+            
             />
           <About/>
           <Faq />
