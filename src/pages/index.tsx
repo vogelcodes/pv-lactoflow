@@ -179,7 +179,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <p className="text-[15.67px] font-medium leading-[22.9px] tracking-[-25] lg:text-[16.75px]">
-              Como uma meia velha pode aumentar a sua produção de leite (e mais 3 estratégias infalíveis).
+              Como uma <span className="text-[18px] uppercase text-red-400">meia velha</span> pode aumentar a sua produção de leite (e mais 3 estratégias infalíveis).
               </p>
             </div>
             </div>
