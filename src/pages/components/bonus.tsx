@@ -4,12 +4,9 @@ import Header1 from "./h1";
 
 const Bonus = () => {
     return (
-        <section className="px-4 w-full text-2xl bg-cream text-blue mt-4">
-            <Header1>
-                Bônus              
-            </Header1>
+        <section className="p-6 w-full text-2xl bg-cream text-blue">
             <p className="text-center">
-            Além de todas as aulas gravadas, você ainda ganha 2 bônus:
+            Além de todas as aulas gravadas, você ainda tem acesso a:
             </p>
 <div className="flex text-cream flex-col items-center mx-auto max-w-lg gap-2 my-4">
 
@@ -36,6 +33,26 @@ const Bonus = () => {
   <div className="card-body">
 
      <div className="flex items-center flex-col gap-2">
+    {/* <Image
+        alt="wpp"
+        width={44}
+        src={"/telegram-2.svg"}
+        height={44}
+        ></Image> */}
+<p className="text-center">Materiais exclusivos e didáticos do curso para facilitar o seu dia-a-dia</p>
+<Image alt="telegram-comunidade"
+    width={260}
+    height={500}
+    src={"/materiais.webp"}
+    className="rounded-md"
+    />
+</div>
+</div>
+        </div>
+<div className="card bg-blue shadow-lg">
+  <div className="card-body">
+
+     <div className="flex items-center flex-col gap-2">
     <Image
         alt="wpp"
         width={44}
@@ -47,6 +64,8 @@ const Bonus = () => {
     width={260}
     height={500}
     src={"/comunidade.webp"}
+    className="rounded-md"
+
     />
 </div>
 </div>

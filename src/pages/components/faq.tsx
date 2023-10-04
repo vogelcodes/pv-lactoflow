@@ -30,7 +30,7 @@ const Accordion = ({ question="Q", answer="A"} : {
 
 const Faq = () => {
     return (
-        <section className="px-2">
+        <section className="p-4">
             <Header1>
                 Perguntas Frequentes - FAQ               
             </Header1>
