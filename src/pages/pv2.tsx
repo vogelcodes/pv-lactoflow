@@ -146,7 +146,7 @@ const Home: NextPage = () => {
               </div>
               </div>
 
-          <div className="mx-auto px-2 grid lg:grid-cols-1 grid-cols-2 gap-y-2 uppercase text-green">
+          <div className="mx-auto px-2 grid lg:grid-cols-1 grid-cols-2 gap-3 uppercase text-green">
             <div className="mt-1 flex items-center gap-x-2 lg:mt-4">
               <div className="border-green border-[2px] rounded-full w-8 h-8 flex items-center justify-center">
                 

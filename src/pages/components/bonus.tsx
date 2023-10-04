@@ -43,7 +43,7 @@ const Bonus = () => {
 <Image alt="telegram-comunidade"
     width={260}
     height={500}
-    src={"/materiais.webp"}
+    src={"/materiais2.webp"}
     className="rounded-md"
     />
 </div>

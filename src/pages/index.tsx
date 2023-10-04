@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
@@ -17,6 +17,7 @@ import Furadeira from "./components/furadeira";
 import Faq from "./components/faq";
 import Footer from "./components/footer";
 import Bonus from "./components/bonus";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
   type E164Number = string | undefined;
@@ -38,8 +39,7 @@ const Home: NextPage = () => {
 
     mutate({ email, phoneNumber: value?.toString() || "" });
   }
-
-  // const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  
 
   return (
     <>
