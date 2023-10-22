@@ -69,36 +69,38 @@ const Home: NextPage = () => {
         <div className="w-full text-xl bg-slate">
           <div className="max-w-[80rem] xl:px-0 px-4 mx-auto w-full flex flex-col items-center">
             <div className="flex lg:flex-row lg:items-start lg:gap-0 gap-[1.75rem] flex-col items-center justify-center pb-[5rem] lg:pt-[3.5rem] pt-[1.5rem]">
-              <div className="max-w-[50rem] justify-center w-full text-slate-100">
-                <h1 className="lg:text-[2.5rem] text-[2rem] text-[#FFF] lg:leading-[3rem] leading-9 font-extrabold">
-                  Sua amamentação da gestação ao desmame
-                  <span className="text-[#03CBD1]"> em um único Curso</span>
+              <div className="max-w-[50rem] flex flex-col justify-center items-center w-full text-slate-100">
+                <h1 className="lg:text-[4rem] w-[70%] text-[2.5rem] text-[#FFF] lg:leading-[4rem] text-center leading-9 font-extrabold">
+                  Sua <span className="text-green
+                  ">amamentação</span>  da gestação ao desmame
+                  <span className="text-red-400"> em um único curso</span>
                 </h1>
                 <div className="flex gap-4 items-center flex-col lg:flex-row pt-4 justify-center">
-                  <div className="bg-slate-50 w-[18rem] text-slate-700  rounded-md p-2">
-                      <h2 className="text-center pb-2">Oferta Normal</h2>
+                  <div className="bg-cream w-[18rem] text-slate-700  rounded-md p-2">
+                      <h2 className="text-center pb-4">Oferta Normal</h2>
                     
-                <ul className="text-sm">
-                  <li className="text-slate-700"><div className="flex justify-between">LactoFlow <span className="text-left w-[3.75rem]">R$298</span></div></li>
-                        <li className="pl-2 text-slate-600">
-                          <div className="flex justify-between">WS Gestante <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
-                        </li>
-                        <li className="pl-2 text-slate-600">
-                          <div className="flex justify-between">WS Intro Alimentar  <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
-                        </li>
-                        <li className="pl-2 text-slate-600">
-                          <div className="flex justify-between">WS Desmame  <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
-                        </li>
-                        <li className="pt-4">
-                          <div className="flex justify-between">Total: <span className="text-lg">R$1.097,00</span></div>
-                        </li>
-                </ul>
-
+                <ul className="flex flex-col gap-2 text-sm">
+                  <li className="text-slate-700"><div className="flex justify-between">LactoFlow <span className="text-left w-[3.75rem]">R$497</span></div></li>
+                  <li className="pl-2 text-slate-600">
+                  <div className="flex justify-between">WS Gestante <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
+                  </li>
+                  <li className="pl-2 text-slate-600">
+                  <div className="flex justify-between">WS Intro Alimentar  <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
+                  </li>
+                  <li className="pl-2 text-slate-600">
+                  <div className="flex justify-between">WS Desmame  <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
+                  </li>
+                  <li className="text-slate-700"><div className="flex justify-center">Acesso por 2 anos</div></li>
+                  <li className="pt-4">
+                  <div className="flex justify-center"><span className="text-2xl">R$1.097,00</span></div>
+                  </li>
+                  </ul>
+                  
                   </div>
-                  <div className="bg-gray-950 w-[18rem] text-slate-50  rounded-md p-2">
-                      <h2 className="text-center pb-2">Oferta <span className="text-[#0f0]">Black Friday</span></h2>
+                  <div className="bg-stone-900 w-[18rem] text-slate-50  rounded-md p-2">
+                      <h2 className="text-center pb-4">Oferta <span className="text-[#4dca64]">Black Friday</span></h2>
                     
-                <ul className="text-sm">
+                <ul className="flex flex-col gap-2 text-sm">
                   <li className="text-slate-50"><div className="flex justify-between">LactoFlow <span className="text-left w-[3.75rem]">R$298</span></div></li>
                         <li className="pl-2 text-slate-50">
                           <div className="flex justify-between">WS Gestante <span className="line-through text-slate-400 text-left w-[3.75rem]">R$200</span></div>
@@ -109,8 +111,10 @@ const Home: NextPage = () => {
                         <li className="pl-2 text-slate-50">
                           <div className="flex justify-between">WS Desmame  <span className="line-through text-slate-400 text-left w-[3.75rem]">R$200</span></div>
                         </li>
+                  <li className="text-slate-50"><div className="flex justify-center">Acesso Vitalício</div></li>
+
                         <li className="pt-4">
-                          <div className="flex justify-between">Total: <span className="text-lg text-[#0f0]">R$298</span></div>
+                          <div className="flex justify-center"><span className="text-2xl text-[#4dca64]">R$298</span></div>
                         </li>
                 </ul>
 
@@ -120,8 +124,8 @@ const Home: NextPage = () => {
               <Image width={300} height={0} alt="Carolina Procaci" className="rounded-md" src={"/carol.webp"}/>
 
             </div>
-            <div className="card lg:w-full bg-cream shadow-lg text-blue">
-  <div className="card-body">
+            <div className="card lg:w-full lg:max-w-[77rem] bg-cream shadow-lg text-blue">
+  <div className="lg:text-lg text-base card-body">
             <h1 className="text-left mb-[14.4px] mt-3 px-4 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
                 LactoFlow               
             </h1>
@@ -129,7 +133,7 @@ const Home: NextPage = () => {
             <h1 className="text-left mb-[14.4px] mt-3 px-4 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
                 Workshop - Gestante               
             </h1>
-            <p>Amamentar não é intuitivo, apesar de ser natural.
+            <p className="text-base">Amamentar não é intuitivo, apesar de ser natural.
 
 A falta de informações corretas sobre a amamentação é a principal causa de:</p>
 <ul>
@@ -156,7 +160,8 @@ A livre demanda não precisa ser pra sempre e existe um meio do caminho para ree
 
 Existem estratégias para você achar um respiro e assim até decidir amamentar um pouco mais (quem sabe?).
 
-No Workshop Desmame Gentil eu vou te ensinar o passo a passo para que você consiga:
+  
+</p>
 <ul>
   <li>1. Sair da livre demanda sem enlouquecer e regular as mamadas do dia; e</li>
   <li>2. Conduzir um desmame noturno de uma forma lúdica e cheia de acolhimento;</li>
@@ -165,6 +170,7 @@ No Workshop Desmame Gentil eu vou te ensinar o passo a passo para que você cons
 
 
 </ul>
+No Workshop Desmame Gentil eu vou te ensinar o passo a passo para que você consiga:<p>
 
 
 Toda história de amamentação tem seu fim e esse fim não precisar ser negando o peito com o seu bebê chorando desesperado querendo mamar e nem mentindo para ele ao colocar band-aids dizendo que o mamá está machucado… Você e seu bebê merecem um fim respeitoso e gentil para esse vínculo tão incrível que é a amamentação.</p>
