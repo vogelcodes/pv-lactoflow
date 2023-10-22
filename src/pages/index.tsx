@@ -56,7 +56,7 @@ const Home: NextPage = () => {
         {/* <link href="https://fonts.cdnfonts.com/css/gotham-6" rel="stylesheet" /> */}
       </Head>
       <Hotjar/>
-        <header className="w-full flex items-center h-[5.0625rem] border-b-[1px] border-solid border-[#18191A] sticky top-0 bg-[#020202]">
+        <header className="w-full flex items-center h-[5.0625rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
           <div className="max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex justify-center lg:justify-start ">            
           <Image
               src="/logo-portrait.svg"
@@ -70,10 +70,10 @@ const Home: NextPage = () => {
           <div className="max-w-[80rem] xl:px-0 px-4 mx-auto w-full flex flex-col items-center">
             <div className="flex lg:flex-row lg:items-start lg:gap-0 gap-[1.75rem] flex-col items-center justify-center pb-[5rem] lg:pt-[3.5rem] pt-[1.5rem]">
               <div className="max-w-[50rem] flex flex-col justify-center items-center w-full text-slate-100">
-                <h1 className="lg:text-[4rem] sm:text-[3rem] text-[2rem] lg:w-[70%] text-[#FFF] lg:leading-[4rem] text-center leading-9 font-extrabold">
+                <h1 className="lg:text-[4rem] sm:text-[3rem] text-[2rem] md:w-[70%] text-[#FFF] lg:leading-[4rem] text-center leading-9 font-extrabold">
                   Sua <span className="text-green
-                  ">amamentação</span>  da gestação ao desmame
-                  <span className="text-red-400"> em um único curso</span>
+                  ">amamentação</span>  da gestação ao desmame em um 
+                  <span className="text-red-400"> único curso</span>
                 </h1>
                 <div className="flex gap-4 items-center flex-col lg:flex-row pt-4 justify-center">
                   <div className="bg-cream w-[18rem] text-slate-700  rounded-md p-2">
