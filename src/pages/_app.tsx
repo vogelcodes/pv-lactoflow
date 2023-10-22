@@ -40,7 +40,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
           font-family: ${gotham.style.fontFamily};
         }
       `}</style>
-      <main className={`${gotham.variable} flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c] font-sans`}>
+      <main className={`${gotham.variable} flex min-h-screen flex-col items-center bg-blue font-sans`}>
         <Component {...pageProps} />
       </main>
 

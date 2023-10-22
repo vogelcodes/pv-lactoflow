@@ -17,6 +17,7 @@ import Furadeira from "./components/furadeira";
 import Faq from "./components/faq";
 import Footer from "./components/footer";
 import Bonus from "./components/bonus";
+import Hotjar from "./components/tags/hotjar";
 
 const Home: NextPage = () => {
   type E164Number = string | undefined;
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
 
     <>
             <Head>
-        <title>LactoFlow®️</title>
+        <title>Black Friday-LactoFlow®️</title>
         <meta
           name="description"
           content="Método para aumentar a produção de leite materno"
@@ -53,54 +54,69 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         {/* <link href="https://fonts.cdnfonts.com/css/gotham-6" rel="stylesheet" /> */}
       </Head>
-      <Script
-        id="hj"
-        dangerouslySetInnerHTML={{
-          __html: `
-                  (function(h,o,t,j,a,r){
-                      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                      h._hjSettings={hjid:3570841,hjsv:6};
-                      a=o.getElementsByTagName('head')[0];
-                      r=o.createElement('script');r.async=1;
-                      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                      a.appendChild(r);
-                    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
-                  }}
-                  />
-      <Script
-        id="fb-pixel"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', ${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || ""});
-            fbq('track', 'PageView');
-            `,
-          }}
-      />
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-6T6HHESNG2"
-        ></Script>
-      <Script
-        id="google-analytics"
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+      <Hotjar/>
+        <header className="w-full flex items-center h-[5.0625rem] border-b-[1px] border-solid border-[#18191A] sticky top-0 bg-[#020202]">
+          <div className="max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex justify-center lg:justify-start ">            
+            <h1>Black Friday<br/>LactoFlow®️</h1>
+          </div>
+        </header >
+        <div className="w-full text-xl bg-slate">
+          <div className="max-w-[80rem] xl:px-0 px-4 mx-auto w-full">
+            <div className="flex lg:flex-row  lg:gap-0 gap-[1.75rem] flex-col items-center justify-center pb-[5rem] lg:pt-[3.5rem] pt-[1.5rem]">
+              <div className="max-w-[50rem] justify-center w-full text-slate-100">
+                <h1 className="lg:text-[2.5rem] text-[2rem] text-[#FFF] lg:leading-[3rem] leading-9 font-extrabold">
+                  Sua amamentação da gestação ao desmame
+                  <span className="text-[#03CBD1]"> em um único Curso</span>
+                </h1>
+                <div className="grid gap-2 lg:grid-cols-2 pt-4">
+                  <div className="bg-slate-50 text-slate-700  rounded-md p-2">
+                      <h2 className="text-center pb-2">Oferta Normal</h2>
+                    
+                <ul className="text-sm">
+                  <li className="text-slate-700"><div className="flex justify-between">LactoFlow <span>R$298</span></div></li>
+                        <li className="pl-2 text-slate-600">
+                          <div className="flex justify-between">WS Gestante <span className="text-slate-600">R$200</span></div>
+                        </li>
+                        <li className="pl-2 text-slate-600">
+                          <div className="flex justify-between">WS Intro Alimentar  <span className="text-slate-600">R$200</span></div>
+                        </li>
+                        <li className="pl-2 text-slate-600">
+                          <div className="flex justify-between">WS Desmame  <span className="text-slate-600">R$200</span></div>
+                        </li>
+                        <li className="pt-4">
+                          <div className="flex justify-between">Total: <span className="text-lg">R$1.097,00</span></div>
+                        </li>
+                </ul>
 
-          gtag('config', 'G-6T6HHESNG2');`,
-        }}
-        />
-        <h1>Black Friday</h1>
+                  </div>
+                  <div className="bg-slate-50 text-slate-700  rounded-md p-2">
+                      <h2 className="text-center pb-2">Oferta Black Friday</h2>
+                    
+                <ul className="text-sm">
+                  <li className="text-slate-700"><div className="flex justify-between">LactoFlow <span>R$298</span></div></li>
+                        <li className="pl-2 text-slate-600">
+                          <div className="flex justify-between">WS Gestante <span className="line-through text-slate-400">R$200</span></div>
+                        </li>
+                        <li className="pl-2 text-slate-600">
+                          <div className="flex justify-between">WS Intro Alimentar  <span className="line-through text-slate-400">R$200</span></div>
+                        </li>
+                        <li className="pl-2 text-slate-600">
+                          <div className="flex justify-between">WS Desmame  <span className="line-through text-slate-400">R$200</span></div>
+                        </li>
+                        <li className="pt-4">
+                          <div className="flex justify-between">Total: <span className="text-lg">R$298</span></div>
+                        </li>
+                </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+          
+
 
     </>
         )
