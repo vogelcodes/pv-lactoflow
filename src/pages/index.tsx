@@ -67,14 +67,14 @@ const Home: NextPage = () => {
           </div>
         </header >
         <div className="w-full text-xl bg-slate">
-          <div className="max-w-[80rem] xl:px-0 px-4 mx-auto w-full">
-            <div className="flex lg:flex-row  lg:gap-0 gap-[1.75rem] flex-col items-center justify-center pb-[5rem] lg:pt-[3.5rem] pt-[1.5rem]">
+          <div className="max-w-[80rem] xl:px-0 px-4 mx-auto w-full flex flex-col items-center">
+            <div className="flex lg:flex-row lg:items-start lg:gap-0 gap-[1.75rem] flex-col items-center justify-center pb-[5rem] lg:pt-[3.5rem] pt-[1.5rem]">
               <div className="max-w-[50rem] justify-center w-full text-slate-100">
                 <h1 className="lg:text-[2.5rem] text-[2rem] text-[#FFF] lg:leading-[3rem] leading-9 font-extrabold">
                   Sua amamentação da gestação ao desmame
                   <span className="text-[#03CBD1]"> em um único Curso</span>
                 </h1>
-                <div className="grid gap-2 lg:grid-cols-2 pt-4 justify-center">
+                <div className="flex gap-4 items-center flex-col lg:flex-row pt-4 justify-center">
                   <div className="bg-slate-50 w-[18rem] text-slate-700  rounded-md p-2">
                       <h2 className="text-center pb-2">Oferta Normal</h2>
                     
@@ -120,17 +120,54 @@ const Home: NextPage = () => {
               <Image width={300} height={0} alt="Carolina Procaci" className="rounded-md" src={"/carol.webp"}/>
 
             </div>
-            <div className="card bg-cream max-w-2xl shadow-lg text-blue">
+            <div className="card lg:w-full bg-cream shadow-lg text-blue">
   <div className="card-body">
             <h1 className="text-left mb-[14.4px] mt-3 px-4 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
                 LactoFlow               
             </h1>
+            <p>Método para aumento de produção de leite comprovado com mais de 200 alunas, incluindo todo o conhecimento necessário para não cair nas armadilhas do desmame precoce.</p>
+            <h1 className="text-left mb-[14.4px] mt-3 px-4 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+                Workshop - Gestante               
+            </h1>
+            <p>Amamentar não é intuitivo, apesar de ser natural.
 
-            <ul className="flex flex-col text-xl gap-2 m-2">
-            <div className="flex gap-2">🎓 <li>Carolina Procaci é biomédica formada na Universidade Federal do Estado do Rio de Janeiro</li></div>
-            <div className="flex gap-2">🏥 <li>Consultora em amamentação pelo único curso reconhecido pelo MEC</li></div>
-            <div className="flex gap-2">👩‍👧‍👦 <li>Mãe de 2 filhos e lactante há mais de 5 anos.</li></div>
-            </ul>
+A falta de informações corretas sobre a amamentação é a principal causa de:</p>
+<ul>
+<li>- dor e fissuras no momento da mamada;</li>
+<li>- baixa produção de leite;</li>
+<li>- desmame precoce.</li>
+
+
+</ul>
+            <h1 className="text-left mb-[14.4px] mt-3 px-4 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+            Workshop - Introdução alimentar            
+            </h1>
+            <p>Há menos de 1 mês a OMS liberou o novo guia de Introdução Alimentar para crianças entre 6 a 23 meses. 
+
+E no Workshop Introdução Alimentar eu vou te mostrar quais são as mais recentes e atualizadas orientações para essa fase e também te mostrar o que muda na sua amamentação depois da introdução de alimentos na rotina do bebê.</p>
+            <h1 className="text-left mb-[14.4px] mt-3 px-4 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+            Workshop - Desmame Gentil          
+            </h1>
+            <p>É normal chegar em um momento em que a amamentação se torna pesada e a gente se pega frequentemente pensando em um desmame. Ao mesmo tempo, diversas vezes nos arrependermos de desejarmos isso. Afinal, lutamos tanto para que nossos filhos pudessem ser amamentados!
+
+E, olha, se esse momento ainda não chegou pra você… Calma que provavelmente ele ainda vai chegar.
+
+A livre demanda não precisa ser pra sempre e existe um meio do caminho para reencontrar o prazer em amamentar.
+
+Existem estratégias para você achar um respiro e assim até decidir amamentar um pouco mais (quem sabe?).
+
+No Workshop Desmame Gentil eu vou te ensinar o passo a passo para que você consiga:
+<ul>
+  <li>1. Sair da livre demanda sem enlouquecer e regular as mamadas do dia; e</li>
+  <li>2. Conduzir um desmame noturno de uma forma lúdica e cheia de acolhimento;</li>
+  <li>3. Encerrar a sua amamentação de uma forma leve e com lembranças positivas (para você e para o seu bebê).</li>
+
+
+
+</ul>
+
+
+Toda história de amamentação tem seu fim e esse fim não precisar ser negando o peito com o seu bebê chorando desesperado querendo mamar e nem mentindo para ele ao colocar band-aids dizendo que o mamá está machucado… Você e seu bebê merecem um fim respeitoso e gentil para esse vínculo tão incrível que é a amamentação.</p>
             </div>
             </div>
 
