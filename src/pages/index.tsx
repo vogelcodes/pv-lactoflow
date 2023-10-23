@@ -134,33 +134,33 @@ const Home: NextPage = () => {
             </div>
             <div className="card lg:w-full lg:max-w-[77rem] bg-cream shadow-lg text-blue">
   <div className="lg:text-lg text-base card-body">
-            <h1 className="text-left  pt-3 px-2 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+            <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
                 LactoFlow               
             </h1>
             <hr/>
             <p>Método para aumento de produção de leite comprovado com mais de 200 alunas, incluindo todo o conhecimento necessário para não cair nas armadilhas do desmame precoce.</p>
-            <h1 className="text-left  pt-3 px-2 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+            <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
                 Workshop - Gestante               
             </h1>
             <hr/>
-            <p className="text-base">Amamentar não é intuitivo, apesar de ser natural.
+            <p className="">Amamentar não é intuitivo, apesar de ser natural.
 
 A falta de informações corretas sobre a amamentação é a principal causa de:</p>
-<ul>
+<ul className="pl-2 py-2">
 <li>- dor e fissuras no momento da mamada;</li>
 <li>- baixa produção de leite;</li>
 <li>- desmame precoce.</li>
 
 
 </ul>
-            <h1 className="text-left  pt-3 px-2 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+            <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
             Workshop - Introdução alimentar            
             </h1>
             <hr/>
             <p>Há menos de 1 mês a OMS liberou o novo guia de Introdução Alimentar para crianças entre 6 a 23 meses. 
 
 E no Workshop Introdução Alimentar eu vou te mostrar quais são as mais recentes e atualizadas orientações para essa fase e também te mostrar o que muda na sua amamentação depois da introdução de alimentos na rotina do bebê.</p>
-            <h1 className="text-left  pt-3 px-2 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+            <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
             Workshop - Desmame Gentil          
             </h1>
             <hr/>
@@ -174,7 +174,7 @@ Existem estratégias para você achar um respiro e assim até decidir amamentar 
 
   
 </p>
-<ul>
+<ul className="pl-2 py-2">
   <li>1. Sair da livre demanda sem enlouquecer e regular as mamadas do dia; e</li>
   <li>2. Conduzir um desmame noturno de uma forma lúdica e cheia de acolhimento;</li>
   <li>3. Encerrar a sua amamentação de uma forma leve e com lembranças positivas (para você e para o seu bebê).</li>
