@@ -66,13 +66,14 @@ const Home: NextPage = () => {
               height={120}
               />
               </div>           
+            <div classname="text-white"> <div>Esta oferta acaba em:</div> <div>5 dias 19:30:23</div></div>
           </div>
         </header >
         <div className="w-full text-xl bg-slate">
           <div className="max-w-[80rem] xl:px-0 px-4 mx-auto w-full flex flex-col items-center">
             <div className="flex lg:flex-row lg:items-start lg:gap-0 gap-[1.75rem] flex-col items-center justify-center pb-[5rem] lg:pt-[3.5rem] pt-[1.5rem]">
               <div className="max-w-[50rem] flex flex-col justify-center items-center w-full text-slate-100">
-                <h1 className="lg:text-[4rem] sm:text-[3rem] text-[2rem] md:w-[70%] text-[#FFF] lg:leading-[4rem] text-center leading-9 font-extrabold">
+                <h1 className="lg:text-[3.5rem] sm:text-[3rem] text-[2rem] md:w-[70%] text-[#FFF] lg:leading-[3.5rem] text-center leading-9 font-extrabold">
                   Sua amamentação da<span className="text-green
                   "> gestação ao desmame</span>  em um 
                   <span className="text-red-400"> único curso</span>
@@ -82,23 +83,26 @@ const Home: NextPage = () => {
                       <h2 className="text-center pb-4">Oferta Normal</h2>
                     
                 <ul className="flex flex-col gap-2 text-sm">
-                  <li className="text-slate-700"><div className="flex justify-between">LactoFlow <span className="text-left w-[3.75rem]">R$497</span></div></li>
-                  <li className="pl-2 text-slate-600">
-                  <div className="flex justify-between">WS Gestante <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
+                  <li className="text-slate-700"><div className="flex justify-between">LactoFlow®️ <span className="text-left w-[3.75rem]">R$497</span></div></li>
+                  <li className="text-slate-600">
+                  <div className="flex justify-between">Workshops ao vivo: <span className="text-slate-600 text-left w-[3.75rem]"></span></div>
                   </li>
                   <li className="pl-2 text-slate-600">
-                  <div className="flex justify-between">WS Intro Alimentar  <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
+                  <div className="flex justify-between">A Amamentação<br/> começa na Gestação<span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
                   </li>
                   <li className="pl-2 text-slate-600">
-                  <div className="flex justify-between">WS Desmame  <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
+                  <div className="flex justify-between">Como fica o mamá,<br/> depois do papá<span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
                   </li>
-                        <hr className="border-dashed border-stone-800"/>
+                  <li className="pl-2 text-slate-600">
+                  <div className="flex justify-between">Toda Amamentação<br/> tem seu fim  <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
+                  </li>
+                        <hr width="85%" className="mx-auto border-dashed border-stone-800"/>
                   <li className="text-slate-700"><div className="flex justify-center">Acesso por 2 anos</div></li>
-                  <hr className="border-dashed border-stone-800"/>
+                  <hr width="85%" className="mx-auto border-dashed border-stone-800"/>
 
                   <li className="pt-4">
 
-                  <div className="flex justify-center"><span className="text-2xl">R$1.097,00</span></div>
+                  <div className="flex justify-center pb-2"><span className="text-2xl">R$1.097,00</span></div>
                   </li>
                   </ul>
                   
@@ -107,22 +111,25 @@ const Home: NextPage = () => {
                       <h2 className="text-center pb-4">Oferta <span className="text-[#4dca64]">Black Friday</span></h2>
                     
                 <ul className="flex flex-col gap-2 text-sm">
-                  <li className="text-slate-50"><div className="flex justify-between">LactoFlow <span className="text-left w-[3.75rem]">R$298</span></div></li>
-                        <li className="pl-2 text-slate-50">
-                          <div className="flex justify-between">WS Gestante <span className="line-through text-slate-400 text-left w-[3.75rem]">R$200</span></div>
+                  <li className="text-slate-50"><div className="flex justify-between">LactoFlow®️ <span className="text-left w-[3.75rem]">R$298</span></div></li>
+                        <li className="text-slate-50">
+                          <div className="flex justify-between">Workshops ao vivo: <span className="line-through text-slate-400 text-left w-[3.75rem]"></span></div>
                         </li>
                         <li className="pl-2 text-slate-50">
-                          <div className="flex justify-between">WS Intro Alimentar  <span className="line-through text-slate-400 text-left w-[3.75rem]">R$200</span></div>
+                          <div className="flex justify-between">A Amamentação<br/> começa na Gestação<span className="line-through text-slate-400 text-left w-[3.75rem]">R$200</span></div>
                         </li>
                         <li className="pl-2 text-slate-50">
-                          <div className="flex justify-between">WS Desmame  <span className="line-through text-slate-400 text-left w-[3.75rem]">R$200</span></div>
+                          <div className="flex justify-between">Como fica o mamá<br/> depois do papá<span className="line-through text-slate-400 text-left w-[3.75rem]">R$200</span></div>
                         </li>
-                        <hr className="border-dashed"/>
+                        <li className="pl-2 text-slate-50">
+                          <div className="flex justify-between">Toda Amamentação<br/> tem seu fim<span className="line-through text-slate-400 text-left w-[3.75rem]">R$200</span></div>
+                        </li>
+                        <hr width="85%" className="mx-auto border-dashed"/>
 
                   <li className="text-slate-50"><div className="flex justify-center text-lg">Acesso Vitalício</div></li>
-                  <hr className="border-dashed"/>
+                  <hr width="85%" className="mx-auto border-dashed"/>
                         <li className="pt-4">
-                          <div className="flex justify-center"><span className="text-2xl text-[#4dca64]">R$298</span></div>
+                          <div className="flex justify-center pb-2"><span className="text-2xl text-[#4dca64]">R$298</span></div>
                         </li>
                 </ul>
 
@@ -135,33 +142,33 @@ const Home: NextPage = () => {
             <div className="card lg:w-full lg:max-w-[77rem] bg-cream shadow-lg text-blue">
   <div className="lg:text-lg text-base card-body">
             <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-                LactoFlow               
+            LactoFlow®️               
             </h1>
             <hr/>
             <p>Método para aumento de produção de leite comprovado com mais de 200 alunas, incluindo todo o conhecimento necessário para não cair nas armadilhas do desmame precoce.</p>
             <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-                Workshop - Gestante               
+                Workshop - A Amamentação começa na Gestação              
             </h1>
             <hr/>
             <p className="">Amamentar não é intuitivo, apesar de ser natural.
 
 A falta de informações corretas sobre a amamentação é a principal causa de:</p>
-<ul className="pl-2 py-2">
-<li>- dor e fissuras no momento da mamada;</li>
-<li>- baixa produção de leite;</li>
-<li>- desmame precoce.</li>
+<ul className="pl-2 py-2 list-disc">
+<li>dor e fissuras no momento da mamada;</li>
+<li>baixa produção de leite;</li>
+<li>desmame precoce.</li>
 
 
 </ul>
             <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-            Workshop - Introdução alimentar            
+            Workshop - Como fica o mamá depois do papá            
             </h1>
             <hr/>
             <p>Há menos de 1 mês a OMS liberou o novo guia de Introdução Alimentar para crianças entre 6 a 23 meses. 
 
 E no Workshop Introdução Alimentar eu vou te mostrar quais são as mais recentes e atualizadas orientações para essa fase e também te mostrar o que muda na sua amamentação depois da introdução de alimentos na rotina do bebê.</p>
             <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-            Workshop - Desmame Gentil          
+            Workshop - Toda Amamentação tem seu fim          
             </h1>
             <hr/>
             <p>É normal chegar em um momento em que a amamentação se torna pesada e a gente se pega frequentemente pensando em um desmame. Ao mesmo tempo, diversas vezes nos arrependermos de desejarmos isso. Afinal, lutamos tanto para que nossos filhos pudessem ser amamentados!
@@ -174,10 +181,10 @@ Existem estratégias para você achar um respiro e assim até decidir amamentar 
 
   
 </p>
-<ul className="pl-2 py-2">
-  <li>1. Sair da livre demanda sem enlouquecer e regular as mamadas do dia; e</li>
-  <li>2. Conduzir um desmame noturno de uma forma lúdica e cheia de acolhimento;</li>
-  <li>3. Encerrar a sua amamentação de uma forma leve e com lembranças positivas (para você e para o seu bebê).</li>
+<ul className="pl-2 py-2 flex flex-col gap-2 list-disc">
+  <li>Sair da livre demanda sem enlouquecer e regular as mamadas do dia; e</li>
+  <li>Conduzir um desmame noturno de uma forma lúdica e cheia de acolhimento;</li>
+  <li>Encerrar a sua amamentação de uma forma leve e com lembranças positivas (para você e para o seu bebê).</li>
 
 
 
