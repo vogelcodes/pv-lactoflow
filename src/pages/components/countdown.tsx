@@ -22,7 +22,7 @@ const CountdownReact = () => {
       };
     
     return (<>
-                    <div className="text-white w-[50%]"> <div>Esta oferta acaba em:</div> <Countdown renderer={renderer} date={"2023-10-23T23:59:59"}/></div>
+                    <div className="text-white w-[50%] flex flex-col items-center"> <div>Esta oferta acaba em:</div> <Countdown renderer={renderer} date={"2023-10-23T23:59:59"}/></div>
 
     </>)
 }
