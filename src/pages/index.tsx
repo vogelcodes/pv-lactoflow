@@ -92,8 +92,12 @@ const Home: NextPage = () => {
                   <li className="pl-2 text-slate-600">
                   <div className="flex justify-between">WS Desmame  <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
                   </li>
+                        <hr className="border-dashed border-stone-800"/>
                   <li className="text-slate-700"><div className="flex justify-center">Acesso por 2 anos</div></li>
+                  <hr className="border-dashed border-stone-800"/>
+
                   <li className="pt-4">
+
                   <div className="flex justify-center"><span className="text-2xl">R$1.097,00</span></div>
                   </li>
                   </ul>
@@ -113,8 +117,10 @@ const Home: NextPage = () => {
                         <li className="pl-2 text-slate-50">
                           <div className="flex justify-between">WS Desmame  <span className="line-through text-slate-400 text-left w-[3.75rem]">R$200</span></div>
                         </li>
-                  <li className="text-slate-50"><div className="flex justify-center">Acesso Vitalício</div></li>
+                        <hr className="border-dashed"/>
 
+                  <li className="text-slate-50"><div className="flex justify-center text-lg">Acesso Vitalício</div></li>
+                  <hr className="border-dashed"/>
                         <li className="pt-4">
                           <div className="flex justify-center"><span className="text-2xl text-[#4dca64]">R$298</span></div>
                         </li>
@@ -128,13 +134,15 @@ const Home: NextPage = () => {
             </div>
             <div className="card lg:w-full lg:max-w-[77rem] bg-cream shadow-lg text-blue">
   <div className="lg:text-lg text-base card-body">
-            <h1 className="text-left mb-[14.4px] mt-3 px-4 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+            <h1 className="text-left  pt-3 px-2 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
                 LactoFlow               
             </h1>
+            <hr/>
             <p>Método para aumento de produção de leite comprovado com mais de 200 alunas, incluindo todo o conhecimento necessário para não cair nas armadilhas do desmame precoce.</p>
-            <h1 className="text-left mb-[14.4px] mt-3 px-4 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+            <h1 className="text-left  pt-3 px-2 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
                 Workshop - Gestante               
             </h1>
+            <hr/>
             <p className="text-base">Amamentar não é intuitivo, apesar de ser natural.
 
 A falta de informações corretas sobre a amamentação é a principal causa de:</p>
@@ -145,15 +153,17 @@ A falta de informações corretas sobre a amamentação é a principal causa de:
 
 
 </ul>
-            <h1 className="text-left mb-[14.4px] mt-3 px-4 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+            <h1 className="text-left  pt-3 px-2 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
             Workshop - Introdução alimentar            
             </h1>
+            <hr/>
             <p>Há menos de 1 mês a OMS liberou o novo guia de Introdução Alimentar para crianças entre 6 a 23 meses. 
 
 E no Workshop Introdução Alimentar eu vou te mostrar quais são as mais recentes e atualizadas orientações para essa fase e também te mostrar o que muda na sua amamentação depois da introdução de alimentos na rotina do bebê.</p>
-            <h1 className="text-left mb-[14.4px] mt-3 px-4 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+            <h1 className="text-left  pt-3 px-2 text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
             Workshop - Desmame Gentil          
             </h1>
+            <hr/>
             <p>É normal chegar em um momento em que a amamentação se torna pesada e a gente se pega frequentemente pensando em um desmame. Ao mesmo tempo, diversas vezes nos arrependermos de desejarmos isso. Afinal, lutamos tanto para que nossos filhos pudessem ser amamentados!
 
 E, olha, se esse momento ainda não chegou pra você… Calma que provavelmente ele ainda vai chegar.
