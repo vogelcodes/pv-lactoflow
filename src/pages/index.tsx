@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       </Head>
       <Hotjar/>
         <header className="w-full flex items-center md:h-[5.0625rem] h-[3.5rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
-          <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-center lg:justify-start "> 
+          <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-between lg:justify-start "> 
             <div className="md:w-[16rem] w-[8rem]">
               <Image
                   src="/logo-portrait.svg"
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
                   height={120}
                 />
             </div>           
-            <CountdownReact/>
+            <CountdownReact />
           </div>
         </header >
         <div className="w-full text-xl bg-slate">
