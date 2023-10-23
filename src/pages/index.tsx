@@ -56,14 +56,16 @@ const Home: NextPage = () => {
         {/* <link href="https://fonts.cdnfonts.com/css/gotham-6" rel="stylesheet" /> */}
       </Head>
       <Hotjar/>
-        <header className="w-full flex items-center h-[5.0625rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
-          <div className="max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex justify-center lg:justify-start ">            
+        <header className="w-full flex items-center md:h-[5.0625rem] h-[3.5rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
+          <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex justify-center lg:justify-start "> 
+          <div className="md:w-[16rem] w-[8rem]">
           <Image
               src="/logo-portrait.svg"
               alt="logo"
               width={250}
               height={120}
-            />
+              />
+              </div>           
           </div>
         </header >
         <div className="w-full text-xl bg-slate">
