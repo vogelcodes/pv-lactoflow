@@ -19,6 +19,7 @@ import Footer from "./components/footer";
 import Bonus from "./components/bonus";
 import Hotjar from "./components/tags/hotjar";
 import Header1 from "./components/h1";
+import CountdownReact from "./components/countdown";
 
 const Home: NextPage = () => {
   type E164Number = string | undefined;
@@ -57,16 +58,16 @@ const Home: NextPage = () => {
       </Head>
       <Hotjar/>
         <header className="w-full flex items-center md:h-[5.0625rem] h-[3.5rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
-          <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex justify-center lg:justify-start "> 
-          <div className="md:w-[16rem] w-[8rem]">
-          <Image
-              src="/logo-portrait.svg"
-              alt="logo"
-              width={250}
-              height={120}
-              />
-              </div>           
-            <div classname="text-white"> <div>Esta oferta acaba em:</div> <div>5 dias 19:30:23</div></div>
+          <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-center lg:justify-start "> 
+            <div className="md:w-[16rem] w-[8rem]">
+              <Image
+                  src="/logo-portrait.svg"
+                  alt="logo"
+                  width={250}
+                  height={120}
+                />
+            </div>           
+            <CountdownReact/>
           </div>
         </header >
         <div className="w-full text-xl bg-slate">
@@ -96,9 +97,9 @@ const Home: NextPage = () => {
                   <li className="pl-2 text-slate-600">
                   <div className="flex justify-between">Toda Amamentação<br/> tem seu fim  <span className="text-slate-600 text-left w-[3.75rem]">R$200</span></div>
                   </li>
-                        <hr width="85%" className="mx-auto border-dashed border-stone-800"/>
+                        <hr className="mx-auto px-28 border-dashed border-stone-800"/>
                   <li className="text-slate-700"><div className="flex justify-center">Acesso por 2 anos</div></li>
-                  <hr width="85%" className="mx-auto border-dashed border-stone-800"/>
+                  <hr className="mx-auto px-28 border-dashed border-stone-800"/>
 
                   <li className="pt-4">
 
@@ -124,10 +125,10 @@ const Home: NextPage = () => {
                         <li className="pl-2 text-slate-50">
                           <div className="flex justify-between">Toda Amamentação<br/> tem seu fim<span className="line-through text-slate-400 text-left w-[3.75rem]">R$200</span></div>
                         </li>
-                        <hr width="85%" className="mx-auto border-dashed"/>
+                        <hr  className="mx-auto px-28 border-dashed"/>
 
                   <li className="text-slate-50"><div className="flex justify-center text-lg">Acesso Vitalício</div></li>
-                  <hr width="85%" className="mx-auto border-dashed"/>
+                  <hr className="mx-auto px-28 border-dashed"/>
                         <li className="pt-4">
                           <div className="flex justify-center pb-2"><span className="text-2xl text-[#4dca64]">R$298</span></div>
                         </li>
@@ -152,47 +153,47 @@ const Home: NextPage = () => {
             <hr/>
             <p className="">Amamentar não é intuitivo, apesar de ser natural.
 
-A falta de informações corretas sobre a amamentação é a principal causa de:</p>
-<ul className="pl-2 py-2 list-disc">
-<li>dor e fissuras no momento da mamada;</li>
-<li>baixa produção de leite;</li>
-<li>desmame precoce.</li>
+                  A falta de informações corretas sobre a amamentação é a principal causa de:</p>
+                  <ul className="pl-2 py-2 list-disc">
+                  <li>dor e fissuras no momento da mamada;</li>
+                  <li>baixa produção de leite;</li>
+                  <li>desmame precoce.</li>
 
 
-</ul>
-            <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-            Workshop - Como fica o mamá depois do papá            
-            </h1>
-            <hr/>
-            <p>Há menos de 1 mês a OMS liberou o novo guia de Introdução Alimentar para crianças entre 6 a 23 meses. 
+                  </ul>
+                              <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
+                              Workshop - Como fica o mamá depois do papá            
+                              </h1>
+                              <hr/>
+                              <p>Há menos de 1 mês a OMS liberou o novo guia de Introdução Alimentar para crianças entre 6 a 23 meses. 
 
-E no Workshop Introdução Alimentar eu vou te mostrar quais são as mais recentes e atualizadas orientações para essa fase e também te mostrar o que muda na sua amamentação depois da introdução de alimentos na rotina do bebê.</p>
-            <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-            Workshop - Toda Amamentação tem seu fim          
-            </h1>
-            <hr/>
-            <p>É normal chegar em um momento em que a amamentação se torna pesada e a gente se pega frequentemente pensando em um desmame. Ao mesmo tempo, diversas vezes nos arrependermos de desejarmos isso. Afinal, lutamos tanto para que nossos filhos pudessem ser amamentados!
+                  E no Workshop Introdução Alimentar eu vou te mostrar quais são as mais recentes e atualizadas orientações para essa fase e também te mostrar o que muda na sua amamentação depois da introdução de alimentos na rotina do bebê.</p>
+                              <h1 className="text-left  pt-3 text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
+                              Workshop - Toda Amamentação tem seu fim          
+                              </h1>
+                              <hr/>
+                              <p>É normal chegar em um momento em que a amamentação se torna pesada e a gente se pega frequentemente pensando em um desmame. Ao mesmo tempo, diversas vezes nos arrependermos de desejarmos isso. Afinal, lutamos tanto para que nossos filhos pudessem ser amamentados!
 
-E, olha, se esse momento ainda não chegou pra você… Calma que provavelmente ele ainda vai chegar.
+                  E, olha, se esse momento ainda não chegou pra você… Calma que provavelmente ele ainda vai chegar.
 
-A livre demanda não precisa ser pra sempre e existe um meio do caminho para reencontrar o prazer em amamentar.
+                  A livre demanda não precisa ser pra sempre e existe um meio do caminho para reencontrar o prazer em amamentar.
 
-Existem estratégias para você achar um respiro e assim até decidir amamentar um pouco mais (quem sabe?).
+                  Existem estratégias para você achar um respiro e assim até decidir amamentar um pouco mais (quem sabe?).
 
-  
-</p>
-<ul className="pl-2 py-2 flex flex-col gap-2 list-disc">
-  <li>Sair da livre demanda sem enlouquecer e regular as mamadas do dia; e</li>
-  <li>Conduzir um desmame noturno de uma forma lúdica e cheia de acolhimento;</li>
-  <li>Encerrar a sua amamentação de uma forma leve e com lembranças positivas (para você e para o seu bebê).</li>
-
-
-
-</ul>
-No Workshop Desmame Gentil eu vou te ensinar o passo a passo para que você consiga:<p>
+                    
+                  </p>
+                  <ul className="pl-2 py-2 flex flex-col gap-2 list-disc">
+                    <li>Sair da livre demanda sem enlouquecer e regular as mamadas do dia; e</li>
+                    <li>Conduzir um desmame noturno de uma forma lúdica e cheia de acolhimento;</li>
+                    <li>Encerrar a sua amamentação de uma forma leve e com lembranças positivas (para você e para o seu bebê).</li>
 
 
-Toda história de amamentação tem seu fim e esse fim não precisar ser negando o peito com o seu bebê chorando desesperado querendo mamar e nem mentindo para ele ao colocar band-aids dizendo que o mamá está machucado… Você e seu bebê merecem um fim respeitoso e gentil para esse vínculo tão incrível que é a amamentação.</p>
+
+                  </ul>
+                  No Workshop Desmame Gentil eu vou te ensinar o passo a passo para que você consiga:<p>
+
+
+                  Toda história de amamentação tem seu fim e esse fim não precisar ser negando o peito com o seu bebê chorando desesperado querendo mamar e nem mentindo para ele ao colocar band-aids dizendo que o mamá está machucado… Você e seu bebê merecem um fim respeitoso e gentil para esse vínculo tão incrível que é a amamentação.</p>
             </div>
             </div>
 
