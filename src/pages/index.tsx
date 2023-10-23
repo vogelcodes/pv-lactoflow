@@ -73,8 +73,8 @@ const Home: NextPage = () => {
             <div className="flex lg:flex-row lg:items-start lg:gap-0 gap-[1.75rem] flex-col items-center justify-center pb-[5rem] lg:pt-[3.5rem] pt-[1.5rem]">
               <div className="max-w-[50rem] flex flex-col justify-center items-center w-full text-slate-100">
                 <h1 className="lg:text-[4rem] sm:text-[3rem] text-[2rem] md:w-[70%] text-[#FFF] lg:leading-[4rem] text-center leading-9 font-extrabold">
-                  Sua <span className="text-green
-                  ">amamentação</span>  da gestação ao desmame em um 
+                  Sua amamentação da<span className="text-green
+                  "> gestação ao desmame</span>  em um 
                   <span className="text-red-400"> único curso</span>
                 </h1>
                 <div className="flex gap-4 items-center flex-col lg:flex-row pt-4 justify-center">
