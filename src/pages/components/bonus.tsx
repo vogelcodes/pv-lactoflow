@@ -4,7 +4,7 @@ import Header1 from "./h1";
 
 const Bonus = () => {
     return (
-        <section className="p-6 w-full text-2xl bg-cream text-blue">
+        <section className="p-2 w-full text-2xl bg-cream text-blue">
             <p className="text-center">
             Além de todas as aulas gravadas, você ainda tem acesso a:
             </p>
@@ -20,17 +20,46 @@ const Bonus = () => {
         src={"/zoom.svg"}
         height={44}
         ></Image>
-    <p className="text-2xl text-center">2 encontros ao vivo todos os meses no Zoom</p>
+    <p className="text-2xl text-center">Suporte mensal no Zoom</p>
 </div>
-    <li className="text-lg">Uma Oficina com os mais diversos temas da maternidade</li>
-     <li className="text-lg">Um encontro para tirar as dúvidas do método</li>
+    <p className="text-lg">Todos os meses, temos um encontro marcado onde você pode ligar sua câmera e conversar diretamente comigo para tirar todas as suas dúvidas sobre o método.</p>
+    <p className="text-2xl text-center">Oficina mensal no Zoom</p>
+    <Image alt="telegram-comunidade"
+    width={500}
+    height={500}
+    src={"/oficina.webp"}
+    className="rounded-md"
+    />
+
+    <p className="text-lg">Uma vez ao mês eu faço Oficinas sobre os mais diversos temas da maternidade a partir de propostas das próprias alunas.</p>
 
 
   </div>
 </div>
 
-<div className="card bg-blue shadow-lg">
-  <div className="card-body">
+      <div className="card bg-blue shadow-lg">
+        <div className="card-body">
+      
+           <div className="flex items-center flex-col gap-2">
+          <Image
+              alt="wpp"
+              width={44}
+              src={"/telegram-2.svg"}
+              height={44}
+              ></Image>
+      <p className="text-center">Comunidade exclusiva de alunas onde você tem contato direto a mim e às demais alunas do método</p>
+      <Image alt="telegram-comunidade"
+          width={260}
+          height={500}
+          src={"/telegram-ve.webp"}
+          className="rounded-md"
+      
+          />
+      </div>
+      </div>
+              </div>
+<div className="card px-0.5 bg-blue shadow-lg">
+  <div className="card-body p-1">
 
      <div className="flex items-center flex-col gap-2">
     {/* <Image
@@ -39,34 +68,23 @@ const Bonus = () => {
         src={"/telegram-2.svg"}
         height={44}
         ></Image> */}
-<p className="text-center">Materiais exclusivos e didáticos do curso para facilitar o seu dia-a-dia</p>
+<p className="p-3 text-center">E-book sobre as diversas Ervas Galactagogas</p>
 <Image alt="telegram-comunidade"
-    width={260}
-    height={500}
-    src={"/materiais2.webp"}
+    width={400}
+    height={600}
+    src={"/ervas.webp"}
     className="rounded-md"
     />
-</div>
-</div>
-        </div>
-<div className="card bg-blue shadow-lg">
-  <div className="card-body">
-
-     <div className="flex items-center flex-col gap-2">
-    <Image
-        alt="wpp"
-        width={44}
-        src={"/telegram-2.svg"}
-        height={44}
-        ></Image>
-<p className="text-center">Comunidade exclusiva de alunas onde você tem contato direto a mim e às demais alunas do método</p>
+    <p className="p-4 text-base">Quando usadas da forma correta, as ervas galactagogas podem sim dar um bom gás no seu resultado. E para te ajudar com orientações sobre as funções de cada erva, misturas recomendadas, doses corretas, efeitos colaterais e contraindicações, eu criei um e-book prático com o resumo de todas essas informações. Um verdadeiro guia com tudo o que você precisa saber sobre o mundo das ervas.</p>
+<p className="text-center">E-book com diversas Receitas Lactogênicas</p>
 <Image alt="telegram-comunidade"
-    width={260}
+    width={300}
     height={500}
-    src={"/comunidade.webp"}
+    src={"/receitas.webp"}
     className="rounded-md"
-
     />
+    <p className="p-4 text-base">A estratégia para aumentar sua produção de leite também pode ser gostosa! Eu juntei em um e-book as receitas lactogênicas mais saborosas e fáceis que eu conheço. Nenhum alimento sozinho faz milagre para a sua produção, mas os alimentos corretos podem sim fazer diferença nesse resultado.</p>
+
 </div>
 </div>
         </div>

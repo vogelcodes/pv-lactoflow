@@ -4,7 +4,7 @@ import Header1 from "./h1";
 
 const About = () => {
     return (
-        <section className="p-4">
+        <section className="p-2">
             <div className="flex max-w-2xl flex-col gap-3 items-center">
             <Image width={720} height={0} alt="Carolina Procaci" className="rounded-md" src={"/carol-close-md.webp"}/>
             <div className="card bg-cream max-w-2xl shadow-lg text-blue">

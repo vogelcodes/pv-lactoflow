@@ -229,6 +229,7 @@ Explicação do método
               })}
             </div>
           </section>
+          <Bonus/>
           <CTA
             openModal={openModal}
             label="Também quero esses resultados"
@@ -236,7 +237,6 @@ Explicação do método
             />
           <About/>
           <Faq />
-          <Bonus/>
           <CTA
             openModal={openModal}
             label="Quero aumentar minha produção de leite"
