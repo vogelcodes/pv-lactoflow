@@ -232,7 +232,7 @@ Explicação do método
           <Bonus/>
           <CTA
             openModal={openModal}
-            label="Também quero esses resultados"
+            label="Tenha acesso a tudo isso agora"
             
             />
           <About/>

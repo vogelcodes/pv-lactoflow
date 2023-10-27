@@ -22,8 +22,22 @@ const Bonus = () => {
         ></Image>
     <p className="text-2xl text-center">Suporte mensal no Zoom</p>
 </div>
-    <p className="text-lg">Todos os meses, temos um encontro marcado onde você pode ligar sua câmera e conversar diretamente comigo para tirar todas as suas dúvidas sobre o método.</p>
+    <Image alt="telegram-comunidade"
+    width={500}
+    height={500}
+    src={"/zoom-call.webp"}
+    className="rounded-md"
+    />
+    <p className="text-lg">Todos os meses, temos um encontro marcado para você poder ligar sua câmera e conversar diretamente comigo para tirar todas as suas dúvidas sobre o método.</p>
+<div className="flex flex-col items-center gap-2 pt-4">
+    <Image
+        alt="zoom"
+        width={44}
+        src={"/zoom.svg"}
+        height={44}
+        ></Image>
     <p className="text-2xl text-center">Oficina mensal no Zoom</p>
+</div>
     <Image alt="telegram-comunidade"
     width={500}
     height={500}
@@ -48,6 +62,7 @@ const Bonus = () => {
               height={44}
               ></Image>
       <p className="text-center">Comunidade exclusiva de alunas onde você tem contato direto a mim e às demais alunas do método</p>
+      <p className="text-lg">No telegram temos a nossa comunidade da família LactoFlow onde você encontra acolhimento, um espaço para desabafos e também para tirar dúvidas práticas sobre o método no dia a dia.</p>
       <Image alt="telegram-comunidade"
           width={260}
           height={500}
