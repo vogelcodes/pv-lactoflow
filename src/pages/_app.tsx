@@ -7,26 +7,26 @@ import { api } from "@/utils/api";
 
 import "@/styles/globals.css";
 
-const gotham = localFont({
+const metro = localFont({
   src: [
     {
-      path: '../styles/GothamMedium.ttf',
+      path: '../styles/Metropolis-Medium.otf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../styles/Gotham-Bold.otf',
+      path: '../styles/Metropolis-Bold.otf',
       weight: '600',
       style: 'bold',
     },
     {
-      path: '../styles/Gotham-Black.otf',
+      path: '../styles/Metropolis-Black.otf',
       weight: '700',
       style: 'extrabold',
     },
     
   ],
-  variable: '--font-gotham'
+  variable: '--font-metro'
 })
 
 const MyApp: AppType<{ session: Session | null }> = ({
@@ -37,10 +37,10 @@ const MyApp: AppType<{ session: Session | null }> = ({
     <SessionProvider session={session}>
       <style jsx global>{`
         html {
-          font-family: ${gotham.style.fontFamily};
+          font-family: ${metro.style.fontFamily};
         }
       `}</style>
-      <main className={`${gotham.variable} flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c] font-sans`}>
+      <main className={`${metro.variable} flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c] font-sans`}>
         <Component {...pageProps} />
       </main>
 

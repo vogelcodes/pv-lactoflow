@@ -24,7 +24,7 @@ export default {
       cream: "#fcfaef",
     },
     fontFamily: {
-      sans: ['var(--font-gotham)'],
+      sans: ['var(--font-metro)'],
     },
     extend: {},
   },
