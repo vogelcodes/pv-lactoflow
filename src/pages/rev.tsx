@@ -19,6 +19,8 @@ const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [value, setValue] = useState<E164Number | undefined>();
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+
   const { mutate } = api.example.saveLead.useMutation();
 
   function closeModal() {
@@ -31,7 +33,7 @@ const Home: NextPage = () => {
   function handleSubmit() {
     console.log(value);
 
-    mutate({ email, phoneNumber: value?.toString() || "" });
+    mutate({ name, email, phoneNumber: value?.toString() || "" });
   }
 
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
