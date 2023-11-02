@@ -54,7 +54,6 @@ const Home: NextPage = () => {
           content="Método para aumentar a produção de leite materno"
           />
         <link rel="icon" href="/favicon.ico" />
-        {/* <link href="https://fonts.cdnfonts.com/css/gotham-6" rel="stylesheet" /> */}
       </Head>
       <Hotjar/>
         <header className="w-full flex items-center md:h-[5.0625rem] h-[3.5rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">

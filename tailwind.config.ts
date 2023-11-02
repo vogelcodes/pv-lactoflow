@@ -13,7 +13,7 @@ export default {
       xl: "1440px",
     },
     fontFamily: {
-      sans: ['var(--font-gotham)'],
+      sans: ['var(--font-metro)'],
     },
     extend: {
       colors: {

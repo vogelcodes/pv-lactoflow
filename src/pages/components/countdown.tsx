@@ -1,5 +1,4 @@
 import Countdown from "react-countdown"
-import dynamic from 'next/dynamic'
 
 const CountdownReact = () => {
       
@@ -11,18 +10,18 @@ const CountdownReact = () => {
           if (days>0) {
 
               // Render a countdown
-              return <span className="flex text-center text-sm" suppressHydrationWarning>{days.toString()} Dias, {hours.toString()} horas</span>;
+              return <span className="flex text-center text-sm" suppressHydrationWarning>{days} Dias, {hours} horas</span>;
             }  
           if (days<1) {
 
               // Render a countdown
-              return <span className="flex text-center text-sm" suppressHydrationWarning>{hours.toString()}h, {minutes.toString()}min, {seconds.toString()}s</span>;
+              return <span className="flex text-center text-sm" suppressHydrationWarning>{hours}h, {minutes}min, {seconds}s</span>;
             }  
         }
       };
     
     return (<>
-                    <div className="text-white w-[50%] flex flex-col items-center"> <div>Esta oferta acaba em:</div> <Countdown renderer={renderer} date={"2023-10-23T23:59:59"}/></div>
+                    <div className="text-white w-[50%] flex flex-col items-center"> <div>Esta oferta acaba em:</div> <Countdown renderer={renderer} date={Date.parse('Nov 28 2023 02:59:59 GMT+0000')}/></div>
 
     </>)
 }
