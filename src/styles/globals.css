@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-input {
-    @apply dark:bg-cream
+input, select {
+    @apply dark:bg-cream dark:text-blue
 }

@@ -24,6 +24,7 @@ const Home: NextPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [value, setValue] = useState<E164Number | undefined>();
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
 
   function closeModal() {
@@ -36,7 +37,7 @@ const Home: NextPage = () => {
   function handleSubmit() {
     console.log(value);
 
-    mutate({ email, phoneNumber: value?.toString() || "" });
+    mutate({ name, email, phoneNumber: value?.toString() || "" });
   }
 
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -304,6 +305,15 @@ Explicação do método
                       </Dialog.Title>
                       <div className="mt-2">
                         <form className="mb-8  text-blue flex flex-col">
+                          <label htmlFor="celular">Nome</label>
+                          <input
+                            className="pl-2 dark:bg-cream"
+                            type="text"
+                            name="email"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            placeholder="Nome"
+                            />
                           <label htmlFor="celular">Email</label>
                           <input
                             className="pl-2 dark:bg-cream"
@@ -315,7 +325,8 @@ Explicação do método
                             />
                           <label htmlFor="celular">Celular</label>
                           <PhoneInput
-                          className=""
+                          
+                          className="bg-cream"
                             labels={ptBR}
                             flags={flags}
                             value={value}
@@ -336,6 +347,7 @@ Explicação do método
                             Quero aumentar minha produção de leite
                           </button>
                         </a>
+                        <h3 className="text-blue text-base text-center">SEUS DADOS ESTÃO SEGUROS</h3>
                       </div>
                     </Dialog.Panel>
                   </Transition.Child>
