@@ -31,7 +31,7 @@ const Home: NextPage = () => {
   function handleSubmit() {
     console.log(value);
 
-    mutate({ email, phoneNumber: value?.toString() || "" });
+    mutate({ name: "", email, phoneNumber: value?.toString() || "" });
   }
 
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
