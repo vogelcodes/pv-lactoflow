@@ -31,7 +31,9 @@ const About = () => {
             <p>
 Desde a sua primeira experiência com a amamentação, em 2018, desenvolveu estratégias pessoais para aumentar a sua produção de leite. E assim, enquanto amamentava de forma exclusiva seu filho, conseguiu montar um estoque de leite materno para ele e ainda doar <span className="uppercase underline underline-offset-4 decoration-dashed">semanalmente</span> cerca de 1 litro para um banco de leite humano.
 
-            </p>             
+            </p>     
+            <Image width={320} height={0} alt="Carolina Procaci" className="rounded-md mx-auto" src={"/pote-leite.webp"}/>
+
             <p>
 Com as estratégias pessoais desenvolvidas e com a capacitação profissional na área de baixa produção de leite, desenvolveu  o <span className="text-2xl text-red">Método LactoFlow®️</span>: um passo a passo estratégico e simples do que é necessário fazer para aumentar a produção de leite e não precisar de fórmula infantil.
             </p> 
