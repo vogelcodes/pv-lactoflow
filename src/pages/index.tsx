@@ -17,6 +17,7 @@ import Furadeira from "./components/furadeira";
 import Faq from "./components/faq";
 import Footer from "./components/footer";
 import Bonus from "./components/bonus";
+import {useRouter} from 'next/router'
 
 const Home: NextPage = () => {
   type E164Number = string | undefined;
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
+  const router = useRouter();
 
   function closeModal() {
     setIsOpen(false);
@@ -36,8 +38,9 @@ const Home: NextPage = () => {
   }
   function handleSubmit() {
     console.log(value);
+    console.log(router.asPath)
 
-    mutate({ name, email, phoneNumber: value?.toString() || "" });
+    mutate({ url: router.asPath, name, email, phoneNumber: value?.toString() || "" });
   }
 
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
