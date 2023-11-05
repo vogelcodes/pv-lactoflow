@@ -230,9 +230,9 @@ Explicação do método
                 return (
                   <div className="" key={number}>
                     <Image
-                      className="rounded-xl mx-auto max-w-[250px]"
+                      className="rounded-xl mx-auto"
                       key={number}
-                      width={300}
+                      width={340}
                       height={500}
                       src={`/depoimentos/metodo/${number}.jpg`}
                       alt="depoimento"

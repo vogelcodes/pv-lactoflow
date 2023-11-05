@@ -9,8 +9,8 @@ const Furadeira = ()=> {
             </h1>
             <div className="mx-2 sm:p-2">
               
-              <div className="flex max-w-3xl flex-col  gap-2">
-                          <div className='mx-auto '>
+              <div className="flex max-w-3xl flex-col gap-4">
+                          <div className='mx-auto mb-2 '>
                       <Image
                           className=''
                           alt='metodo'

@@ -21,7 +21,10 @@ const About = () => {
             </div>
             </div>
 
-                         
+               <div className="flex gap-2 flex-col md:flex-row md:gap-1">
+            <Image width={320} height={0} alt="Carolina Procaci" className="rounded-md" src={"/carol-amamentando.webp"}/>
+            <Image width={320} height={0} alt="Carolina Procaci" className="rounded-md" src={"/carol-coletando.webp"}/>
+                </div>          
             <div className="card text-xl bg-cream max-w-2xl shadow-lg text-blue">
   <div className="card-body">
             <div className="max-w-2xl m-2 flex flex-col gap-4">
