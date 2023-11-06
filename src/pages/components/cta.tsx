@@ -1,7 +1,8 @@
 import Image from "next/image";
 
 type CtaProps = {
-  openModal: () => void;
+  ctaOption?: string;
+  openModal: (option: string) => void;
   price?: boolean;
   label?: string;
 };
@@ -10,6 +11,7 @@ const CTA = ({
   openModal,
   price = false,
   label = "Quero aumentar minha produção de leite",
+  ctaOption = '0'
 }: CtaProps) => {
   return (
     <div className="flex w-full flex-col items-center rounded-sm bg-cream text-blue">
@@ -18,7 +20,7 @@ const CTA = ({
         {/* <a href="https://pay.hotmart.com/O84147403X"> */}
 
         <button
-          onClick={openModal}
+          onClick={e =>openModal(ctaOption)}
           className="text-white my-2 max-w-[250px] rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-4 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:max-w-md lg:py-5 lg:text-[22.6px]"
         >
           {label}

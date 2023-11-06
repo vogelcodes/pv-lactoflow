@@ -19,7 +19,7 @@ export const exampleRouter = createTRPCRouter({
     return ctx.prisma.lead.findMany();
   }),
   saveLead: publicProcedure
-    .input(z.object({ url: z.string().optional(), name: z.string(), email: z.string(), phoneNumber: z.string() }))
+    .input(z.object({ ctaOption: z.string().optional(), url: z.string().optional(), name: z.string(), email: z.string(), phoneNumber: z.string() }))
     .mutation(async ({ ctx, input }) => {
       const lead =  {
           email: input.email,
@@ -38,6 +38,7 @@ export const exampleRouter = createTRPCRouter({
       formData.append('data', new Date().toISOString() || "")
       formData.append('tag', "pv")
       formData.append('url', input.url || "")
+      formData.append('cta', input.ctaOption || "")
       const gSheets = await fetch(scriptURL, { method: 'POST', headers: {
       }, body: formData})
       console.log(lead)
