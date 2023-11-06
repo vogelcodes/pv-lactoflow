@@ -21,7 +21,7 @@ import Hotjar from "./components/tags/hotjar";
 import Header1 from "./components/h1";
 import CountdownReact from "./components/countdown";
 
-const Home: NextPage = () => {
+const Obrigado: NextPage = () => {
   type E164Number = string | undefined;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -111,5 +111,5 @@ const Home: NextPage = () => {
         )
         }
 
-        export default Home;
+        export default Obrigado;
   
