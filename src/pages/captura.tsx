@@ -78,9 +78,9 @@ const Home: NextPage = () => {
       <Hotjar/>
         <header className="w-full flex items-center md:h-[5.0625rem] h-[3.5rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
           <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-center "> 
-            <div className="md:w-[16rem] w-[8rem]">
+            <div className="md:w-[13rem] w-[8rem]">
               <Image
-                  src="/logo-portrait.svg"
+                  src="/logo-portrait-v2.svg"
                   alt="logo"
                   width={250}
                   height={120}
@@ -94,20 +94,20 @@ const Home: NextPage = () => {
               <div className="max-w-[50rem] flex flex-col gap-2 justify-center items-center w-full text-slate-100">
                 <div className="text-cream">
 
+                  <h1 className="lg:text-[3.5rem] sm:text-[3rem] text-[1.5rem] text-cream lg:leading-[3.5rem] text-center leading-9 font-bold">
+                    Todas as fases<br/> da sua <span className="uppercase text-green
+                    ">amamentação</span><br/> em um 
+                    <span className="text-[1.5rem] sm:text-[3rem] text-red-400"> ÚNICO CURSO</span>
+                  </h1>
                   <div className="flex w-full justify-center">
 
                           <Image
-                              src="/bf-cc.png"
+                              src="/bf-cc-2.webp"
                               alt="logo"
                               width={250}
                               height={120}
                               />
                               </div>
-                  <h1 className="lg:text-[3.5rem] sm:text-[3rem] text-[2rem] text-cream lg:leading-[3.5rem] text-center leading-9 font-extrabold">
-                    Todas as fases da sua <span className="uppercase text-green
-                    ">amamentação</span> em um 
-                    <span className="text-[1.5rem] sm:text-[3rem] text-red-400"> ÚNICO CURSO</span>
-                  </h1>
                   
                   <p className="text-center">Inscreva-se agora para garantir essa oferta</p>
                   <div className="mt-2 bg-green p-2 max-w-[420px] rounded-md flex w-[95%] mx-auto flex-col items-center">
@@ -136,7 +136,7 @@ const Home: NextPage = () => {
                         
                           <button
                             type="submit"
-                            className="mt-2 w-full mx-auto rounded-lg w-full border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-2 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
+                            className="mt-2 w-full mx-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-2 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
                             >
                             Quero Participar
                           </button>
@@ -150,10 +150,10 @@ const Home: NextPage = () => {
 
 
             </div>
-            <div className="h-full">
+            {/* <div className="h-full">
 
             <Image width={300} height={0} alt="Carolina Procaci" className="rounded-md h-full" src={"/carol.webp"}/>
-            </div>
+            </div> */}
             
             </div>
 

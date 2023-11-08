@@ -52,17 +52,17 @@ const Home: NextPage = () => {
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
   
   return         <header className="w-full flex items-center md:h-[5.0625rem] h-[3.5rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
-  <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-center "> 
-    <div className="md:w-[16rem] w-[8rem]">
-      <Image
-          src="/logo-portrait.svg"
-          alt="logo"
-          width={250}
-          height={120}
-        />
-    </div>           
-  </div>
-</header >
+          <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-center "> 
+            <div className="md:w-[16rem] w-[8rem]">
+              <Image
+                  src="/logo-portrait.svg"
+                  alt="logo"
+                  width={250}
+                  height={120}
+                />
+            </div>           
+          </div>
+        </header >
 
   return (
 
