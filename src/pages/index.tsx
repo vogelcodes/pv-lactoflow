@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
@@ -20,6 +20,7 @@ import Bonus from "./components/bonus";
 import Hotjar from "./components/tags/hotjar";
 import Header1 from "./components/h1";
 import CountdownReact from "./components/countdown";
+import { useRouter } from "next/navigation";
 
 const Home: NextPage = () => {
   type E164Number = string | undefined;
@@ -42,8 +43,26 @@ const Home: NextPage = () => {
 
     mutate({name, email, phoneNumber: value?.toString() || "" });
   }
+  const router = useRouter()
+
+  useEffect(()=>{
+    router.push('captura')
+  },[])
 
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  
+  return         <header className="w-full flex items-center md:h-[5.0625rem] h-[3.5rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
+  <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-center "> 
+    <div className="md:w-[16rem] w-[8rem]">
+      <Image
+          src="/logo-portrait.svg"
+          alt="logo"
+          width={250}
+          height={120}
+        />
+    </div>           
+  </div>
+</header >
 
   return (
 
