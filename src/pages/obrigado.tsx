@@ -56,11 +56,11 @@ const Obrigado: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hotjar/>
-        <header className="w-full flex items-center md:h-[5.0625rem] h-[3.5rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
-          <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-center"> 
-            <div className="md:w-[16rem] w-[8rem]">
+      <header className="w-full flex items-center md:h-[5.0625rem] h-[3.5rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
+          <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-center "> 
+            <div className="md:w-[13rem] w-[8rem]">
               <Image
-                  src="/logo-portrait.svg"
+                  src="/logo-portrait-v2.svg"
                   alt="logo"
                   width={250}
                   height={120}
@@ -74,7 +74,7 @@ const Obrigado: NextPage = () => {
               <div className="max-w-[50rem] flex flex-col gap-2 justify-center items-center w-full text-slate-100">
                 <div className="text-cream">
 
-                  <h1 className="lg:text-[3.5rem] sm:text-[3rem] text-[2rem] text-cream leading-relaxed text-center font-extrabold">
+                  <h1 className="lg:text-[3.5rem] sm:text-[3rem] text-[2rem] text-cream md:leading-[4rem] leading-[2.5rem] text-center font-extrabold">
                     Falta pouco para você entrar na  <span className="bg-black p-2 text-green-bf">BLACKFRIDAY</span> <span className="text-green
                     "> LactoFlow</span>
                   </h1>

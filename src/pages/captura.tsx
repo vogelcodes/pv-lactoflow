@@ -114,7 +114,7 @@ const Home: NextPage = () => {
                         <form onSubmit={(e)=> handleSubmit(e)} className="p-2 w-full md:w-[25rem]  text-blue flex flex-col">
                           <label htmlFor="celular">Email</label>
                           <input
-                            className="pl-2 bg-neutral-50"
+                            className="pl-2 bg-neutral-50 rounded-md"
                             type="text"
                             name="email"
                             value={email}
@@ -124,13 +124,14 @@ const Home: NextPage = () => {
                             />
                           <label htmlFor="celular">Celular</label>
                           <PhoneInput
-                          className="bg-neutral-50 dark:text-cream"
+                          className="bg-neutral-50 dark:text-cream rounded-md"
                             labels={ptBR}
                             flags={flags}
                             value={value}
                             defaultCountry="BR"
                             onChange={setValue}
-                            placeholder="(12)34567890"
+                            placeholder="(11)11111-1111"
+                            
 
                             />
                         
