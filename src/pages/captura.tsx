@@ -20,7 +20,9 @@ import Bonus from "./components/bonus";
 import Hotjar from "./components/tags/hotjar";
 import Header1 from "./components/h1";
 import CountdownReact from "./components/countdown";
-import { useRouter } from "next/router";
+import { useRouter, usePathname } from "next/navigation";
+import  Link  from "next/link";
+import { type FormEvent } from 'react'
 
 
 const Home: NextPage = () => {
@@ -33,6 +35,7 @@ const Home: NextPage = () => {
   const [cta, setCta] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
+  const path = usePathname();
 
 
   function closeModal() {
@@ -42,17 +45,19 @@ const Home: NextPage = () => {
   function openModal() {
     setIsOpen(true);
   }
-  async function handleSubmit() {
+  function handleSubmit(event: FormEvent) {
+    event.preventDefault()
     console.log(value);
-    console.log(router.asPath);
+    console.log();
 
-    await mutate({
+    mutate({
       ctaOption: cta,
-      url: router.asPath,
+      url: path,
       name,
       email,
       phoneNumber: value?.toString() || "",
     });
+   
     router.push('/obrigado')
 
   }
@@ -106,13 +111,14 @@ const Home: NextPage = () => {
                   
                   <p className="text-center">Inscreva-se agora para garantir essa oferta</p>
                   <div className="mt-2 bg-green p-2 max-w-[420px] rounded-md flex w-[95%] mx-auto flex-col items-center">
-                        <form className="p-2 w-full md:w-[25rem]  text-blue flex flex-col">
+                        <form onSubmit={(e)=> handleSubmit(e)} className="p-2 w-full md:w-[25rem]  text-blue flex flex-col">
                           <label htmlFor="celular">Email</label>
                           <input
                             className="pl-2 bg-neutral-50"
                             type="text"
                             name="email"
                             value={email}
+                            required
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="maeincrivel@email.com"
                             />
@@ -125,18 +131,16 @@ const Home: NextPage = () => {
                             defaultCountry="BR"
                             onChange={setValue}
                             placeholder="(12)34567890"
+
                             />
-                        <a
-                        className=""
-                          href={`/obrigado`}
-                          >
+                        
                           <button
-                            onClick={handleSubmit}
+                            type="submit"
                             className="mt-2 w-full mx-auto rounded-lg w-full border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-2 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
                             >
                             Quero Participar
                           </button>
-                        </a>
+                        
                         </form>
                         <h3 className="text-blue w-full text-center text-sm">SEUS DADOS ESTÃO SEGUROS</h3>
                       </div>

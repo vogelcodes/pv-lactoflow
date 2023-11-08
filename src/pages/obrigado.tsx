@@ -57,7 +57,7 @@ const Obrigado: NextPage = () => {
       </Head>
       <Hotjar/>
         <header className="w-full flex items-center md:h-[5.0625rem] h-[3.5rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
-          <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-between lg:justify-start "> 
+          <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-center"> 
             <div className="md:w-[16rem] w-[8rem]">
               <Image
                   src="/logo-portrait.svg"
@@ -66,8 +66,6 @@ const Obrigado: NextPage = () => {
                   height={120}
                 />
             </div>           
-            {/* <CountdownReact /> */}
-            <h1>Black Friday</h1>
           </div>
         </header >
         <div className="w-full text-xl bg-slate">
@@ -76,8 +74,8 @@ const Obrigado: NextPage = () => {
               <div className="max-w-[50rem] flex flex-col gap-2 justify-center items-center w-full text-slate-100">
                 <div className="text-cream">
 
-                  <h1 className="lg:text-[3.5rem] sm:text-[3rem] text-[2rem] text-cream lg:leading-[3.5rem] text-center leading-9 font-extrabold">
-                    Falta pouco para você concluir seu cadastro na  <span className="bg-black p-2 text-green-bf">BLACKFRIDAY</span> <span className="text-green
+                  <h1 className="lg:text-[3.5rem] sm:text-[3rem] text-[2rem] text-cream leading-relaxed text-center font-extrabold">
+                    Falta pouco para você entrar na  <span className="bg-black p-2 text-green-bf">BLACKFRIDAY</span> <span className="text-green
                     "> LactoFlow</span>
                   </h1>
                   <p className="text-center">Entre no grupo de Whatsapp para concluir seu cadastro</p>
