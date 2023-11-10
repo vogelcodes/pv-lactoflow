@@ -185,6 +185,16 @@ const Home: NextPage = () => {
                     onSubmit={(e) => handleSubmit(e)}
                     className="flex w-full flex-col gap-1  p-2 text-blue md:w-[25rem]"
                   >
+                    <label htmlFor="celular">Nome</label>
+                    <input
+                      className="rounded-md bg-neutral-50 pl-2"
+                      type="text"
+                      name="name"
+                      value={name}
+                      required
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Nome"
+                    />
                     <label htmlFor="celular">Email</label>
                     <input
                       className="rounded-md bg-neutral-50 pl-2"

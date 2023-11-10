@@ -22,7 +22,7 @@ const PreCountdownReact = () => {
       };
     
     return (<>
-                    <div className="text-cream w-[50%] flex flex-col items-center"> <div>Oferta revelada daqui a</div> <span><Countdown renderer={renderer} date={Date.parse('Nov 20 2023 12:00:00 GMT+0000')}/></span></div>
+                    <div className="text-cream w-[50%] flex flex-col items-center"> <div>Oferta revelada em</div> <span><Countdown renderer={renderer} date={Date.parse('Nov 20 2023 12:00:00 GMT+0000')}/></span></div>
 
     </>)
 }
