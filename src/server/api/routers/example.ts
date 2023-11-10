@@ -30,6 +30,7 @@ export const exampleRouter = createTRPCRouter({
 
       
       const scriptURL = 'https://script.google.com/macros/s/AKfycbw72hugYvfvgDz18Ce4yxv9fU0XMtTcSmsgNV4My6rol2vvtN89OqiBlp7yGgDpAfHoDw/exec'
+      const mailchimpUrl = 'https://lactoflow.us13.list-manage.com/subscribe/post?u=f2c713cb04fc024e126ae662d&amp;id=96c32b9825&amp;f_id=0034ede7f0'
       const formData = new FormData();
       formData.append("name", input.name)
       formData.append("email", input.email)
@@ -41,7 +42,16 @@ export const exampleRouter = createTRPCRouter({
       formData.append('cta', input.ctaOption || "")
       const gSheets = await fetch(scriptURL, { method: 'POST', headers: {
       }, body: formData})
-      console.log(lead)
+      const mcForm = new FormData();
+      mcForm.append("FNAME", input.name)
+      mcForm.append("EMAIL", input.email)
+      mcForm.append("PHONE", input.phoneNumber)
+      mcForm.append("tags", "7071199")
+      mcForm.append("b_f2c713cb04fc024e126ae662d_96c32b9825", "")
+
+      const mailChimpSub = await fetch(mailchimpUrl, { method: 'POST', headers: {
+      }, body: mcForm})
+      console.log(mailChimpSub)
 
 
       return lead;
