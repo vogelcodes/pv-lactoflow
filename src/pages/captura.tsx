@@ -21,6 +21,9 @@ import Hotjar from "./components/tags/hotjar";
 import Header1 from "./components/h1";
 import PreCountdownReact from "./components/preCountdown";
 import { useRouter, usePathname } from "next/navigation";
+import { useRouter as oldRouter } from "next/router";
+
+
 import Link from "next/link";
 import { type FormEvent } from "react";
 
@@ -34,7 +37,7 @@ const Home: NextPage = () => {
   const [cta, setCta] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
-  const path = usePathname();
+  const pathRouter = oldRouter();
 
   function closeModal() {
     setIsOpen(false);
@@ -46,11 +49,10 @@ const Home: NextPage = () => {
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
     console.log(value);
-    console.log();
 
     mutate({
       ctaOption: cta,
-      url: path,
+      url: pathRouter.asPath,
       name,
       email,
       phoneNumber: value?.toString() || "",
