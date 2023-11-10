@@ -75,7 +75,7 @@ const Obrigado: NextPage = () => {
                 <div className="text-cream">
 
                   <h1 className="lg:text-[3.5rem] sm:text-[3rem] text-[2rem] text-cream md:leading-[4rem] leading-[2.5rem] text-center font-extrabold">
-                    No <span className="text-[#40C351]">Whatsapp</span> vou liberar o link 15 minutos antes
+                    No grupo do <span className="text-[#40C351]">Whatsapp</span> vou liberar o link uma hora antes
                   </h1>
                   <p className="text-center">Entre no grupo para ser uma das primeiras e garantir um prêmio exclusivo</p>
                   <div className="mt-2 p-2 rounded-sm flex flex-col items-center">

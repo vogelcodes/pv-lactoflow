@@ -124,7 +124,7 @@ const Home: NextPage = () => {
                     <li className="text-cream">
                       <div className="flex justify-between">
                         LactoFlow®️{" "}
-                        <span className="w-[3.75rem] blur-sm text-left">R$XXX</span>
+                        <span className="w-[3.75rem] blur-sm select-none text-left">R$XXX</span>
                       </div>
                     </li>
                     <li className="text-cream">
@@ -137,7 +137,7 @@ const Home: NextPage = () => {
                       <div className="flex justify-between">
                         A Amamentação
                         <br /> começa na Gestação
-                        <span className="w-[3.75rem] text-left blur-sm text-slate-400 line-through">
+                        <span className="w-[3.75rem] text-left blur-sm select-none text-slate-400 line-through">
                           R$XXX
                         </span>
                       </div>
@@ -146,7 +146,7 @@ const Home: NextPage = () => {
                       <div className="flex justify-between">
                         Como fica o mamá
                         <br /> depois do papá
-                        <span className="w-[3.75rem] text-left blur-sm text-slate-400 line-through">
+                        <span className="w-[3.75rem] text-left blur-sm select-none text-slate-400 line-through">
                           R$XXX
                         </span>
                       </div>
@@ -155,7 +155,7 @@ const Home: NextPage = () => {
                       <div className="flex justify-between">
                         Toda Amamentação
                         <br /> tem seu fim
-                        <span className="w-[3.75rem] blur-sm text-left text-slate-400 line-through">
+                        <span className="w-[3.75rem] blur-sm text-left select-none text-slate-400 line-through">
                           R$XXX
                         </span>
                       </div>
@@ -170,7 +170,7 @@ const Home: NextPage = () => {
                     <hr className="mx-auto border-dashed px-28" />
                     <li className="pt-2">
                       <div className="text-center justify-center pb-2">
-                        <h1 className="text-xl blur-sm text-[#4dca64]">R$000</h1>
+                        <h1 className="text-xl blur-sm select-none text-[#4dca64]">R$000</h1>
                         <h1 className="text-xs">Oferta será revelada<br/>em 20/11/2023 09:00</h1>
                       </div>
                     </li>
