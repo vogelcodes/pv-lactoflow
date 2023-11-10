@@ -17,7 +17,7 @@ class MyDocument extends Document {
   }
   render() {
     return (
-      <Html>
+      <Html lang="pt">
         <Head>
           {/* <noscript>
           <Image
@@ -28,6 +28,7 @@ class MyDocument extends Document {
             src={`https://www.facebook.com/tr?id=${fbp}&ev=PageView&noscript=1`}
           />
         </noscript> */}
+        
         </Head>
         <body>
           <Main />

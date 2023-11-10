@@ -70,15 +70,14 @@ const Obrigado: NextPage = () => {
         </header >
         <div className="w-full text-xl bg-slate">
           <div className="max-w-[80rem] xl:px-0 px-4 mx-auto w-full flex flex-col items-center">
-            <div className="flex lg:flex-row lg:items-start lg:gap-0 gap-[1.75rem] flex-col items-center justify-center pb-[5rem] lg:pt-[3.5rem] pt-[1.5rem]">
+            <div className="flex lg:flex-row lg:items-start lg:gap-0 gap-[1.75rem] flex-col items-center justify-center pb-[5rem] lg:pt-[3.5rem] pt-1">
               <div className="max-w-[50rem] flex flex-col gap-2 justify-center items-center w-full text-slate-100">
                 <div className="text-cream">
 
                   <h1 className="lg:text-[3.5rem] sm:text-[3rem] text-[2rem] text-cream md:leading-[4rem] leading-[2.5rem] text-center font-extrabold">
-                    Falta pouco para você entrar na  <span className="bg-black p-2 text-green-bf">BLACKFRIDAY</span> <span className="text-green
-                    "> LactoFlow</span>
+                    No <span className="text-[#40C351]">Whatsapp</span> vou liberar o link 15 minutos antes
                   </h1>
-                  <p className="text-center">Entre no grupo de Whatsapp para concluir seu cadastro</p>
+                  <p className="text-center">Entre no grupo para ser uma das primeiras e garantir um prêmio exclusivo</p>
                   <div className="mt-2 p-2 rounded-sm flex flex-col items-center">
                         <a
                           target="_blank"

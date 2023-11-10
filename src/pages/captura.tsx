@@ -19,11 +19,10 @@ import Footer from "./components/footer";
 import Bonus from "./components/bonus";
 import Hotjar from "./components/tags/hotjar";
 import Header1 from "./components/h1";
-import CountdownReact from "./components/countdown";
+import PreCountdownReact from "./components/preCountdown";
 import { useRouter, usePathname } from "next/navigation";
-import  Link  from "next/link";
-import { type FormEvent } from 'react'
-
+import Link from "next/link";
+import { type FormEvent } from "react";
 
 const Home: NextPage = () => {
   type E164Number = string | undefined;
@@ -37,7 +36,6 @@ const Home: NextPage = () => {
   const router = useRouter();
   const path = usePathname();
 
-
   function closeModal() {
     setIsOpen(false);
   }
@@ -46,7 +44,7 @@ const Home: NextPage = () => {
     setIsOpen(true);
   }
   function handleSubmit(event: FormEvent) {
-    event.preventDefault()
+    event.preventDefault();
     console.log(value);
     console.log();
 
@@ -57,49 +55,57 @@ const Home: NextPage = () => {
       email,
       phoneNumber: value?.toString() || "",
     });
-   
-    router.push('/obrigado')
 
+    router.push("/obrigado");
   }
 
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
   return (
-
     <>
-            <Head>
+      <Head>
         <title>Black Friday-LactoFlow®️</title>
         <meta
           name="description"
-          content="Método para aumentar a produção de leite materno"
-          />
+          content="Oferta Black Friday - LactoFlow"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hotjar/>
-        <header className="w-full flex items-center md:h-[5.0625rem] h-[3.5rem] border-b-[1px] border-solid border-[#18191A] z-10 sticky top-0 bg-[#020202]">
-          <div className="lg:max-w-[80rem] xl:px-0 lg:px-4 mx-auto w-full flex items-center gap-4 justify-center "> 
-            <div className="md:w-[13rem] w-[8rem]">
-              <Image
-                  src="/logo-portrait-v2.svg"
-                  alt="logo"
-                  width={250}
-                  height={120}
-                />
-            </div>           
+      <Hotjar />
+      <header className="sticky top-0 z-10 flex h-[3.5rem] w-full items-center border-b-[1px] border-solid border-[#18191A] bg-[#020202] md:h-[5.0625rem]">
+        <div className="mx-auto flex w-full items-center justify-center gap-4 lg:max-w-[80rem] lg:px-4 xl:px-0 ">
+          <div className="w-[8rem] md:w-[13rem]">
+            <Image
+              src="/logo-portrait-v2.svg"
+              alt="logo"
+              width={250}
+              height={120}
+            />
           </div>
-        </header >
-        <div className="w-full text-xl bg-slate">
-          <div className="max-w-[80rem] xl:px-0 px-4 mx-auto w-full flex flex-col md:flex-row items-center justify-center">
-            <div className="flex lg:flex-row lg:items-center lg:gap-0 gap-[1.75rem] flex-col items-center justify-center pb-[5rem] lg:pt-[3.5rem] pt-[1.5rem]">
-              <div className="max-w-[50rem] flex flex-col gap-2 justify-center items-center w-full text-slate-100">
-                <div className="text-cream">
-
-                  <h1 className="lg:text-[3.5rem] sm:text-[3rem] text-[1.5rem] text-cream lg:leading-[3.5rem] text-center leading-9 font-bold">
-                    Todas as fases<br/> da sua <span className="uppercase text-green
-                    ">amamentação</span><br/> em um 
-                    <span className="text-[1.5rem] sm:text-[3rem] text-red-400"> ÚNICO CURSO</span>
-                  </h1>
-                  <div className="flex w-full justify-center">
+          <PreCountdownReact />
+        </div>
+      </header>
+      <div className="bg-slate w-full text-xl">
+        <div className="mx-auto flex w-full max-w-[80rem] flex-col items-center justify-center px-1 md:flex-row xl:px-0">
+          <div className="flex flex-col items-center justify-center gap-[1.75rem] pb-2 lg:flex-row lg:items-center lg:gap-0 lg:pt-[3.5rem]">
+            <div className="flex w-full max-w-[50rem] flex-col items-center justify-center gap-2 text-slate-100">
+              <div className="text-cream">
+                <h1 className="text-center text-[1.5rem] font-bold leading-9 text-cream sm:text-[3rem] lg:text-[3.5rem] lg:leading-[3.5rem]">
+                  Todas as fases
+                  <br /> da sua{" "}
+                  <span
+                    className="uppercase text-green
+                    "
+                  >
+                    amamentação
+                  </span>
+                  <br /> em um
+                  <span className="text-[1.5rem] text-red-400 sm:text-[3rem]">
+                    {" "}
+                    ÚNICO CURSO
+                  </span>
+                </h1>
+                {/* <div className="flex w-full justify-center">
 
                           <Image
                               src="/bf-cc-2.webp"
@@ -107,66 +113,126 @@ const Home: NextPage = () => {
                               width={250}
                               height={120}
                               />
-                              </div>
-                  
-                  <p className="text-center">Inscreva-se agora para garantir essa oferta</p>
-                  <div className="mt-2 bg-green p-2 max-w-[420px] rounded-md flex w-[95%] mx-auto flex-col items-center">
-                        <form onSubmit={(e)=> handleSubmit(e)} className="p-2 w-full md:w-[25rem]  text-blue flex flex-col">
-                          <label htmlFor="celular">Email</label>
-                          <input
-                            className="pl-2 bg-neutral-50 rounded-md"
-                            type="text"
-                            name="email"
-                            value={email}
-                            required
-                            onChange={(e) => setEmail(e.target.value)}
-                            placeholder="maeincrivel@email.com"
-                            />
-                          <label htmlFor="celular">Celular</label>
-                          <PhoneInput
-                          className="bg-neutral-50 dark:text-cream rounded-md"
-                            labels={ptBR}
-                            flags={flags}
-                            value={value}
-                            defaultCountry="BR"
-                            onChange={setValue}
-                            placeholder="(11)11111-1111"
-                            
+                              </div> */}
+                <div className="flex flex-col sm:flex-row sm:gap-4 items-center">
+                <div className="w-[18rem] mx-auto rounded-md bg-stone-900  p-2 text-cream">
+                  <h2 className="pb-4 text-center">
+                    Oferta <span className="text-[#4dca64]">Black Friday</span>
+                  </h2>
 
-                            />
-                        
-                          <button
-                            type="submit"
-                            className="mt-2 w-full mx-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-2 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
-                            >
-                            Quero Participar
-                          </button>
-                        
-                        </form>
-                        <h3 className="text-blue w-full text-center text-sm">SEUS DADOS ESTÃO SEGUROS</h3>
+                  <ul className="flex flex-col gap-2 text-sm">
+                    <li className="text-cream">
+                      <div className="flex justify-between">
+                        LactoFlow®️{" "}
+                        <span className="w-[3.75rem] blur-sm text-left">R$XXX</span>
                       </div>
-                    </div>
-                      
-              
+                    </li>
+                    <li className="text-cream">
+                      <div className="flex justify-between">
+                        Workshops ao vivo:{" "}
+                        <span className="w-[3.75rem] text-left text-slate-400 line-through"></span>
+                      </div>
+                    </li>
+                    <li className="pl-2 text-cream">
+                      <div className="flex justify-between">
+                        A Amamentação
+                        <br /> começa na Gestação
+                        <span className="w-[3.75rem] text-left blur-sm text-slate-400 line-through">
+                          R$XXX
+                        </span>
+                      </div>
+                    </li>
+                    <li className="pl-2 text-cream">
+                      <div className="flex justify-between">
+                        Como fica o mamá
+                        <br /> depois do papá
+                        <span className="w-[3.75rem] text-left blur-sm text-slate-400 line-through">
+                          R$XXX
+                        </span>
+                      </div>
+                    </li>
+                    <li className="pl-2 text-cream">
+                      <div className="flex justify-between">
+                        Toda Amamentação
+                        <br /> tem seu fim
+                        <span className="w-[3.75rem] blur-sm text-left text-slate-400 line-through">
+                          R$XXX
+                        </span>
+                      </div>
+                    </li>
+                    <hr className="mx-auto border-dashed px-28" />
 
+                    <li className="text-cream">
+                      <div className="flex justify-center text-lg">
+                        Acesso Vitalício
+                      </div>
+                    </li>
+                    <hr className="mx-auto border-dashed px-28" />
+                    <li className="pt-2">
+                      <div className="text-center justify-center pb-2">
+                        <h1 className="text-xl blur-sm text-[#4dca64]">R$000</h1>
+                        <h1 className="text-xs">Oferta será revelada<br/>em 20/11/2023 09:00</h1>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                <p className="pt-2 text-center">
+                  Inscreva-se agora para não perder essa oferta!
+                </p>
+                <div className="mx-auto mt-2 flex w-[95%] max-w-[420px] flex-col items-center rounded-md bg-green p-2">
+                  <form
+                    onSubmit={(e) => handleSubmit(e)}
+                    className="flex w-full flex-col gap-1  p-2 text-blue md:w-[25rem]"
+                  >
+                    <label htmlFor="celular">Email</label>
+                    <input
+                      className="rounded-md bg-neutral-50 pl-2"
+                      type="text"
+                      name="email"
+                      value={email}
+                      required
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="maeincrivel@email.com"
+                    />
+                    <label htmlFor="celular">Celular</label>
+                    <PhoneInput
+                      className="rounded-md bg-neutral-50 dark:text-cream"
+                      labels={ptBR}
+                      flags={flags}
+                      value={value}
+                      defaultCountry="BR"
+                      onChange={setValue}
+                      placeholder="(11)11111-1111"
+                    />
 
+                    <button
+                      type="submit"
+                      className="mx-auto mt-4 w-full rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-2 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
+                    >
+                      Quero Participar
+                    </button>
+                  </form>
+                  <h3 className="w-full text-center text-sm text-blue">
+                    SEUS DADOS ESTÃO SEGUROS
+                  </h3>
+                </div>
+                </div></div>
+              </div>
             </div>
             {/* <div className="h-full">
 
             <Image width={300} height={0} alt="Carolina Procaci" className="rounded-md h-full" src={"/carol.webp"}/>
             </div> */}
-            
-            </div>
-
           </div>
-
         </div>
-          
-
-
+        <Footer>          <div className="flex items-center justify-center flex-col sm:flex-row text-center">
+            <span>Copyright © 2023</span><span className="hidden sm:block mx-3">|</span><span>Todos os direitos reservados.</span>
+          </div>
+</Footer>
+      </div>
     </>
-        )
-        }
+  );
+};
 
-        export default Home;
-  
+export default Home;
