@@ -51,6 +51,7 @@ const Home: NextPage = () => {
     console.log(value);
 
     mutate({
+      tag: 'depo-raquel',
       ctaOption: cta,
       url: pathRouter.asPath,
       name,
@@ -126,8 +127,8 @@ const Home: NextPage = () => {
           </div>
 
                 <div>
-                <p className="pt-2 text-center">
-                  Emergências acontecem, faça seu estoque de leite. Aproveite nossa promoção de Black Friday:
+                <p className="pt-2 text-center text-balance">
+                  Emergências acontecem, faça seu estoque de leite.<br/> Aproveite nossa promoção de Black Friday:
                 </p>
                 <div className="mx-auto mt-2 flex w-[95%] max-w-[420px] flex-col items-center rounded-md bg-green p-2">
                   <form
