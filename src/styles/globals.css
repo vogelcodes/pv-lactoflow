@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 input, select {
-    @apply dark:bg-white dark:text-blue bg-white text-blue rounded-md
+    @apply dark:bg-white dark:text-blue text-blue rounded-md
 }

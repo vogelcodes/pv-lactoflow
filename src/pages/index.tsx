@@ -11,7 +11,7 @@ import flags from "react-phone-number-input/flags";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import { api } from "@/utils/api";
-import CTA from "./components/cta";
+import CTABF from "./components/cta-bf";
 import About from "./components/about";
 import Furadeira from "./components/furadeira";
 import Faq from "./components/faq";
@@ -45,24 +45,33 @@ const Home: NextPage = () => {
   }
   const router = useRouter();
 
+  const date = new Date(Date.now())
+  const lcto = new Date('2023-11-20T12:00:00.000Z')
+  console.log(date,lcto)
   useEffect(() => {
-    router.push("captura");
+    if ((date < lcto)){
+      
+      router.push("captura");
+    }
+    
   }, []);
 
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
-  return (
-    <header className="sticky top-0 z-10 flex h-[3.5rem] w-full items-center border-b-[1px] border-solid border-[#18191A] bg-[#020202] md:h-[5.0625rem]">
-      <div className="mx-auto flex w-full items-center justify-center gap-4 lg:max-w-[80rem] lg:px-4 xl:px-0 ">
-        <div className="w-[8rem] md:w-[16rem]">
-          <Image src="/logo-portrait.svg" alt="logo" width={250} height={120} />
-        </div>
-      </div>
-    </header>
-  );
+  // return (
+  //   <header className="sticky top-0 z-10 flex h-[3.5rem] w-full items-center border-b-[1px] border-solid border-[#18191A] bg-[#020202] md:h-[5.0625rem]">
+  //     <div className="mx-auto flex w-full items-center justify-center gap-4 lg:max-w-[80rem] lg:px-4 xl:px-0 ">
+  //       <div className="w-[8rem] md:w-[16rem]">
+  //         <Image src="/logo-portrait-v2.svg" alt="logo" width={250} height={120} />
+  //       </div>
+  //     </div>
+  //   </header>
+  // );
+  if (date > lcto) {
 
-  return (
-    <>
+  
+    return (
+      <>
       <Head>
         <title>Black Friday-LactoFlow®️</title>
         <meta
@@ -76,7 +85,7 @@ const Home: NextPage = () => {
         <div className="mx-auto flex w-full items-center justify-between gap-4 lg:max-w-[80rem] lg:justify-start lg:px-4 xl:px-0 ">
           <div className="w-[8rem] md:w-[16rem]">
             <Image
-              src="/logo-portrait.svg"
+              src="/logo-portrait-v2.svg"
               alt="logo"
               width={250}
               height={120}
@@ -86,10 +95,10 @@ const Home: NextPage = () => {
         </div>
       </header>
       <div className="bg-slate w-full text-xl">
-        <div className="mx-auto flex w-full max-w-[80rem] flex-col items-center px-4 xl:px-0">
-          <div className="flex flex-col items-center justify-center gap-[1.75rem] pb-[5rem] pt-[1.5rem] lg:flex-row lg:items-start lg:gap-0 lg:pt-[3.5rem]">
+        <div className="mx-auto flex w-full max-w-[80rem] flex-col items-center xl:px-0">
+          <div className="flex flex-col items-center justify-center gap-[1.75rem] pb-4 pt-[1.5rem] lg:items-start lg:gap-0 lg:pt-[3.5rem]">
             <div className="flex w-full max-w-[50rem] flex-col items-center justify-center text-slate-100">
-              <h1 className="text-center text-[2rem] font-extrabold leading-9 text-[#FFF] sm:text-[3rem] md:w-[70%] lg:text-[3.5rem] lg:leading-[3.5rem]">
+              <h1 className="text-center text-[2rem] px-4 font-extrabold leading-9 text-cream sm:text-[3rem] md:w-[70%] lg:text-[3.5rem] lg:leading-[3.5rem]">
                 Sua amamentação da
                 <span
                   className="text-green
@@ -167,9 +176,9 @@ const Home: NextPage = () => {
 
                   <ul className="flex flex-col gap-2 text-sm">
                     <li className="text-slate-50">
-                      <div className="flex justify-between">
+                      <div className="flex items-center justify-between">
                         LactoFlow®️{" "}
-                        <span className="w-[3.75rem] text-left">R$298</span>
+                      <div className="flex items-center"><span className="w-[3.75rem] text-left text-slate-400 line-through">R$497</span><span className="w-[3.75rem] text-[#4dca64] text-xl text-left">R$298</span></div>
                       </div>
                     </li>
                     <li className="text-slate-50">
@@ -222,34 +231,42 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <Image
-              width={300}
-              height={0}
-              alt="Carolina Procaci"
-              className="rounded-md"
-              src={"/carol.webp"}
+          <CTABF
+            openModal={openModal}
+            label="Quero aumentar minha produção de leite"
+            price
             />
           </div>
-          <div className="card bg-cream text-blue shadow-lg lg:w-full lg:max-w-[77rem]">
+          <div className="card bg-cream text-blue shadow-lg lg:w-full lg:max-w-[60rem]">
             <div className="card-body text-base lg:text-lg">
-              <h1 className="pt-3  text-left text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
+              <h1 className="pt-3 text-left text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
                 LactoFlow®️
               </h1>
               <hr />
               <p>
-                Método para aumento de produção de leite comprovado com mais de
+                Método comprovado para aumento de produção de leite com mais de
                 200 alunas, incluindo todo o conhecimento necessário para não
                 cair nas armadilhas do desmame precoce.
               </p>
+              <div className='mx-auto '>
+                      <Image
+                          className=''
+                          alt='metodo'
+                          src={'/furadeira/furadeira-crop.webp'}
+                          width={600}
+                          height={600}
+                          />
+                          </div>
+
               <h1 className="pt-3  text-left text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
                 Workshop - A Amamentação começa na Gestação
               </h1>
               <hr />
               <p className="">
-                Amamentar não é intuitivo, apesar de ser natural. A falta de
+                Amamentar <span className="uppercase underline underline-offset-4 decoration-dashed">não é intuitivo</span>, apesar de ser natural. A falta de
                 informações corretas sobre a amamentação é a principal causa de:
               </p>
-              <ul className="list-disc py-2 pl-2">
+              <ul className="list-disc py-2 pl-6">
                 <li>dor e fissuras no momento da mamada;</li>
                 <li>baixa produção de leite;</li>
                 <li>desmame precoce.</li>
@@ -266,6 +283,15 @@ const Home: NextPage = () => {
                 mostrar o que muda na sua amamentação depois da introdução de
                 alimentos na rotina do bebê.
               </p>
+              <div className='mx-auto '>
+                      <Image
+                          className=''
+                          alt='metodo'
+                          src={'/intro-alimentar.webp'}
+                          width={600}
+                          height={600}
+                          />
+                          </div>
               <h1 className="pt-3  text-left text-[18px] font-extrabold leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
                 Workshop - Toda Amamentação tem seu fim
               </h1>
@@ -273,19 +299,25 @@ const Home: NextPage = () => {
               <p>
                 É normal chegar em um momento em que a amamentação se torna
                 pesada e a gente se pega frequentemente pensando em um desmame.
-                Ao mesmo tempo, diversas vezes nos arrependermos de desejarmos
+                Ao mesmo tempo, diversas vezes nos arrependemos de desejarmos
                 isso. Afinal, lutamos tanto para que nossos filhos pudessem ser
                 amamentados! E, olha, se esse momento ainda não chegou pra você…
-                Calma que provavelmente ele ainda vai chegar. A livre demanda
+                Calma que provavelmente ele ainda vai chegar.
+              </p>
+              <p>
+              A livre demanda
                 não precisa ser pra sempre e existe um meio do caminho para
                 reencontrar o prazer em amamentar. Existem estratégias para você
                 achar um respiro e assim até decidir amamentar um pouco mais
                 (quem sabe?).
+                
               </p>
-              <ul className="flex list-disc flex-col gap-2 py-2 pl-2">
+              <p>No Workshop Desmame Gentil eu vou te ensinar o passo a passo para
+              que você consiga:</p>
+              <ul className="flex list-disc flex-col gap-2 py-2 pl-6">
                 <li>
                   Sair da livre demanda sem enlouquecer e regular as mamadas do
-                  dia; e
+                  dia;
                 </li>
                 <li>
                   Conduzir um desmame noturno de uma forma lúdica e cheia de
@@ -296,8 +328,7 @@ const Home: NextPage = () => {
                   positivas (para você e para o seu bebê).
                 </li>
               </ul>
-              No Workshop Desmame Gentil eu vou te ensinar o passo a passo para
-              que você consiga:
+              
               <p>
                 Toda história de amamentação tem seu fim e esse fim não precisar
                 ser negando o peito com o seu bebê chorando desesperado querendo
@@ -307,10 +338,148 @@ const Home: NextPage = () => {
               </p>
             </div>
           </div>
+          <section className="my-2">
+          <h1 className="mb-[14.4px] mt-6 px-4 text-cream text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+            Depoimento das alunas que seguiram o método LactoFlow®️:
+          </h1>
+          <div className="flex flex-col items-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3, 4, 5, 6].map((number) => {
+              return (
+                <div className="" key={number}>
+                  <Image
+                    className="mx-auto rounded-xl"
+                    key={number}
+                    width={340}
+                    height={500}
+                    src={`/depoimentos/metodo/${number}.jpg`}
+                    alt="depoimento"
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
+          <CTABF
+            openModal={openModal}
+            label="Quero aumentar minha produção de leite"
+            price
+            />
+            <div className="h-2"></div>
+          <Bonus/>
+          <Faq />
+          <About/>
+          <CTABF
+            openModal={openModal}
+            label="Quero aumentar minha produção de leite"
+            price
+            />
+
         </div>
+        <div className="">
+
+        <Transition appear show={isOpen} as={Fragment}>
+            <Dialog as="div" className="relative z-10" onClose={closeModal}>
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <div className="bg-black fixed inset-0 bg-opacity-75" />
+              </Transition.Child>
+
+              <div className="fixed inset-0 overflow-y-auto">
+                <div className="flex min-h-full items-start justify-center bg-blue bg-opacity-70 p-4 text-center">
+                  <Transition.Child
+                    as={Fragment}
+                    enter="ease-out duration-300"
+                    enterFrom="opacity-0 scale-95"
+                    enterTo="opacity-100 scale-100"
+                    leave="ease-in duration-200"
+                    leaveFrom="opacity-100 scale-100"
+                    leaveTo="opacity-0 scale-95"
+                  >
+                    <Dialog.Panel className="mt-16 w-full max-w-md transform overflow-hidden rounded-2xl bg-green p-6 text-left align-middle shadow-xl transition-all">
+                      <span
+                        className="absolute right-5 top-3 cursor-pointer font-extrabold text-blue"
+                        onClick={closeModal}
+                      >
+                        ✖
+                      </span>
+                      <Dialog.Title
+                        as="h3"
+                        className="text-2xl leading-6 text-blue"
+                      >
+                        Preencha esse formulário e entre para o LactoFlow
+                      </Dialog.Title>
+                      <div className="mt-2">
+                        <form className="mb-8  flex flex-col text-blue">
+                          <label htmlFor="celular">Nome</label>
+                          <input
+                            className="pl-2 dark:bg-cream"
+                            type="text"
+                            name="email"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            placeholder="Nome"
+                          />
+                          <label htmlFor="celular">Email</label>
+                          <input
+                            className="pl-2 dark:bg-cream"
+                            type="text"
+                            name="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="maeincrivel@email.com"
+                          />
+                          <label htmlFor="celular">Celular</label>
+                          <PhoneInput
+                            className="bg-cream"
+                            labels={ptBR}
+                            flags={flags}
+                            value={value}
+                            defaultCountry="BR"
+                            onChange={setValue}
+                          />
+                        </form>
+                        <a
+                          target="_blank"
+                          href={`https://pay.hotmart.com/O84147403X?off=cyafh50d?email=${email}&phoneac=${
+                            value?.toString() || ""
+                          }&name=${name}`}
+                        >
+                          <button
+                            onClick={handleSubmit}
+                            className="mx-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
+                          >
+                            Quero aumentar minha produção de leite
+                          </button>
+                        </a>
+                        <h3 className="text-center text-base text-blue">
+                          SEUS DADOS ESTÃO SEGUROS
+                        </h3>
+                      </div>
+                    </Dialog.Panel>
+                  </Transition.Child>
+                </div>
+              </div>
+            </Dialog>
+          </Transition>
+        </div>
+        <Footer>          <div className="flex items-center justify-center flex-col sm:flex-row text-center">
+            <span>Copyright © 2023</span><span className="hidden sm:block mx-3">|</span><span>Todos os direitos reservados.</span>
+          </div>
+</Footer>
       </div>
     </>
   );
+                        }
+return <></>
+  
 };
 
 export default Home;

@@ -21,7 +21,7 @@ const CountdownReact = () => {
       };
     
     return (<>
-                    <div className="text-white w-[50%] flex flex-col items-center"> <div>Esta oferta acaba em:</div> <Countdown renderer={renderer} date={Date.parse('Nov 28 2023 02:59:59 GMT+0000')}/></div>
+                    <div className="text-white w-[50%] flex flex-col items-center"> <div>A oferta acaba em:</div> <Countdown renderer={renderer} date={Date.parse('Nov 28 2023 02:59:59 GMT+0000')}/></div>
 
     </>)
 }
