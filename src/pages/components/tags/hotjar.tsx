@@ -50,6 +50,18 @@ const Hotjar = () => {
           gtag('config', 'G-6T6HHESNG2');`,
         }}
         />
+              <Script
+        id="hotmart_launcher_script"
+        dangerouslySetInnerHTML={{
+          __html: `(function(l,a,u,n,c,h,e,r){l['HotmartLauncherObject']=c;l[c]=l[c]||function(){
+			(l[c].q=l[c].q||[]).push(arguments)},l[c].l=1*new Date();h=a.createElement(u),
+			e=a.getElementsByTagName(u)[0];h.async=1;h.src=n;e.parentNode.insertBefore(h,e)
+			})(window,document,'script','//launcher.hotmart.com/launcher.js','hot');
+
+			hot('account','32aba353-3c4c-3d94-9d63-eb652a9ca8ee');`,
+        }}
+      />
+
         </>
     )
 }
