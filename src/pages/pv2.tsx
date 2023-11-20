@@ -198,7 +198,6 @@ const Home: NextPage = () => {
               poster="maxresdefault"
             />
           </div>
-
           <CTA openModal={openModal} />
           {/* <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image> */}
 

@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
+import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
@@ -27,7 +28,13 @@ import { useRouter as oldRouter } from "next/router";
 import Link from "next/link";
 import { type FormEvent } from "react";
 
-const Home: NextPage = () => {
+export const getServerSideProps = ( () => {
+  const date = new Date(Date.now())
+  return { props: { date: date.getTime() } }
+})
+
+
+const Home = (props: {date: number}) => {
   type E164Number = string | undefined;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -38,6 +45,18 @@ const Home: NextPage = () => {
   const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
   const pathRouter = oldRouter();
+  const date = new Date (props.date)
+  const lcto = new Date('2023-11-20T12:00:00.000Z')
+  console.log(date,lcto)
+  useEffect(() => {
+    if ((date > lcto)){
+      
+      router.push("/");
+    }
+    
+  }, []);
+
+
 
   function closeModal() {
     setIsOpen(false);

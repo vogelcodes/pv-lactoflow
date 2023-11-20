@@ -4,7 +4,7 @@ import Header1 from "./h1";
 
 const Bonus = () => {
   return (
-    <section className="w-full bg-cream p-2 text-2xl text-blue">
+    <section className="w-full rounded-md lg:max-w-[60rem] bg-cream p-2 text-2xl text-blue">
       <p className="text-center font-semibold">
         Além de todas as aulas gravadas, você ainda tem acesso a:
       </p>
