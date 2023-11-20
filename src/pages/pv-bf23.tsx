@@ -87,7 +87,7 @@ const Home: NextPage = () => {
       </header>
       <div className="bg-slate w-full text-xl">
         <div className="mx-auto flex w-full max-w-[80rem] flex-col items-center xl:px-0">
-          <div className="flex flex-col items-center justify-center gap-[1.75rem] pb-4 pt-[1.5rem] lg:items-start lg:gap-0 lg:pt-[3.5rem]">
+          <div className="flex flex-col items-center justify-center gap-[1.75rem] pb-4 pt-2 lg:items-start lg:gap-0 lg:pt-[3.5rem]">
             <div className="flex w-full max-w-[60rem] flex-col items-center justify-center text-slate-100">
               <h1 className="text-center text-[2rem] px-4 font-extrabold leading-9 text-cream sm:text-[3rem] md:w-[70%] lg:text-[3.5rem] lg:leading-[3.5rem]">
                 Sua amamentação da
@@ -101,7 +101,7 @@ const Home: NextPage = () => {
                 em um
                 <span className="text-red-400"> único curso</span>
               </h1>
-              <div className="flex flex-col items-center justify-center gap-4 pt-4 lg:flex-row">
+              <div className="flex flex-col items-center justify-center gap-2 py-2 lg:flex-row">
                 <div className="w-[18rem] rounded-md bg-cream  p-2 text-slate-700">
                   <h2 className="pb-4 text-center">Oferta Normal</h2>
 
@@ -155,7 +155,27 @@ const Home: NextPage = () => {
 
                     <li className="pt-4">
                       <div className="flex justify-center pb-2">
-                        <span className="text-2xl">R$1.097,00</span>
+                      <div className="flex items-center">
+            <div className="m-2 lg:-rotate-90">
+              <Image
+                className="ml-2 animate-bounce"
+                src="/arrow-down.svg"
+                alt="one"
+                height={36}
+                width={36}
+              />
+            </div>
+          </div><span className="text-2xl line-through">R$1.097,00</span><div className="flex items-center">
+            <div className="m-2 lg:-rotate-90">
+              <Image
+                className="ml-2 animate-bounce"
+                src="/arrow-down.svg"
+                alt="one"
+                height={36}
+                width={36}
+              />
+            </div>
+          </div>
                       </div>
                     </li>
                   </ul>
