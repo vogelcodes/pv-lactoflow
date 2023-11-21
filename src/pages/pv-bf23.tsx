@@ -20,7 +20,7 @@ import Bonus from "./components/bonus";
 import Hotjar from "./components/tags/hotjar";
 import Header1 from "./components/h1";
 import CountdownReact from "./components/countdown";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
   type E164Number = string | undefined;
@@ -30,6 +30,7 @@ const Home: NextPage = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
+  const router = useRouter();
 
   function closeModal() {
     setIsOpen(false);
@@ -41,9 +42,9 @@ const Home: NextPage = () => {
   function handleSubmit() {
     console.log(value);
 
-    mutate({ name, email, phoneNumber: value?.toString() || "" });
+    mutate({       url: router.asPath,
+      name, email, phoneNumber: value?.toString() || "" });
   }
-  const router = useRouter();
 
   const date = new Date(Date.now())
   const lcto = new Date('2023-11-20T12:00:00.000Z')
@@ -67,7 +68,8 @@ const Home: NextPage = () => {
         <title>Black Friday-LactoFlow®️</title>
         <meta
           name="description"
-          content="Método para aumentar a produção de leite materno"
+          content="40%OFF Método para aumentar a produção de leite materno"
+          media=""
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -17,14 +17,15 @@ const CTABF = ({
       <div className="mt-5 w-full text-center">
         {/* <a href="https://instagram.com/carolina.procaci"> */}
         {/* <a href="https://pay.hotmart.com/O84147403X"> */}
-        <Link target="_blank" href="https://pay.hotmart.com/O84147403X?off=cyafh50d?">
+        {/* <Link target="_blank" href="https://pay.hotmart.com/O84147403X?off=cyafh50d?"> */}
 
         <button
+        onClick={openModal}
           className="text-white my-2 max-w-[250px] rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-4 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:max-w-md lg:py-5 lg:text-[22.6px]"
           >
           {label}
         </button>
-          </Link>
+          {/* </Link> */}
         {/* </a> */}
 
         {/* </a> */}
