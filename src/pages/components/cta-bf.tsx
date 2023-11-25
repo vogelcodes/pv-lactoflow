@@ -31,9 +31,9 @@ const CTABF = ({
         {/* </a> */}
         {price ? (
           <p>
-            6x
+            12x
             <span className="mb-[14.4px] ml-1 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-              R$54,81
+              R$29,74
             </span>{" "}
             <br /> ou R$298,00 à vista
           </p>
