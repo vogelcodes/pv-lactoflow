@@ -126,7 +126,7 @@ const Home: NextPage = () => {
 
       <div className="flex flex-col items-center justify-center bg-blue py-2 text-cream sm:py-4">
         <div className="w-[180px] sm:w-[300px]">
-          <Image src="/logo-portrait.svg" alt="logo" width={300} height={120} />
+          <Image src="/logo-portrait-v2.svg" alt="logo" width={300} height={120} />
         </div>
         <h4 hidden className="text-center text-3xl text-[#fcfaef]">
           Conheça o Método
@@ -224,7 +224,43 @@ Explicação do método
             Depoimento das alunas que seguiram o método LactoFlow®️:
           </h1>
           <div className="flex flex-col items-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6].map((number) => {
+            <div className="w-[340px]">
+          <LiteYouTubeEmbed
+              id="PzxmWmJLjz8"
+              title="Método LactoFlow®️"
+              poster="maxresdefault"
+              thumbnail="/depoimentos/depo-priscila.webp"
+              aspectHeight={500}
+              aspectWidth={280}
+            />
+
+                </div>
+          <div className="w-[340px]">
+          <LiteYouTubeEmbed
+              id="HC6maLeH-iM"
+              title="Método LactoFlow®️"
+              poster="maxresdefault"
+              thumbnail="/depoimentos/depo-raquel.webp"
+              aspectHeight={500}
+              aspectWidth={280}
+            />
+
+                </div>
+            {[1, 2].map((number) => {
+              return (
+                <div className="" key={number}>
+                  <Image
+                    className="mx-auto rounded-xl"
+                    key={number}
+                    width={340}
+                    height={500}
+                    src={`/depoimentos/metodo/${number}.jpg`}
+                    alt="depoimento"
+                  />
+                </div>
+              );
+            })}
+            {[ 3, 4, 5, 6].map((number) => {
               return (
                 <div className="" key={number}>
                   <Image
@@ -240,6 +276,7 @@ Explicação do método
             })}
           </div>
         </section>
+
         <Bonus />
         <CTA
           ctaOption="2"
