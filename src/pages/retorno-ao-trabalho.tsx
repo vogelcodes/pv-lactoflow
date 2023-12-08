@@ -123,7 +123,6 @@ const Home: NextPage = () => {
 			hot('account','32aba353-3c4c-3d94-9d63-eb652a9ca8ee');`,
         }}
       />
-
       <div className="flex flex-col items-center justify-center bg-blue py-2 text-cream sm:py-4">
         <div className="w-[180px] sm:w-[300px]">
           <Image src="/logo-portrait-v2.svg" alt="logo" width={300} height={120} />

@@ -6,6 +6,7 @@ import localFont from 'next/font/local'
 import { api } from "@/utils/api";
 
 import "@/styles/globals.css";
+import Script from "next/script";
 
 const metro = localFont({
   src: [
@@ -40,6 +41,8 @@ const MyApp: AppType<{ session: Session | null }> = ({
           font-family: ${metro.style.fontFamily};
         }
       `}</style>
+              <Script async src="https://umami-production-bb17.up.railway.app/script.js" data-website-id="d794a2e3-7454-4150-add4-b2578e44b3d4"/>
+
       <main className={`${metro.variable} flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c] font-sans`}>
         <Component {...pageProps} />
       </main>

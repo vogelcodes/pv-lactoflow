@@ -6,6 +6,7 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
+import Script from "next/script";
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -28,8 +29,10 @@ class MyDocument extends Document {
             src={`https://www.facebook.com/tr?id=${fbp}&ev=PageView&noscript=1`}
           />
         </noscript> */}
+
         </Head>
         <body>
+
           <Main />
           <NextScript />
         </body>
