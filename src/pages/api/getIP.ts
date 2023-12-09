@@ -51,7 +51,7 @@ export default async function handler(
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
   const locationInfo = await ip2location.fetch(userIp);
   const ts = new Date().toUTCString();
-  console.log(locationInfo);
+  console.log(userIp);
 
     const newClient: clientsCreateInput = {
       ip: typeof(userIp) === 'string' ? userIp : userIp[0],
@@ -89,10 +89,11 @@ export default async function handler(
         
         
         res.status(200).json({ message: JSON.stringify(newClient.location) })
-      // console.log(gSheets);
-    } catch (err) {
-      // close the client
-      // client.end();
+        // console.log(gSheets);
+      } catch (err) {
+        // close the client
+        // client.end();
+      }
     }
-  }
+    res.status(200).json({ message: userIp.toString() })
 }
