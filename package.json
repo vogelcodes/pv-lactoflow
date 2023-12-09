@@ -24,6 +24,7 @@
     "@trpc/server": "^10.18.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "ip-to-location": "^1.0.1",
     "lucide-react": "^0.268.0",
     "next": "^13.2.4",
     "next-auth": "^4.20.1",

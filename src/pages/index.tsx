@@ -1,6 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-floating-promises */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { type NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
@@ -27,6 +31,7 @@ const Home: NextPage = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [cta, setCta] = useState("");
+  const [userIP, setUserIP] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
 
@@ -49,8 +54,23 @@ const Home: NextPage = () => {
       name,
       email,
       phoneNumber: value?.toString() || "",
+      location: userIP
     });
   }
+
+  useEffect(() => {
+    const fetchIP = async () => {
+      try {
+        const response = await fetch('/api/getIP');
+        const data = await response.json();
+        setUserIP(data.message);
+      } catch (error) {
+        console.error('Error fetching IP:', error);
+      }
+    };
+
+    fetchIP();
+  }, []);
 
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
