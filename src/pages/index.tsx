@@ -58,19 +58,19 @@ const Home: NextPage = () => {
     });
   }
 
-  // useEffect(() => {
-  //   const fetchIP = async () => {
-  //     try {
-  //       const response = await fetch('/api/getIP');
-  //       const data = await response.json();
-  //       setUserIP(data.message);
-  //     } catch (error) {
-  //       console.error('Error fetching IP:', error);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchIP = async () => {
+      try {
+        const response = await fetch('/api/getIP');
+        const data = await response.json();
+        setUserIP(data.message);
+      } catch (error) {
+        console.error('Error fetching IP:', error);
+      }
+    };
 
-  //   fetchIP();
-  // }, []);
+    fetchIP();
+  }, []);
 
   // const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
