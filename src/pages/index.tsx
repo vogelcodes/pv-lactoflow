@@ -6,6 +6,7 @@ import { type NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
+import { useSearchParams } from 'next/navigation'
 import Image from "next/image";
 import Script from "next/script";
 import "react-phone-number-input/style.css";
@@ -30,10 +31,15 @@ const Home: NextPage = () => {
   const [value, setValue] = useState<E164Number | undefined>();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [version, setVersion] = useState<string | null>();
   const [cta, setCta] = useState("");
   const [userIP, setUserIP] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
+  const versionParam = useSearchParams().get('version')
+  useEffect(()=>
+    setVersion(versionParam), [ versionParam]
+  )
 
   function closeModal() {
     setIsOpen(false);
@@ -156,8 +162,19 @@ const Home: NextPage = () => {
           className="text-center text-5xl font-extrabold tracking-tight text-cream sm:text-[5rem]"
         >
           Lacto<span className="text-green">Flow</span>{" "}
-        </h1>
+        </h1>{
+        (version =="retorno-ao-trabalho") ?
         <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[18px] font-extrabold uppercase leading-[29px] tracking-[-25] text-cream sm:w-2/3 sm:px-0 sm:text-[24px] sm:leading-[36px]">
+            Monte seu estoque de{" "}
+            <br/><span className="text-[25px] mx-2 text-red-400 sm:text-[35px]">
+              leite materno
+            </span><br/>
+            e volte ao trabalho{" "}
+            <span className="text-[25px] text-green sm:text-[35px]">
+              tranquila.
+            </span>{" "}
+            
+          </h1> : (version && version!="retorno-ao-trabalho") ? <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[18px] font-extrabold uppercase leading-[29px] tracking-[-25] text-cream sm:w-2/3 sm:px-0 sm:text-[24px] sm:leading-[36px]">
           Aprenda como{" "}
           <span className="text-[25px] text-red-400 sm:text-[35px]">
             aumentar a sua produção
@@ -167,7 +184,8 @@ const Home: NextPage = () => {
             melhor alimento do mundo
           </span>{" "}
           ao seu bebê.
-        </h1>
+        </h1> : <div className="h-40"></div> }
+          
         <p className="mx-auto w-[80%] max-w-[600px] text-center text-[16.67px] font-bold leading-[22.9px] tracking-[-25] sm:mt-7 sm:px-2 lg:mt-5 lg:text-[18.75px]">
           Assista esse vídeo e comece a aumentar a sua produção de leite agora
           mesmo com as técnicas:
@@ -230,10 +248,8 @@ const Home: NextPage = () => {
           />
         </div>
 
-        {/* <CTA ctaOption="1" openModal={openModal} /> */}
         {/* <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image> */}
 
-        <Furadeira />
         {/* <section>
 
 <h1 className="font-extrabold text-[25px] lg:text-[31.25px] text-center mt-6 leading-[29.17px] tracking-[-25] mb-[14.4px] ">
@@ -245,23 +261,23 @@ Explicação do método
             Depoimento das alunas que seguiram o método LactoFlow®️:
           </h1>
           <div className="flex flex-col items-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
+          <div className="w-[340px]">
+          <LiteYouTubeEmbed
+              id="eVpBHlpupu0"
+              title="Método LactoFlow®️"
+              poster="maxresdefault"
+              thumbnail="/depoimentos/depo-raquel.webp"
+              aspectHeight={500}
+              aspectWidth={280}
+                          />
+
+                </div>
             <div className="w-[340px]">
           <LiteYouTubeEmbed
               id="PzxmWmJLjz8"
               title="Método LactoFlow®️"
               poster="maxresdefault"
               thumbnail="/depoimentos/depo-priscila.webp"
-              aspectHeight={500}
-              aspectWidth={280}
-            />
-
-                </div>
-          <div className="w-[340px]">
-          <LiteYouTubeEmbed
-              id="HC6maLeH-iM"
-              title="Método LactoFlow®️"
-              poster="maxresdefault"
-              thumbnail="/depoimentos/depo-raquel.webp"
               aspectHeight={500}
               aspectWidth={280}
             />
@@ -297,6 +313,8 @@ Explicação do método
             })}
           </div>
         </section>
+<CTA ctaOption="1" openModal={openModal} />
+        <Furadeira />
 
         <Bonus />
         <CTA
