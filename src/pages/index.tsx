@@ -37,9 +37,12 @@ const Home: NextPage = () => {
   const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
   const versionParam = useSearchParams().get('version')
-  useEffect(()=>
-    setVersion(versionParam), [ versionParam]
+  useEffect(()=>{
+    setVersion(!versionParam ? "" : versionParam)
+    console.log(version)
+  }, [ versionParam]
   )
+  console.log(version)
 
   function closeModal() {
     setIsOpen(false);
@@ -174,7 +177,7 @@ const Home: NextPage = () => {
               tranquila.
             </span>{" "}
             
-          </h1> : (version && version!="retorno-ao-trabalho") ? <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[18px] font-extrabold uppercase leading-[29px] tracking-[-25] text-cream sm:w-2/3 sm:px-0 sm:text-[24px] sm:leading-[36px]">
+          </h1> : (!version) ? <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[18px] font-extrabold uppercase leading-[29px] tracking-[-25] text-cream sm:w-2/3 sm:px-0 sm:text-[24px] sm:leading-[36px]">
           Aprenda como{" "}
           <span className="text-[25px] text-red-400 sm:text-[35px]">
             aumentar a sua produção
