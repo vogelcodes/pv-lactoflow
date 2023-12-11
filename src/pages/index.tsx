@@ -251,6 +251,7 @@ const Home: NextPage = () => {
           />
         </div>
 
+            <CTA ctaOption="1" openModal={openModal} />
         {/* <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image> */}
 
         {/* <section>
@@ -316,7 +317,6 @@ Explicação do método
             })}
           </div>
         </section>
-<CTA ctaOption="1" openModal={openModal} />
         <Furadeira />
 
         <Bonus />
