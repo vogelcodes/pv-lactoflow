@@ -27,7 +27,7 @@ const Bonus = () => {
               src={"/zoom-call.webp"}
               className="rounded-md"
             />
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               Todos os meses, temos dois encontros marcados onde você tem a
               oportunidade de ligar sua câmera e conversar diretamente comigo
               para tirar todas as suas dúvidas sobre o método.
@@ -49,7 +49,7 @@ const Bonus = () => {
               className="rounded-md"
             />
 
-            <p className="text-lg">
+            <p className="text-lg text-justify">
               Em um desses encontros eu faço uma Oficina sobre os mais diversos
               temas da maternidade a partir de propostas das próprias alunas.
             </p>
@@ -75,7 +75,7 @@ const Bonus = () => {
                 src={"/ervas.webp"}
                 className="rounded-md"
               />
-              <p className="p-4 text-lg">
+              <p className="p-4 text-lg break-words text-justify">
                 Quando usadas da forma correta, as ervas galactagogas podem sim
                 dar um bom gás no seu resultado. E para te ajudar com
                 orientações sobre as funções de cada erva, misturas
@@ -94,7 +94,7 @@ const Bonus = () => {
                 src={"/receitas.webp"}
                 className="rounded-md"
               />
-              <p className="p-4 text-lg">
+              <p className="p-4 text-lg text-justify">
                 A estratégia para aumentar sua produção de leite também pode ser
                 gostosa! Eu juntei em um e-book as receitas lactogênicas mais
                 saborosas e fáceis que eu conheço. Nenhum alimento sozinho faz
@@ -123,7 +123,7 @@ const Bonus = () => {
                 src={"/telegram-ve.webp"}
                 className="rounded-md"
               />
-              <p className="text-lg">
+              <p className="text-lg text-justify">
                 No Telegram temos a comunidade da família LactoFlow onde você
                 encontra acolhimento, um espaço para desabafos e também para
                 tirar dúvidas práticas sobre o método no dia a dia.

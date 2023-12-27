@@ -22,7 +22,7 @@ const Accordion = ({ question="Q", answer="A"} : {
 <div className="collapse-title text-xl sm:text-2xl text-blue font-medium">
 <h1>{question}</h1>
 </div>
-<div className="collapse-content text-xl"> 
+<div className="collapse-content text-justify text-xl"> 
   <p dangerouslySetInnerHTML={{__html: answer}}></p>
 </div>
 </div>)

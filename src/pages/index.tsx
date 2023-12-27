@@ -265,7 +265,7 @@ Explicação do método
             Depoimento das alunas que seguiram o método LactoFlow®️:
           </h1>
           <div className="flex flex-col items-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
-          <div className="w-[340px]">
+          {/*<div className="w-[340px]">
           <LiteYouTubeEmbed
               id="eVpBHlpupu0"
               title="Método LactoFlow®️"
@@ -284,9 +284,9 @@ Explicação do método
               thumbnail="/depoimentos/depo-priscila.webp"
               aspectHeight={500}
               aspectWidth={280}
-            />
+/>
 
-                </div>
+                </div>*/}
             {[1, 2].map((number) => {
               return (
                 <div className="" key={number}>
