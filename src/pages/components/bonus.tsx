@@ -4,7 +4,7 @@ import Header1 from "./h1";
 
 const Bonus = () => {
   return (
-    <section className="w-full bg-cream p-2 text-2xl mt-2 text-blue">
+    <section className="mt-2 w-full bg-cream p-2 text-2xl text-blue">
       <p className="text-center font-semibold">
         Além de todas as aulas gravadas, você ainda tem acesso a:
       </p>
@@ -27,7 +27,7 @@ const Bonus = () => {
               src={"/zoom-call.webp"}
               className="rounded-md"
             />
-            <p className="text-lg text-justify">
+            <p className="text-justify text-lg">
               Todos os meses, temos dois encontros marcados onde você tem a
               oportunidade de ligar sua câmera e conversar diretamente comigo
               para tirar todas as suas dúvidas sobre o método.
@@ -49,7 +49,7 @@ const Bonus = () => {
               className="rounded-md"
             />
 
-            <p className="text-lg text-justify">
+            <p className="text-justify text-lg">
               Em um desses encontros eu faço uma Oficina sobre os mais diversos
               temas da maternidade a partir de propostas das próprias alunas.
             </p>
@@ -75,7 +75,7 @@ const Bonus = () => {
                 src={"/ervas.webp"}
                 className="rounded-md"
               />
-              <p className="p-4 text-lg break-words text-justify">
+              <p className="break-words p-4 text-justify text-lg">
                 Quando usadas da forma correta, as ervas galactagogas podem sim
                 dar um bom gás no seu resultado. E para te ajudar com
                 orientações sobre as funções de cada erva, misturas
@@ -94,7 +94,7 @@ const Bonus = () => {
                 src={"/receitas.webp"}
                 className="rounded-md"
               />
-              <p className="p-4 text-lg text-justify">
+              <p className="p-4 text-justify text-lg">
                 A estratégia para aumentar sua produção de leite também pode ser
                 gostosa! Eu juntei em um e-book as receitas lactogênicas mais
                 saborosas e fáceis que eu conheço. Nenhum alimento sozinho faz
@@ -120,10 +120,10 @@ const Bonus = () => {
                 alt="telegram-comunidade"
                 width={260}
                 height={500}
-                src={"/telegram-ve.webp"}
+                src={"/telegram-01-24.webp"}
                 className="rounded-md"
               />
-              <p className="text-lg text-justify">
+              <p className="text-justify text-lg">
                 No Telegram temos a comunidade da família LactoFlow onde você
                 encontra acolhimento, um espaço para desabafos e também para
                 tirar dúvidas práticas sobre o método no dia a dia.

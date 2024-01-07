@@ -255,6 +255,7 @@ const Home: NextPage = () => {
           className="mx-auto mb-8 aspect-video w-full lg:max-w-[53.25rem]"
         >
           <LiteYouTubeEmbed
+            data-umami-event="Watch Video"
             id="eXp3-bclWPs"
             title="Método LactoFlow®️"
             poster="maxresdefault"
