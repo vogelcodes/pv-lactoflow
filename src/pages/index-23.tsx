@@ -198,12 +198,12 @@ const Home: NextPage = () => {
         )}
 
         <p className="mx-auto w-[80%] max-w-[600px] text-center text-[16.67px] font-bold leading-[22.9px] tracking-[-25] sm:mt-7 sm:px-2 lg:mt-5 lg:text-[18.75px]">
-          Assista a essa aula gratuita e comece a aumentar a sua producao de
-          leite HOJE MESMO
+          Assista esse vídeo e comece a aumentar a sua produção de leite agora
+          mesmo com as técnicas:
         </p>
         <div className="flex  flex-col items-center lg:flex-row">
           <div className="flex items-center">
-            <div className="m-2">
+            <div className="m-2 lg:-rotate-90">
               <Image
                 className="ml-2 animate-bounce"
                 src="/arrow-down.svg"
@@ -214,7 +214,7 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          {/* <div className="mx-auto grid grid-cols-2 gap-3 px-2 uppercase text-green lg:grid-cols-1">
+          <div className="mx-auto grid grid-cols-2 gap-3 px-2 uppercase text-green lg:grid-cols-1">
             <div className="mt-1 flex items-center gap-x-2 lg:mt-4">
               <div className="flex h-8 w-8 items-center justify-center rounded-full border-[2px] border-green">
                 <span className="text-2xl text-cream ">1</span>
@@ -247,12 +247,12 @@ const Home: NextPage = () => {
                 20-max
               </p>
             </div>
-          </div> */}
+          </div>
         </div>
         {/* <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe> */}
         <div
           data-umami-event="Watch Video"
-          className="mx-auto mb-8 aspect-video w-full lg:max-w-[53.25rem]"
+          className="mx-auto my-8 aspect-video w-full lg:max-w-[53.25rem]"
         >
           <LiteYouTubeEmbed
             id="eXp3-bclWPs"
