@@ -420,7 +420,7 @@ Explicação do método
                           <input
                             className="pl-2 dark:bg-cream"
                             type="text"
-                            name="email"
+                            name="name"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             placeholder="Nome"
