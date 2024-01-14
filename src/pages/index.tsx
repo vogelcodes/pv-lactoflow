@@ -18,7 +18,7 @@ import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import { api } from "@/utils/api";
 import CTA from "./components/cta";
 import About from "./components/about";
-import Furadeira from "./components/furadeira";
+import Furadeira from "./components/furadeira-completa";
 import Faq from "./components/faq";
 import Footer from "./components/footer";
 import Bonus from "./components/bonus";
