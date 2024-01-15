@@ -4,6 +4,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
+import Cors from "cors";
 const ip2location = require("ip-to-location");
 
 type Data = {
@@ -30,12 +31,35 @@ type clientsCreateInput = {
   referer?: string | null;
   timestamp?: string | null;
 };
+const cors = Cors({
+  methods: ["POST", "GET", "HEAD"],
+});
+
+function runMiddleware(
+  req: NextApiRequest,
+  res: NextApiResponse,
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  fn: Function
+) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result: any) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+
+      return resolve(result);
+    });
+  });
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
   // await client.connect()
   // get the user's IP address and user-agent
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+  await runMiddleware(req, res, cors);
   const userIp = req.headers["x-real-ip"] || req.connection.remoteAddress;
   if (userIp === undefined) {
     return;
@@ -88,10 +112,8 @@ export default async function handler(
   //       // client.end();
   //     }
   // }
-  res
-    .status(200)
-    .json({
-      message: userIp.toString(),
-      locationInfo: JSON.stringify(locationInfo),
-    });
+  res.status(200).json({
+    message: userIp.toString(),
+    locationInfo: JSON.stringify(locationInfo),
+  });
 }
