@@ -41,6 +41,20 @@ const Home: NextPage = () => {
     setVersion(!versionParam ? "" : versionParam);
     console.log(version);
   }, [versionParam]);
+  type ApiResponse = {
+    message: string;
+    locationInfo: string;
+    // other properties
+  };
+
+  useEffect(() => {
+    void fetch("/api/get-ip")
+      .then((res) => res.json())
+      .then((data: ApiResponse) => {
+        setUserIP(data.locationInfo);
+      });
+  }, []);
+
   console.log(version);
 
   function closeModal() {

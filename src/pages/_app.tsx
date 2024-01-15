@@ -59,7 +59,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
       />
 
       <main
-        className={`${metro.variable} flex min-h-screen flex-col items-center bg-gradient-to-b from-[#122e49] to-[#15162c] font-sans`}
+        className={`${metro.variable} flex min-h-screen flex-col items-center bg-[#122e49] font-sans`}
       >
         <Component {...pageProps} />
       </main>
