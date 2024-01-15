@@ -248,7 +248,6 @@ export default function Page() {
           </Dialog>
         </Transition>
       </div>
-      {userIP}
     </div>
   );
 }

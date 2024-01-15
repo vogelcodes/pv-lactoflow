@@ -48,7 +48,12 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
-    void fetch("/api/get-ip")
+    void fetch("https://pv1.lactoflow.com.br/api/get-ip", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((res) => res.json())
       .then((data: ApiResponse) => {
         setUserIP(data.locationInfo);
