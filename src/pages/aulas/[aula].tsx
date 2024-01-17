@@ -14,6 +14,11 @@ import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import { api } from "@/utils/api";
 import CTA from "@/pages/components/cta";
 import { useRouter } from "next/router";
+import Furadeira from "../components/furadeira";
+import Bonus from "../components/bonus";
+import About from "../components/about";
+import Faq from "../components/faq";
+import Footer from "../components/footer";
 
 export default function Page() {
   type E164Number = string | undefined;
@@ -155,6 +160,111 @@ export default function Page() {
       </div>
 
       <CTA ctaOption="1" openModal={openModal} />
+      <section className="my-2">
+        <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+          Depoimento das alunas que seguiram o método LactoFlow®️:
+        </h1>
+        <div className="flex flex-col items-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
+          {/*<div className="w-[340px]">
+          <LiteYouTubeEmbed
+              id="eVpBHlpupu0"
+              title="Método LactoFlow®️"
+              poster="maxresdefault"
+              thumbnail="/depoimentos/depo-raquel.webp"
+              aspectHeight={500}
+              aspectWidth={280}
+                          />
+
+                </div>
+            <div className="w-[340px]">
+          <LiteYouTubeEmbed
+              id="PzxmWmJLjz8"
+              title="Método LactoFlow®️"
+              poster="maxresdefault"
+              thumbnail="/depoimentos/depo-priscila.webp"
+              aspectHeight={500}
+              aspectWidth={280}
+/>
+
+                </div>*/}
+          {[1, 2].map((number) => {
+            return (
+              <div className="" key={number}>
+                <Image
+                  className="mx-auto rounded-xl"
+                  key={number}
+                  width={340}
+                  height={500}
+                  src={`/depoimentos/metodo/${number}.jpg`}
+                  alt="depoimento"
+                />
+              </div>
+            );
+          })}
+          {[3, 4, 5, 6].map((number) => {
+            return (
+              <div className="" key={number}>
+                <Image
+                  className="mx-auto rounded-xl"
+                  key={number}
+                  width={340}
+                  height={500}
+                  src={`/depoimentos/metodo/${number}.jpg`}
+                  alt="depoimento"
+                />
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      <Furadeira />
+
+      <Bonus />
+      <CTA
+        ctaOption="2"
+        openModal={openModal}
+        label="Tenha acesso a tudo isso agora"
+      />
+      <About />
+      <Faq />
+      <CTA
+        ctaOption="3"
+        openModal={openModal}
+        label="Quero aumentar minha produção de leite"
+        price
+      />
+      <Footer>
+        <div className="flex flex-col text-center sm:flex-row sm:text-left">
+          <span>Copyright © 2023</span>
+          <span className="mx-3 hidden sm:block">|</span>
+          <span>Todos os direitos reservados.</span>
+        </div>
+      </Footer>
+      {/* <div className="mx-auto max-w-[19.875rem] lg:max-w-[53.25rem] ">
+              <div className="w-full border-2 border-[#4E859E] bg-[#EDF4FA] lg:bg-[#EDF4FA] rounded-lg flex gap-x-4 py-9 lg:py-6 px-3 mt-10 items-center justify-center"><div className="relative w-[32px] h-[30px]"><span><img alt="" src="https://vendatodosantodia.com.br//imgPg/icon-alert-blue.svg?auto=format&amp;fit=max&amp;w=3840" decoding="async" data-nimg="fill"  loading="lazy"/></span></div><p className="text-[16.17px] text-[#4E859E] font-regular max-w-[80%]">Com o Appbumper é mais fácil fazer o que tem que ser feito e do jeito que tem que ser feito. É quase impossível errar e você nunca fica perdido, sem saber o que fazer.</p>
+              </div>
+          </div> */}
+      {/* <CTA openModal={openModal} price /> */}
+      <div className=" fixed bottom-5 right-5 cursor-pointer">
+        <div className="relative h-[60px] w-[60px]">
+          <a
+            target="_blank"
+            href="https://wa.me/5521986388688?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow."
+          >
+            <span>
+              <Image
+                width={60}
+                height={60}
+                alt="whats logo"
+                src="/whatsapp-logo.svg"
+                decoding="async"
+                data-nimg="fill"
+              />
+            </span>
+          </a>
+        </div>
+      </div>
+
       <div className="">
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog as="div" className="relative z-10" onClose={closeModal}>
