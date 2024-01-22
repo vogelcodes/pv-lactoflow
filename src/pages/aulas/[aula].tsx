@@ -159,7 +159,7 @@ export default function Page() {
         </div>
       </div>
 
-      <CTA ctaOption="1" openModal={openModal} />
+      <CTA ctaOption="1" openModal={openModal} price />
       <section className="my-2">
         <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
           Depoimento das alunas que seguiram o método LactoFlow®️:
@@ -224,6 +224,7 @@ export default function Page() {
         ctaOption="2"
         openModal={openModal}
         label="Tenha acesso a tudo isso agora"
+        price
       />
       <About />
       <Faq />

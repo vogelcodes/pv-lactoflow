@@ -281,7 +281,7 @@ const Home: NextPage = () => {
           />
         </div>
 
-        <CTA ctaOption="1" openModal={openModal} />
+        <CTA ctaOption="1" openModal={openModal} price />
         {/* <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image> */}
 
         {/* <section>
@@ -354,6 +354,7 @@ Explicação do método
           ctaOption="2"
           openModal={openModal}
           label="Tenha acesso a tudo isso agora"
+          price
         />
         <About />
         <Faq />
