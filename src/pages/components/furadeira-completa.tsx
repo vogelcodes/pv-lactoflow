@@ -53,7 +53,7 @@ const Furadeira = () => {
                 <div className="z-10 h-[min(10vw,32)] w-[min(10vw,32)]">
                   <Image
                     className=""
-                    src="conhecimento2.svg"
+                    src="/conhecimento2.svg"
                     alt="D"
                     width={128}
                     height={128}
@@ -103,7 +103,7 @@ const Furadeira = () => {
               <div className="z-10 h-[min(10vw,32)] w-[min(10vw,32)]">
                 <Image
                   className=""
-                  src="defesa.svg"
+                  src="/defesa.svg"
                   alt="D"
                   width={128}
                   height={128}
@@ -147,7 +147,7 @@ const Furadeira = () => {
               <div className="z-10 h-[min(10vw,32)] w-[min(10vw,32)]">
                 <Image
                   className=""
-                  src="acao.svg"
+                  src="/acao.svg"
                   alt="D"
                   width={128}
                   height={128}
