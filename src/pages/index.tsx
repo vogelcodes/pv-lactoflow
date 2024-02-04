@@ -23,6 +23,7 @@ import Faq from "./components/faq";
 import Footer from "./components/footer";
 import Bonus from "./components/bonus";
 import { useRouter } from "next/router";
+import Depos from "./components/depos";
 
 const Home: NextPage = () => {
   type E164Number = string | undefined;
@@ -217,7 +218,7 @@ const Home: NextPage = () => {
         )}
 
         <p className="mx-auto w-[80%] max-w-[600px] text-center text-[16.67px] font-bold leading-[22.9px] tracking-[-25] sm:mt-7 sm:px-2 lg:mt-5 lg:text-[18.75px]">
-          Assista a essa aula gratuita e comece a aumentar a sua producao de
+          Assista a essa aula gratuita e comece a aumentar a sua produção de
           leite HOJE MESMO
         </p>
         <div className="flex  flex-col items-center lg:flex-row">
@@ -290,63 +291,7 @@ const Home: NextPage = () => {
 Explicação do método
 </h1>
 </section> */}
-        <section className="my-2">
-          <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
-            Depoimento das alunas que seguiram o método LactoFlow®️:
-          </h1>
-          <div className="flex flex-col items-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
-            {/*<div className="w-[340px]">
-          <LiteYouTubeEmbed
-              id="eVpBHlpupu0"
-              title="Método LactoFlow®️"
-              poster="maxresdefault"
-              thumbnail="/depoimentos/depo-raquel.webp"
-              aspectHeight={500}
-              aspectWidth={280}
-                          />
-
-                </div>
-            <div className="w-[340px]">
-          <LiteYouTubeEmbed
-              id="PzxmWmJLjz8"
-              title="Método LactoFlow®️"
-              poster="maxresdefault"
-              thumbnail="/depoimentos/depo-priscila.webp"
-              aspectHeight={500}
-              aspectWidth={280}
-/>
-
-                </div>*/}
-            {[1, 2].map((number) => {
-              return (
-                <div className="" key={number}>
-                  <Image
-                    className="mx-auto rounded-xl"
-                    key={number}
-                    width={340}
-                    height={500}
-                    src={`/depoimentos/metodo/${number}.jpg`}
-                    alt="depoimento"
-                  />
-                </div>
-              );
-            })}
-            {[3, 4, 5, 6].map((number) => {
-              return (
-                <div className="" key={number}>
-                  <Image
-                    className="mx-auto rounded-xl"
-                    key={number}
-                    width={340}
-                    height={500}
-                    src={`/depoimentos/metodo/${number}.jpg`}
-                    alt="depoimento"
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </section>
+        <Depos />
         <Furadeira />
 
         <Bonus />

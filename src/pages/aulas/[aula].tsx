@@ -19,6 +19,7 @@ import Bonus from "../components/bonus";
 import About from "../components/about";
 import Faq from "../components/faq";
 import Footer from "../components/footer";
+import Depos from "../components/depos";
 
 export default function Page() {
   type E164Number = string | undefined;
@@ -160,63 +161,8 @@ export default function Page() {
       </div>
 
       <CTA ctaOption="1" openModal={openModal} />
-      <section className="my-2">
-        <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
-          Depoimento das alunas que seguiram o método LactoFlow®️:
-        </h1>
-        <div className="flex flex-col items-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
-          {/*<div className="w-[340px]">
-          <LiteYouTubeEmbed
-              id="eVpBHlpupu0"
-              title="Método LactoFlow®️"
-              poster="maxresdefault"
-              thumbnail="/depoimentos/depo-raquel.webp"
-              aspectHeight={500}
-              aspectWidth={280}
-                          />
+      <Depos />
 
-                </div>
-            <div className="w-[340px]">
-          <LiteYouTubeEmbed
-              id="PzxmWmJLjz8"
-              title="Método LactoFlow®️"
-              poster="maxresdefault"
-              thumbnail="/depoimentos/depo-priscila.webp"
-              aspectHeight={500}
-              aspectWidth={280}
-/>
-
-                </div>*/}
-          {[1, 2].map((number) => {
-            return (
-              <div className="" key={number}>
-                <Image
-                  className="mx-auto rounded-xl"
-                  key={number}
-                  width={340}
-                  height={500}
-                  src={`/depoimentos/metodo/${number}.jpg`}
-                  alt="depoimento"
-                />
-              </div>
-            );
-          })}
-          {[3, 4, 5, 6].map((number) => {
-            return (
-              <div className="" key={number}>
-                <Image
-                  className="mx-auto rounded-xl"
-                  key={number}
-                  width={340}
-                  height={500}
-                  src={`/depoimentos/metodo/${number}.jpg`}
-                  alt="depoimento"
-                />
-              </div>
-            );
-          })}
-        </div>
-      </section>
       <Furadeira />
 
       <Bonus />
