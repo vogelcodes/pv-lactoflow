@@ -11,7 +11,7 @@ const CTA = ({
   openModal,
   price = false,
   label = "Quero aumentar minha produção de leite",
-  ctaOption = '0'
+  ctaOption = "0",
 }: CtaProps) => {
   return (
     <div className="flex w-full flex-col items-center rounded-sm bg-cream text-blue">
@@ -20,9 +20,8 @@ const CTA = ({
         {/* <a href="https://pay.hotmart.com/O84147403X"> */}
 
         <button
-          onClick={e =>openModal(ctaOption)}
-        data-umami-event={`cta-${ctaOption}-click`}
-
+          onClick={(e) => openModal(ctaOption)}
+          data-umami-event={`cta-${ctaOption}-click`}
           className="text-white my-2 max-w-[250px] rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-4 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:max-w-md lg:py-5 lg:text-[22.6px]"
         >
           {label}
@@ -34,9 +33,9 @@ const CTA = ({
           <p>
             12x
             <span className="mb-[14.4px] ml-1 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-              R$49,60
+              R$29,64
             </span>{" "}
-            <br /> ou R$497,00 à vista
+            <br /> ou R$297,00 à vista
           </p>
         ) : (
           <></>
