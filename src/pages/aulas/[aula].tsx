@@ -58,7 +58,7 @@ export default function Page() {
   const ytUrlOptions: Record<string, string> = {
     saciedade: "H6iB3jTKPW8",
     "baixa-producao": "L9IrS6AY2DY",
-    oferta: "KGNSlwcDybQ",
+    oferta: "WKjycIVnNsE",
 
     // Add other possible keys and values as needed
   };
