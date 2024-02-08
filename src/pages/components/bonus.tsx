@@ -72,7 +72,7 @@ const Bonus = () => {
                 alt="telegram-comunidade"
                 width={400}
                 height={600}
-                src={"/ervas.webp"}
+                src={"/ervas-mock.webp"}
                 className="rounded-md"
               />
               <p className="break-words p-4 text-justify text-lg">
@@ -91,7 +91,7 @@ const Bonus = () => {
                 alt="telegram-comunidade"
                 width={300}
                 height={500}
-                src={"/receitas.webp"}
+                src={"/receitas-mock.webp"}
                 className="rounded-md"
               />
               <p className="p-4 text-justify text-lg">
