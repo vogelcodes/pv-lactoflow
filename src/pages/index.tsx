@@ -129,7 +129,7 @@ const Home: NextPage = () => {
                   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
         }}
       /> */}
-      <Script
+      {/* <Script
         id="fb-pixel"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -146,7 +146,7 @@ const Home: NextPage = () => {
             fbq('track', 'PageView');
             `,
         }}
-      />
+      /> */}
       <Script
         id="google-analytics"
         dangerouslySetInnerHTML={{
