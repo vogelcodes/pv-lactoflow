@@ -10,6 +10,7 @@ import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Script from "next/script";
 import "react-phone-number-input/style.css";
+import { formatPhoneNumber } from "react-phone-number-input";
 import PhoneInput from "react-phone-number-input";
 import ptBR from "react-phone-number-input/locale/pt-BR.json";
 import flags from "react-phone-number-input/flags";
@@ -29,19 +30,20 @@ const Home: NextPage = () => {
   type E164Number = string | undefined;
 
   const [isOpen, setIsOpen] = useState(false);
-  const [value, setValue] = useState<E164Number | undefined>();
+  const [value, setValue] = useState<E164Number>();
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [version, setVersion] = useState<string | null>();
+  // const [version, setVersion] = useState<string | null>();
   const [cta, setCta] = useState("");
   const [userIP, setUserIP] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
-  const versionParam = useSearchParams().get("version");
-  useEffect(() => {
-    setVersion(!versionParam ? "" : versionParam);
-    console.log(version);
-  }, [versionParam]);
+  // const versionParam = useSearchParams().get("version");
+  // useEffect(() => {
+  //   setVersion(!versionParam ? "" : versionParam);
+  //   console.log(version);
+  // }, [versionParam]);
   type ApiResponse = {
     message: string;
     locationInfo: string;
@@ -61,7 +63,7 @@ const Home: NextPage = () => {
       });
   }, []);
 
-  console.log(version);
+  // console.log(version);
 
   function closeModal() {
     setIsOpen(false);
@@ -73,7 +75,7 @@ const Home: NextPage = () => {
     setIsOpen(true);
   }
   function handleSubmit() {
-    console.log(value);
+    console.log(formatPhoneNumber(value || ""));
     console.log(router.asPath);
 
     mutate({
@@ -112,6 +114,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       {/* <Script
         id="hj"
         dangerouslySetInnerHTML={{
@@ -145,18 +148,14 @@ const Home: NextPage = () => {
         }}
       />
       <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-6T6HHESNG2"
-      ></Script>
-      <Script
         id="google-analytics"
         dangerouslySetInnerHTML={{
           __html: `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-           gtag('config', 'G-6T6HHESNG2');`,
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TL9M2H7Z')`,
         }}
       />
 
@@ -190,32 +189,17 @@ const Home: NextPage = () => {
         >
           Lacto<span className="text-green">Flow</span>{" "}
         </h1>
-        {version == "retorno-ao-trabalho" ? (
-          <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[18px] font-extrabold uppercase leading-[29px] tracking-[-25] text-cream sm:w-2/3 sm:px-0 sm:text-[24px] sm:leading-[36px]">
-            Monte seu estoque de <br />
-            <span className="mx-2 text-[25px] text-red-400 sm:text-[35px]">
-              leite materno
-            </span>
-            <br />e volte ao trabalho{" "}
-            <span className="text-[25px] text-green sm:text-[35px]">
-              tranquila.
-            </span>{" "}
-          </h1>
-        ) : !version ? (
-          <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[18px] font-extrabold uppercase leading-[29px] tracking-[-25] text-cream sm:w-2/3 sm:px-0 sm:text-[24px] sm:leading-[36px]">
-            Aprenda como{" "}
-            <span className="text-[25px] text-red-400 sm:text-[35px]">
-              aumentar a sua produção
-            </span>{" "}
-            de leite e ofereça o{" "}
-            <span className="text-[25px] text-green sm:text-[35px]">
-              melhor alimento do mundo
-            </span>{" "}
-            ao seu bebê.
-          </h1>
-        ) : (
-          <div className="h-40"></div>
-        )}
+        <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[18px] font-extrabold uppercase leading-[29px] tracking-[-25] text-cream sm:w-2/3 sm:px-0 sm:text-[24px] sm:leading-[36px]">
+          Aprenda como{" "}
+          <span className="text-[25px] text-red-400 sm:text-[35px]">
+            aumentar a sua produção
+          </span>{" "}
+          de leite e ofereça o{" "}
+          <span className="text-[25px] text-green sm:text-[35px]">
+            melhor alimento do mundo
+          </span>{" "}
+          ao seu bebê.
+        </h1>
 
         <p className="mx-auto w-[80%] max-w-[600px] text-center text-[16.67px] font-bold leading-[22.9px] tracking-[-25] sm:mt-7 sm:px-2 lg:mt-5 lg:text-[18.75px]">
           Assista a essa aula gratuita e comece a aumentar a sua produção de
@@ -412,7 +396,7 @@ Explicação do método
                         <a
                           target="_blank"
                           href={`https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
-                            value?.toString() || ""
+                            formatPhoneNumber(value ?? "") || ""
                           }&name=${name}`}
                         >
                           <button
