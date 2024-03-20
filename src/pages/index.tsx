@@ -39,7 +39,9 @@ const Home: NextPage = () => {
   const [userIP, setUserIP] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
-  // const versionParam = useSearchParams().get("version");
+  const utmParams = useSearchParams();
+  console.log(utmParams);
+
   // useEffect(() => {
   //   setVersion(!versionParam ? "" : versionParam);
   //   console.log(version);
@@ -397,7 +399,7 @@ Explicação do método
                           target="_blank"
                           href={`https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
                             formatPhoneNumber(value ?? "") || ""
-                          }&name=${name}`}
+                          }&name=${name}&${utmParams.toString()}`}
                         >
                           <button
                             onClick={handleSubmit}

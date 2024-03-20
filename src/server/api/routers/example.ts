@@ -70,7 +70,7 @@ export const exampleRouter = createTRPCRouter({
         body: mcForm,
       });
 
-      console.log(lead);
+      // console.log(lead);
 
       return lead;
     }),
