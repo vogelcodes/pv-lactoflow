@@ -12,14 +12,14 @@ import flags from "react-phone-number-input/flags";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import { api } from "@/utils/api";
-import CTA from "@/pages/components/cta";
+import CTA from "@/components/cta";
 import { useRouter } from "next/router";
-import Furadeira from "../components/furadeira-completa";
-import Bonus from "../components/bonus";
-import About from "../components/about";
-import Faq from "../components/faq";
-import Footer from "../components/footer";
-import Depos from "../components/depos";
+import Furadeira from "../../components/furadeira-completa";
+import Bonus from "../../components/bonus";
+import About from "../../components/about";
+import Faq from "../../components/faq";
+import Footer from "../../components/footer";
+import Depos from "../../components/depos";
 
 export default function Page() {
   type E164Number = string | undefined;

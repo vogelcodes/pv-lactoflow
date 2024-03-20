@@ -96,7 +96,7 @@ const Depos = () => {
             </div>
           );
         })}
-        {[3, 4, 5, 6].map((number) => {
+        {[3, 4, 5, 6, 7, 8, 9].map((number) => {
           return (
             <div className="" key={number}>
               <Image
