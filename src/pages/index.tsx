@@ -40,7 +40,6 @@ const Home: NextPage = () => {
   const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
   const utmParams = useSearchParams();
-  console.log(utmParams);
 
   // useEffect(() => {
   //   setVersion(!versionParam ? "" : versionParam);
