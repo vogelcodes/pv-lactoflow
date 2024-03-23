@@ -6,9 +6,12 @@
 
 /** @type {import("next").NextConfig} */
 const config = {
+  output: "export",
+
   reactStrictMode: true,
   images: {
     domains: ["www.facebook.com"],
+    unoptimized: true,
   },
 
   /**
@@ -17,9 +20,9 @@ const config = {
    *
    * @see https://github.com/vercel/next.js/issues/41980
    */
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
+  // i18n: {
+  //   locales: ["br"],
+  //   defaultLocale: "br",
+  // },
 };
 export default config;

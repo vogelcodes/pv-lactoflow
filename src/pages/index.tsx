@@ -296,7 +296,7 @@ Explicação do método
         />
         <Footer>
           <div className="flex flex-col text-center sm:flex-row sm:text-left">
-            <span>Copyright © 2023</span>
+            <span>Copyright © {new Date().getFullYear()}</span>
             <span className="mx-3 hidden sm:block">|</span>
             <span>Todos os direitos reservados.</span>
           </div>
