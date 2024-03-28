@@ -5,21 +5,21 @@ import { z } from "zod";
  * built with invalid env vars.
  */
 const server = z.object({
-  MYSQL_URL: z.string().url(),
-  NODE_ENV: z.enum(["development", "test", "production"]),
-  NEXTAUTH_SECRET:
-    process.env.NODE_ENV === "production"
-      ? z.string().min(1)
-      : z.string().min(1).optional(),
-  NEXTAUTH_URL: z
-    .preprocess(
-      (str) => "https://" + process.env.RAILWAY_STATIC_URL ?? str,
-      z.string().url()
-    )
-    .transform((x) => {
-      process.env.NEXTAUTH_URL = x;
-      return x;
-    }),
+  // MYSQL_URL: z.string().url(),
+  // NODE_ENV: z.enum(["development", "test", "production"]),
+  // NEXTAUTH_SECRET:
+  //   process.env.NODE_ENV === "production"
+  //     ? z.string().min(1)
+  //     : z.string().min(1).optional(),
+  // NEXTAUTH_URL: z
+  //   .preprocess(
+  //     (str) => "https://" + process.env.RAILWAY_STATIC_URL ?? str,
+  //     z.string().url()
+  //   )
+  //   .transform((x) => {
+  //     process.env.NEXTAUTH_URL = x;
+  //     return x;
+  //   }),
   // Add `.min(1) on ID and SECRET if you want to make sure they're not empty
   // DISCORD_CLIENT_ID: z.string(),
   // DISCORD_CLIENT_SECRET: z.string(),
