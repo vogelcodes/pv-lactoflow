@@ -52,7 +52,7 @@ const Home: NextPage = () => {
   };
 
   useEffect(() => {
-    void fetch("https://pv1.lactoflow.com.br/api/get-ip", {
+    void fetch("https://lactoflow.vogelcodes.com/api/get-ip", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
