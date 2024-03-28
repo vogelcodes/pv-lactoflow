@@ -5,21 +5,21 @@ import { z } from "zod";
  * built with invalid env vars.
  */
 const server = z.object({
-  MYSQL_URL: z.string().url(),
+  // MYSQL_URL: z.string().url(),
   NODE_ENV: z.enum(["development", "test", "production"]),
-  NEXTAUTH_SECRET:
-    process.env.NODE_ENV === "production"
-      ? z.string().min(1)
-      : z.string().min(1).optional(),
-  NEXTAUTH_URL: z
-    .preprocess(
-      (str) => "https://" + process.env.RAILWAY_STATIC_URL ?? str,
-      z.string().url()
-    )
-    .transform((x) => {
-      process.env.NEXTAUTH_URL = x;
-      return x;
-    }),
+  // NEXTAUTH_SECRET:
+  //   process.env.NODE_ENV === "production"
+  //     ? z.string().min(1)
+  //     : z.string().min(1).optional(),
+  // NEXTAUTH_URL: z
+  //   .preprocess(
+  //     (str) => "https://" + process.env.RAILWAY_STATIC_URL ?? str,
+  //     z.string().url()
+  //   )
+  //   .transform((x) => {
+  //     process.env.NEXTAUTH_URL = x;
+  //     return x;
+  //   }),
   // Add `.min(1) on ID and SECRET if you want to make sure they're not empty
   // DISCORD_CLIENT_ID: z.string(),
   // DISCORD_CLIENT_SECRET: z.string(),
@@ -40,10 +40,10 @@ const client = z.object({
  * @type {Record<keyof z.infer<typeof server> | keyof z.infer<typeof client>, string | undefined>}
  */
 const processEnv = {
-  MYSQL_URL: process.env.MYSQL_URL,
+  // MYSQL_URL: process.env.MYSQL_URL,
   NODE_ENV: process.env.NODE_ENV,
-  NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
-  NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+  // NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+  // NEXTAUTH_URL: process.env.NEXTAUTH_URL,
   // DISCORD_CLIENT_ID: process.env.DISCORD_CLIENT_ID,
   // DISCORD_CLIENT_SECRET: process.env.DISCORD_CLIENT_SECRET,
   // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
