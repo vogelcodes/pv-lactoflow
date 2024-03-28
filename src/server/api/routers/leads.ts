@@ -16,7 +16,7 @@ export const leadsRouter = createTRPCRouter({
     }),
 
   getAll: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.lead.findMany();
+    return "";
   }),
 
   getSecretMessage: protectedProcedure.query(() => {
