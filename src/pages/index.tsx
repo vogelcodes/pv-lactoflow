@@ -75,7 +75,8 @@ const Home: NextPage = () => {
     console.log(cta);
     setIsOpen(true);
   }
-  function handleSubmit() {
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
     console.log(formatPhoneNumber(value || ""));
     console.log(router.asPath);
 
@@ -87,6 +88,12 @@ const Home: NextPage = () => {
       phoneNumber: value?.toString() || "",
       location: userIP,
     });
+    window.open(
+      `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
+        formatPhoneNumber(value ?? "") || ""
+        // value
+      }&name=${name}&${utmParams.toString()}`
+    );
   }
 
   // useEffect(() => {
@@ -365,7 +372,10 @@ Explicação do método
                         Preencha esse formulário e entre para o LactoFlow
                       </Dialog.Title>
                       <div className="mt-2">
-                        <form className="mb-8  flex flex-col text-blue">
+                        <form
+                          onSubmit={(e) => handleSubmit(e)}
+                          className="mb-8  flex flex-col text-blue"
+                        >
                           <label htmlFor="celular">Nome</label>
                           <input
                             className="pl-2 dark:bg-cream"
@@ -380,6 +390,7 @@ Explicação do método
                             className="pl-2 dark:bg-cream"
                             type="text"
                             name="email"
+                            required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="maeincrivel@email.com"
@@ -387,26 +398,27 @@ Explicação do método
                           <label htmlFor="celular">Celular</label>
                           <PhoneInput
                             className="bg-cream"
+                            required
                             labels={ptBR}
                             flags={flags}
                             value={value}
                             defaultCountry="BR"
                             onChange={setValue}
                           />
-                        </form>
-                        <a
+                          {/* <a
                           target="_blank"
                           href={`https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
                             formatPhoneNumber(value ?? "") || ""
                           }&name=${name}&${utmParams.toString()}`}
-                        >
+                          > */}
                           <button
-                            onClick={handleSubmit}
+                            type="submit"
                             className="mx-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
                           >
                             Quero aumentar minha produção de leite
                           </button>
-                        </a>
+                        </form>
+                        {/* </a> */}
                         <h3 className="text-center text-base text-blue">
                           SEUS DADOS ESTÃO SEGUROS
                         </h3>
