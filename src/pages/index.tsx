@@ -358,7 +358,7 @@ Explicação do método
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                   >
-                    <Dialog.Panel className="bg-white mt-16 w-full max-w-md transform overflow-hidden rounded-2xl bg-green p-6 text-left align-middle shadow-xl transition-all">
+                    <Dialog.Panel className="bg-white mt-4 w-full max-w-md transform overflow-hidden rounded-2xl bg-green p-6 text-left align-middle shadow-xl transition-all">
                       <span
                         className="absolute right-5 top-3 cursor-pointer font-extrabold text-blue"
                         onClick={closeModal}
@@ -374,7 +374,7 @@ Explicação do método
                       <div className="mt-2">
                         <form
                           onSubmit={(e) => handleSubmit(e)}
-                          className="mb-8  flex flex-col text-blue"
+                          className="flex flex-col text-blue"
                         >
                           <label htmlFor="celular">Nome</label>
                           <input
@@ -413,7 +413,7 @@ Explicação do método
                           > */}
                           <button
                             type="submit"
-                            className="mx-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
+                            className="mx-auto mt-4 rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
                           >
                             Quero aumentar minha produção de leite
                           </button>

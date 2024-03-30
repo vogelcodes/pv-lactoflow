@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Script from "next/script";
 import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
+import PhoneInput, { formatPhoneNumber } from "react-phone-number-input";
 import ptBR from "react-phone-number-input/locale/pt-BR.json";
 import flags from "react-phone-number-input/flags";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
@@ -41,8 +41,9 @@ export default function Page() {
     setIsOpen(false);
   }
 
-  function handleSubmit() {
-    console.log(value);
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    console.log(formatPhoneNumber(value || ""));
     console.log(router.asPath);
 
     mutate({
@@ -53,6 +54,12 @@ export default function Page() {
       phoneNumber: value?.toString() || "",
       location: userIP,
     });
+    window.open(
+      `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
+        formatPhoneNumber(value ?? "") || ""
+        // value
+      }&name=${name}&${utmParams.toString()}`
+    );
   }
   const router = useRouter();
   const ytUrlOptions: Record<string, string> = {
@@ -62,6 +69,7 @@ export default function Page() {
 
     // Add other possible keys and values as needed
   };
+  const utmParams = useSearchParams();
 
   const aula = router.query.aula?.toString() || "saciedade";
   const ytUrl = ytUrlOptions[aula] || "";
@@ -239,7 +247,7 @@ export default function Page() {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="bg-white mt-16 w-full max-w-md transform overflow-hidden rounded-2xl bg-green p-6 text-left align-middle shadow-xl transition-all">
+                  <Dialog.Panel className="bg-white mt-4 w-full max-w-md transform overflow-hidden rounded-2xl bg-green p-6 text-left align-middle shadow-xl transition-all">
                     <span
                       className="absolute right-5 top-3 cursor-pointer font-extrabold text-blue"
                       onClick={closeModal}
@@ -253,7 +261,10 @@ export default function Page() {
                       Preencha esse formulário e entre para o LactoFlow
                     </Dialog.Title>
                     <div className="mt-2">
-                      <form className="mb-8  flex flex-col text-blue">
+                      <form
+                        onSubmit={(e) => handleSubmit(e)}
+                        className="flex flex-col text-blue"
+                      >
                         <label htmlFor="celular">Nome</label>
                         <input
                           className="pl-2 dark:bg-cream"
@@ -268,6 +279,7 @@ export default function Page() {
                           className="pl-2 dark:bg-cream"
                           type="text"
                           name="email"
+                          required
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="maeincrivel@email.com"
@@ -275,26 +287,27 @@ export default function Page() {
                         <label htmlFor="celular">Celular</label>
                         <PhoneInput
                           className="bg-cream"
+                          required
                           labels={ptBR}
                           flags={flags}
                           value={value}
                           defaultCountry="BR"
                           onChange={setValue}
                         />
-                      </form>
-                      <a
-                        target="_blank"
-                        href={`https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
-                          value?.toString() || ""
-                        }&name=${name}`}
-                      >
+                        {/* <a
+                          target="_blank"
+                          href={`https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
+                            formatPhoneNumber(value ?? "") || ""
+                          }&name=${name}&${utmParams.toString()}`}
+                          > */}
                         <button
-                          onClick={handleSubmit}
-                          className="mx-auto rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
+                          type="submit"
+                          className="mx-auto mt-4 rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
                         >
                           Quero aumentar minha produção de leite
                         </button>
-                      </a>
+                      </form>
+                      {/* </a> */}
                       <h3 className="text-center text-base text-blue">
                         SEUS DADOS ESTÃO SEGUROS
                       </h3>
