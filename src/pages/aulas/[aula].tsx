@@ -20,6 +20,7 @@ import About from "../../components/about";
 import Faq from "../../components/faq";
 import Footer from "../../components/footer";
 import Depos from "../../components/depos";
+export const runtime = "experimental-edge";
 
 export default function Page() {
   type E164Number = string | undefined;

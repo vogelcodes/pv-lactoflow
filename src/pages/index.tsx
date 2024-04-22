@@ -26,6 +26,8 @@ import Bonus from "../components/bonus";
 import { useRouter } from "next/router";
 import Depos from "../components/depos";
 
+export const runtime = "experimental-edge";
+
 const Home: NextPage = () => {
   type E164Number = string | undefined;
 

@@ -5,6 +5,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import Cors from "cors";
+export const runtime = "edge";
+
 const ip2location = require("ip-to-location");
 
 type Data = {
