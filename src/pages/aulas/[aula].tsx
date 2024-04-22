@@ -22,6 +22,8 @@ export default function Page() {
   type E164Number = string | undefined;
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   const [cta, setCta] = useState("");
   const [value, setValue] = useState<E164Number | undefined>();
   const [email, setEmail] = useState("");
@@ -38,16 +40,47 @@ export default function Page() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setIsLoading(true);
+
+    const formData = new FormData();
+
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("phoneNumber", value?.toString() || "");
+    formData.append("cta", cta);
+    formData.append("url", window.location.pathname);
+    formData.append("utm", utmParams.toString());
+
+    void fetch(
+      "https://vogel-codes.hosting.vogelcodes.com/api/lead?list=pv-lactoflow",
+      {
+        method: "POST",
+        headers: {},
+        body: formData,
+      }
+    ).then(() => {
+      setIsLoading(false);
+      window.open(
+        `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
+          formatPhoneNumber(value ?? "") || ""
+          // value
+        }&name=${name}&${utmParams.toString()}`
+      );
+    });
+
     console.log(formatPhoneNumber(value || ""));
     console.log(router.asPath);
 
-    window.open(
-      `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
-        formatPhoneNumber(value ?? "") || ""
-        // value
-      }&name=${name}&${utmParams.toString()}`
-    );
+    // mutate({
+    //   ctaOption: cta,
+    //   url: router.asPath,
+    //   name,
+    //   email,
+    //   phoneNumber: value?.toString() || "",
+    //   location: userIP,
+    // });
   }
+
   const router = useRouter();
   const ytUrlOptions: Record<string, string> = {
     saciedade: "H6iB3jTKPW8",
@@ -272,7 +305,9 @@ export default function Page() {
                           type="submit"
                           className="mx-auto mt-4 rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
                         >
-                          Quero aumentar minha produção de leite
+                          {isLoading
+                            ? "Enviando..."
+                            : "Quero aumentar minha produção de leite"}
                         </button>
                       </form>
                       {/* </a> */}
