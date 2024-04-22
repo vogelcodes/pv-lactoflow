@@ -16,7 +16,6 @@ import ptBR from "react-phone-number-input/locale/pt-BR.json";
 import flags from "react-phone-number-input/flags";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
-import { api } from "@/utils/api";
 import CTA from "@/components/cta";
 import About from "../components/about";
 import Furadeira from "../components/furadeira-completa";
@@ -39,7 +38,6 @@ const Home: NextPage = () => {
   // const [version, setVersion] = useState<string | null>();
   const [cta, setCta] = useState("");
   const [userIP, setUserIP] = useState("");
-  const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
   const utmParams = useSearchParams();
 
@@ -52,19 +50,6 @@ const Home: NextPage = () => {
     locationInfo: string;
     // other properties
   };
-
-  useEffect(() => {
-    void fetch("https://pv1.lactoflow.com.br/api/get-ip", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data: ApiResponse) => {
-        setUserIP(data.locationInfo);
-      });
-  }, []);
 
   // console.log(version);
 
