@@ -4,7 +4,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { type NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import Head from "next/head";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
@@ -37,7 +37,6 @@ const Home: NextPage = () => {
   const [name, setName] = useState("");
   // const [version, setVersion] = useState<string | null>();
   const [cta, setCta] = useState("");
-  const [userIP, setUserIP] = useState("");
   const router = useRouter();
   const utmParams = useSearchParams();
 
@@ -45,11 +44,6 @@ const Home: NextPage = () => {
   //   setVersion(!versionParam ? "" : versionParam);
   //   console.log(version);
   // }, [versionParam]);
-  type ApiResponse = {
-    message: string;
-    locationInfo: string;
-    // other properties
-  };
 
   // console.log(version);
 

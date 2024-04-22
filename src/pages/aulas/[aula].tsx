@@ -1,10 +1,7 @@
-import { type NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useEffect, useState } from "react";
-import Head from "next/head";
+import { Fragment, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import Script from "next/script";
 import "react-phone-number-input/style.css";
 import PhoneInput, { formatPhoneNumber } from "react-phone-number-input";
 import ptBR from "react-phone-number-input/locale/pt-BR.json";
