@@ -1,8 +1,6 @@
 import { type AppType } from "next/app";
 import localFont from "next/font/local";
 
-import { api } from "@/utils/api";
-
 import "@/styles/globals.css";
 import Script from "next/script";
 
@@ -62,4 +60,4 @@ const MyApp: AppType = ({ Component, pageProps: { ...pageProps } }) => {
   );
 };
 
-export default api.withTRPC(MyApp);
+export default MyApp;
