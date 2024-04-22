@@ -31,7 +31,6 @@ export default function Page() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [userIP, setUserIP] = useState("");
-  const { mutate } = api.example.saveLead.useMutation();
 
   function openModal(option: string) {
     setCta(option);
@@ -47,14 +46,14 @@ export default function Page() {
     console.log(formatPhoneNumber(value || ""));
     console.log(router.asPath);
 
-    mutate({
-      ctaOption: cta,
-      url: router.asPath,
-      name,
-      email,
-      phoneNumber: value?.toString() || "",
-      location: userIP,
-    });
+    // mutate({
+    //   ctaOption: cta,
+    //   url: router.asPath,
+    //   name,
+    //   email,
+    //   phoneNumber: value?.toString() || "",
+    //   location: userIP,
+    // });
     window.open(
       `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
         formatPhoneNumber(value ?? "") || ""
