@@ -11,7 +11,6 @@ import ptBR from "react-phone-number-input/locale/pt-BR.json";
 import flags from "react-phone-number-input/flags";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
-import { api } from "@/utils/api";
 import CTA from "@/components/cta";
 import { useRouter } from "next/router";
 import Furadeira from "../../components/furadeira-completa";
@@ -30,7 +29,6 @@ export default function Page() {
   const [value, setValue] = useState<E164Number | undefined>();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [userIP, setUserIP] = useState("");
 
   function openModal(option: string) {
     setCta(option);
@@ -46,14 +44,6 @@ export default function Page() {
     console.log(formatPhoneNumber(value || ""));
     console.log(router.asPath);
 
-    // mutate({
-    //   ctaOption: cta,
-    //   url: router.asPath,
-    //   name,
-    //   email,
-    //   phoneNumber: value?.toString() || "",
-    //   location: userIP,
-    // });
     window.open(
       `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
         formatPhoneNumber(value ?? "") || ""
@@ -76,25 +66,6 @@ export default function Page() {
   if (ytUrl == "") {
     void router.push("/");
   }
-  type ApiResponse = {
-    message: string;
-    locationInfo: string;
-    // other properties
-  };
-
-  useEffect(() => {
-    void fetch("https://pv1.lactoflow.com.br/api/get-ip", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data: ApiResponse) => {
-        console.log(data);
-        setUserIP(data.locationInfo);
-      });
-  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center bg-blue py-2 text-cream sm:py-4">
