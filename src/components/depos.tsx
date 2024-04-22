@@ -89,7 +89,7 @@ const Depos = () => {
                 key={number}
                 width={340}
                 height={500}
-                src={`/depoimentos/metodo/${number}.wepb`}
+                src={`/depoimentos/metodo/${number}.webp`}
                 alt="depoimento"
               />
             </div>
