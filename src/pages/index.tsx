@@ -79,17 +79,38 @@ const Home: NextPage = () => {
   }
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    e.preventDefault();
+
+    const formData = new FormData();
+
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("phoneNumber", value?.toString() || "");
+    formData.append("cta", cta);
+    formData.append("url", window.location.pathname);
+    formData.append("utm", utmParams.toString());
+
+    fetch(
+      "https://vogel-codes.hosting.vogelcodes.com/api/lead?list=pv-lactoflow",
+      {
+        method: "POST",
+        headers: {},
+        body: formData,
+      }
+    );
+
     console.log(formatPhoneNumber(value || ""));
     console.log(router.asPath);
 
-    mutate({
-      ctaOption: cta,
-      url: router.asPath,
-      name,
-      email,
-      phoneNumber: value?.toString() || "",
-      location: userIP,
-    });
+    // mutate({
+    //   ctaOption: cta,
+    //   url: router.asPath,
+    //   name,
+    //   email,
+    //   phoneNumber: value?.toString() || "",
+    //   location: userIP,
+    // });
+
     window.open(
       `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
         formatPhoneNumber(value ?? "") || ""
