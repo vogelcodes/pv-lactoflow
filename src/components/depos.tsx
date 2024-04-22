@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import Header1 from "./h1";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 const Depos = () => {
@@ -90,7 +89,7 @@ const Depos = () => {
                 key={number}
                 width={340}
                 height={500}
-                src={`/depoimentos/metodo/${number}.jpg`}
+                src={`/depoimentos/metodo/${number}.wepb`}
                 alt="depoimento"
               />
             </div>
@@ -104,7 +103,7 @@ const Depos = () => {
                 key={number}
                 width={340}
                 height={500}
-                src={`/depoimentos/metodo/${number}.jpg`}
+                src={`/depoimentos/metodo/${number}.webp`}
                 alt="depoimento"
               />
             </div>
