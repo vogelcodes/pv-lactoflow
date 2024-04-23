@@ -58,7 +58,9 @@ export default function Page() {
         headers: {},
         body: formData,
       }
-    ).then(() => {
+    );
+
+    setTimeout(() => {
       setIsLoading(false);
       window.open(
         `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
@@ -66,10 +68,7 @@ export default function Page() {
           // value
         }&name=${name}&${utmParams.toString()}`
       );
-    });
-
-    console.log(formatPhoneNumber(value || ""));
-    console.log(router.asPath);
+    }, 1500);
 
     // mutate({
     //   ctaOption: cta,

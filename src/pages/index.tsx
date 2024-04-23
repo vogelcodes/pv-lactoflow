@@ -78,7 +78,8 @@ const Home: NextPage = () => {
         headers: {},
         body: formData,
       }
-    ).then(() => {
+    );
+    setTimeout(() => {
       setIsLoading(false);
       window.open(
         `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
@@ -86,7 +87,7 @@ const Home: NextPage = () => {
           // value
         }&name=${name}&${utmParams.toString()}`
       );
-    });
+    }, 1500);
 
     console.log(formatPhoneNumber(value || ""));
     console.log(router.asPath);
