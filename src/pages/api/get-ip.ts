@@ -5,11 +5,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import Cors from "cors";
-const ip2location = require("ip-to-location");
 
 type Data = {
   message: string;
   locationInfo: string;
+  userAgent: string;
 };
 type LocationInfo = {
   country_code: string;
@@ -60,15 +60,21 @@ export default async function handler(
   // get the user's IP address and user-agent
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   await runMiddleware(req, res, cors);
-  const userIp = req.headers["x-real-ip"] || req.connection.remoteAddress;
+  let userIp = req.headers["x-real-ip"] || req.connection.remoteAddress;
+
   if (userIp === undefined) {
     return;
   }
+  //make sure userIp is a string
+  if (typeof userIp !== "string") {
+    userIp = userIp[0];
+  }
+  userIp = String(userIp);
+
   const userAgent = req.headers["user-agent"];
-  const referer = req.headers["referer"];
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-  const locationInfo: LocationInfo = await ip2location.fetch(userIp);
-  const ts = new Date().toUTCString();
+  const ipResponse = await fetch("http://ip-api.com/json/" + userIp);
+  const locationInfo = (await ipResponse.json()) as LocationInfo;
   console.log(userIp);
   console.log(locationInfo);
 
@@ -115,5 +121,6 @@ export default async function handler(
   res.status(200).json({
     message: userIp.toString(),
     locationInfo: JSON.stringify(locationInfo),
+    userAgent: userAgent ?? "",
   });
 }

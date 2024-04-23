@@ -27,6 +27,8 @@ export const exampleRouter = createTRPCRouter({
         email: z.string(),
         phoneNumber: z.string(),
         location: z.string().optional(),
+        ip: z.string().optional(),
+        agent: z.string().optional(),
       })
     )
     .mutation(async ({ ctx, input }) => {
@@ -52,6 +54,7 @@ export const exampleRouter = createTRPCRouter({
       formData.append("url", input.url || "");
       formData.append("cta", input.ctaOption || "");
       formData.append("location", input.location || "");
+      formData.append("ip", input.ip || "");
       const gSheets = await fetch(scriptURL, {
         method: "POST",
         headers: {},

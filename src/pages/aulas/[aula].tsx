@@ -25,13 +25,27 @@ export default function Page() {
   type E164Number = string | undefined;
 
   const [isOpen, setIsOpen] = useState(false);
-  const [cta, setCta] = useState("");
-  const [value, setValue] = useState<E164Number | undefined>();
+  const [value, setValue] = useState<E164Number>();
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  // const [version, setVersion] = useState<string | null>();
+  const [cta, setCta] = useState("");
   const [userIP, setUserIP] = useState("");
+  const [userLocation, setUserLocation] = useState("");
+  const [userAgent, setUserAgent] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
 
+  // useEffect(() => {
+  //   setVersion(!versionParam ? "" : versionParam);
+  //   console.log(version);
+  // }, [versionParam]);
+  type ApiResponse = {
+    message: string;
+    locationInfo: string;
+    userAgent: string;
+    // other properties
+  };
   function openModal(option: string) {
     setCta(option);
     console.log(cta);
@@ -52,7 +66,9 @@ export default function Page() {
       name,
       email,
       phoneNumber: value?.toString() || "",
-      location: userIP,
+      location: userLocation,
+      ip: userIP,
+      agent: userAgent,
     });
     window.open(
       `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
@@ -76,11 +92,6 @@ export default function Page() {
   if (ytUrl == "") {
     void router.push("/");
   }
-  type ApiResponse = {
-    message: string;
-    locationInfo: string;
-    // other properties
-  };
 
   useEffect(() => {
     void fetch("https://pv1.lactoflow.com.br/api/get-ip", {
@@ -91,8 +102,9 @@ export default function Page() {
     })
       .then((res) => res.json())
       .then((data: ApiResponse) => {
-        console.log(data);
-        setUserIP(data.locationInfo);
+        setUserIP(data.message);
+        setUserLocation(data.locationInfo);
+        setUserAgent(data.userAgent);
       });
   }, []);
 

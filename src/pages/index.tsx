@@ -37,6 +37,8 @@ const Home: NextPage = () => {
   // const [version, setVersion] = useState<string | null>();
   const [cta, setCta] = useState("");
   const [userIP, setUserIP] = useState("");
+  const [userLocation, setUserLocation] = useState("");
+  const [userAgent, setUserAgent] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
   const utmParams = useSearchParams();
@@ -48,6 +50,7 @@ const Home: NextPage = () => {
   type ApiResponse = {
     message: string;
     locationInfo: string;
+    userAgent: string;
     // other properties
   };
 
@@ -60,7 +63,9 @@ const Home: NextPage = () => {
     })
       .then((res) => res.json())
       .then((data: ApiResponse) => {
-        setUserIP(data.locationInfo);
+        setUserIP(data.message);
+        setUserLocation(data.locationInfo);
+        setUserAgent(data.userAgent);
       });
   }, []);
 
@@ -86,7 +91,9 @@ const Home: NextPage = () => {
       name,
       email,
       phoneNumber: value?.toString() || "",
-      location: userIP,
+      location: userLocation,
+      ip: userIP,
+      agent: userAgent,
     });
     window.open(
       `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
