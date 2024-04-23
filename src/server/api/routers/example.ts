@@ -55,6 +55,7 @@ export const exampleRouter = createTRPCRouter({
       formData.append("cta", input.ctaOption || "");
       formData.append("location", input.location || "");
       formData.append("ip", input.ip || "");
+      formData.append("agent", input.agent || "");
       const gSheets = await fetch(scriptURL, {
         method: "POST",
         headers: {},
