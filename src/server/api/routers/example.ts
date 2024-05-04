@@ -38,7 +38,8 @@ export const exampleRouter = createTRPCRouter({
         avatarUrl: "",
         url: input.url,
       };
-
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      const location: any = JSON.parse(input.location ?? "{}");
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbw72hugYvfvgDz18Ce4yxv9fU0XMtTcSmsgNV4My6rol2vvtN89OqiBlp7yGgDpAfHoDw/exec";
       const mailchimpUrl =
@@ -77,7 +78,18 @@ export const exampleRouter = createTRPCRouter({
         `https://api.telegram.org/bot6798939077:AAEhMt8W_okiJ1PYw4ySWyUxRG-uHTP7a_8/sendMessage?chat_id=-4086050473&text=${encodeURIComponent(
           `Nova Lead:\n${input.name}\n${input.email}\n${input.phoneNumber}\n${
             input.ctaOption ?? ""
-          }\n${input.location ?? ""}\n${input.agent ?? ""}\n${input.url ?? ""}`
+          }\n${
+            // eslint-disable-next-line @typescript-eslint/restrict-plus-operands, @typescript-eslint/no-unsafe-member-access
+            location.countryCode + "-" + location.city + "-" + location.region
+          }\n${input.ip ?? ""}\n${input.agent ?? ""}\n${decodeURIComponent(
+            input.url ?? ""
+          )}\n
+          https://api.whatsapp.com/send?phone=${input.phoneNumber
+            .replace("+", "")
+            .trim()}&text=${encodeURIComponent(
+            `Oi ${input.name}! Tudo bem?❤\n\nAqui é a Carolina Procaci.🥰\n\nVi que você se interessou pelo curso Lactoflow.\n\nVocê está com alguma dificuldade com a sua amamentação?`
+          )}
+          `
         )}`
       );
 
