@@ -57,11 +57,6 @@ export const exampleRouter = createTRPCRouter({
       formData.append("location", input.location || "");
       formData.append("ip", input.ip || "");
       formData.append("agent", input.agent || "");
-      const gSheets = await fetch(scriptURL, {
-        method: "POST",
-        headers: {},
-        body: formData,
-      });
       const mcForm = new FormData();
       mcForm.append("FNAME", input.name);
       mcForm.append("EMAIL", input.email);
@@ -69,12 +64,12 @@ export const exampleRouter = createTRPCRouter({
       mcForm.append("tags", "7067103");
       mcForm.append("b_f2c713cb04fc024e126ae662d_96c32b9825", "");
 
-      const mailChimpSub = await fetch(mailchimpUrl, {
+      const mailChimpSub = fetch(mailchimpUrl, {
         method: "POST",
         headers: {},
         body: mcForm,
       });
-      const telegramMessage = await fetch(
+      const telegramMessage = fetch(
         `https://api.telegram.org/bot6798939077:AAEhMt8W_okiJ1PYw4ySWyUxRG-uHTP7a_8/sendMessage?chat_id=-4086050473&text=${encodeURIComponent(
           `Nova Lead:\n${input.name}\n${input.email}\n${input.phoneNumber}\n${
             input.ctaOption ?? ""
@@ -92,6 +87,11 @@ export const exampleRouter = createTRPCRouter({
           `
         )}`
       );
+      const gSheets = await fetch(scriptURL, {
+        method: "POST",
+        headers: {},
+        body: formData,
+      });
 
       // console.log(lead);
 
