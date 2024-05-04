@@ -95,12 +95,18 @@ const Home: NextPage = () => {
       ip: userIP,
       agent: userAgent,
     });
-    window.open(
+    router.push(
       `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
         formatPhoneNumber(value ?? "") || ""
         // value
       }&name=${name}&${utmParams.toString()}`
     );
+    // window.open(
+    //   `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
+    //     formatPhoneNumber(value ?? "") || ""
+    //     // value
+    //   }&name=${name}&${utmParams.toString()}`
+    // );
   }
 
   // useEffect(() => {
