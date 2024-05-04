@@ -96,7 +96,7 @@ const Home: NextPage = () => {
       agent: userAgent,
     });
     window.open(
-      `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
+      `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
         formatPhoneNumber(value ?? "") || ""
         // value
       }&name=${name}&${utmParams.toString()}`

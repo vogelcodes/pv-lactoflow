@@ -15,9 +15,9 @@ export const exampleRouter = createTRPCRouter({
       };
     }),
 
-  getAll: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.lead.findMany();
-  }),
+  // getAll: publicProcedure.query(({ ctx }) => {
+  //   return ctx.prisma.lead.findMany();
+  // }),
   saveLead: publicProcedure
     .input(
       z.object({
@@ -73,6 +73,13 @@ export const exampleRouter = createTRPCRouter({
         headers: {},
         body: mcForm,
       });
+      const telegramMessage = await fetch(
+        `https://api.telegram.org/bot6798939077:AAEhMt8W_okiJ1PYw4ySWyUxRG-uHTP7a_8/sendMessage?chat_id=-4086050473&text=${encodeURIComponent(
+          `Nova Lead:\n${input.name}\n${input.email}\n${input.phoneNumber}\n${
+            input.ctaOption ?? ""
+          }\n${input.location ?? ""}\n${input.agent ?? ""}\n${input.url ?? ""}`
+        )}`
+      );
 
       // console.log(lead);
 
