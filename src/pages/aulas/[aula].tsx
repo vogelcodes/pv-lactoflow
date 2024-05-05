@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-floating-promises */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 import { type NextPage } from "next";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
@@ -21,7 +26,7 @@ import Faq from "../../components/faq";
 import Footer from "../../components/footer";
 import Depos from "../../components/depos";
 
-export default function Page() {
+const Page: NextPage = () => {
   type E164Number = string | undefined;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -29,12 +34,15 @@ export default function Page() {
 
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [loading, setLoading] = useState(false);
+
   // const [version, setVersion] = useState<string | null>();
   const [cta, setCta] = useState("");
   const [userIP, setUserIP] = useState("");
   const [userLocation, setUserLocation] = useState("");
   const [userAgent, setUserAgent] = useState("");
   const { mutate } = api.example.saveLead.useMutation();
+  const router = useRouter();
 
   // useEffect(() => {
   //   setVersion(!versionParam ? "" : versionParam);
@@ -57,6 +65,7 @@ export default function Page() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setLoading(true);
     console.log(formatPhoneNumber(value || ""));
     console.log(router.asPath);
 
@@ -70,14 +79,21 @@ export default function Page() {
       ip: userIP,
       agent: userAgent,
     });
-    window.open(
-      `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
-        formatPhoneNumber(value ?? "") || ""
-        // value
-      }&name=${name}&${utmParams.toString()}`
-    );
+    setTimeout(() => {
+      router.push(
+        `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
+          formatPhoneNumber(value ?? "") || ""
+          // value
+        }&name=${name}&${utmParams.toString()}`
+      );
+    }, 1200);
+    // window.open(
+    //   `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
+    //     formatPhoneNumber(value ?? "") || ""
+    //     // value
+    //   }&name=${name}&${utmParams.toString()}`
+    // );
   }
-  const router = useRouter();
   const ytUrlOptions: Record<string, string> = {
     saciedade: "H6iB3jTKPW8",
     "baixa-producao": "L9IrS6AY2DY",
@@ -316,7 +332,9 @@ export default function Page() {
                           type="submit"
                           className="mx-auto mt-4 rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
                         >
-                          Quero aumentar minha produção de leite
+                          {loading
+                            ? "Enviando..."
+                            : "Quero aumentar minha produção de leite"}
                         </button>
                       </form>
                       {/* </a> */}
@@ -333,4 +351,5 @@ export default function Page() {
       </div>
     </div>
   );
-}
+};
+export default Page;
