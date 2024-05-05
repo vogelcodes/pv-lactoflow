@@ -31,6 +31,7 @@ const Home: NextPage = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [value, setValue] = useState<E164Number>();
+  const [loading, setLoading] = useState(false);
 
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -82,6 +83,7 @@ const Home: NextPage = () => {
   }
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setLoading(true);
     console.log(formatPhoneNumber(value || ""));
     console.log(router.asPath);
 
@@ -95,12 +97,14 @@ const Home: NextPage = () => {
       ip: userIP,
       agent: userAgent,
     });
-    router.push(
-      `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
-        formatPhoneNumber(value ?? "") || ""
-        // value
-      }&name=${name}&${utmParams.toString()}`
-    );
+    setTimeout(() => {
+      router.push(
+        `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
+          formatPhoneNumber(value ?? "") || ""
+          // value
+        }&name=${name}&${utmParams.toString()}`
+      );
+    }, 1200);
     // window.open(
     //   `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
     //     formatPhoneNumber(value ?? "") || ""
@@ -411,6 +415,7 @@ Explicação do método
                           <label htmlFor="celular">Celular</label>
                           <PhoneInput
                             className="bg-cream"
+                            type="phone"
                             required
                             labels={ptBR}
                             flags={flags}
@@ -426,9 +431,11 @@ Explicação do método
                           > */}
                           <button
                             type="submit"
-                            className="mx-auto mt-4 rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
+                            className="mx-auto mt-4 w-full rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-2 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:py-5 lg:text-[22.6px]"
                           >
-                            Quero aumentar minha produção de leite
+                            {loading
+                              ? "Enviando..."
+                              : "Quero aumentar minha produção de leite"}
                           </button>
                         </form>
                         {/* </a> */}

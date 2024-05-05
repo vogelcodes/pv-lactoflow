@@ -32,9 +32,13 @@ export const exampleRouter = createTRPCRouter({
       })
     )
     .mutation(async ({ ctx, input }) => {
+      console.log("New lead: ", input);
       const lead = {
         email: input.email,
         phone: input.phoneNumber,
+        name: input.name,
+        ctaOption: input.ctaOption,
+        location: input.location,
         avatarUrl: "",
         url: input.url,
       };
@@ -93,7 +97,7 @@ export const exampleRouter = createTRPCRouter({
         body: formData,
       });
 
-      // console.log(lead);
+      console.log("leadSaved");
 
       return lead;
     }),
