@@ -75,7 +75,7 @@ export const exampleRouter = createTRPCRouter({
           body: mcForm,
         }),
         fetch(
-          `https://api.telegram.org/bot6798939077:AAEhMt8W_okiJ1PYw4ySWyUxRG-uHTP7a_8/sendMessage?chat_id=-4086050473&text=${encodeURIComponent(
+          `https://api.telegram.org/bot6798939077:AAEhMt8W_okiJ1PYw4ySWyUxRG-uHTP7a_8/sendMessage?chat_id=-1002059061283&text=${encodeURIComponent(
             `Nova Lead:\n${input.name}\n${input.email}\n${input.phoneNumber}\n${
               input.ctaOption ?? ""
             }\n${
@@ -98,7 +98,7 @@ export const exampleRouter = createTRPCRouter({
           body: formData,
         }),
       ]);
-
+      console.log(telegramMessage, mailChimpSub, gSheets);
       console.log("leadSaved");
 
       return lead;

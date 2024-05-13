@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-floating-promises */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { type NextPage } from "next";
+import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
 import Head from "next/head";
@@ -26,7 +27,9 @@ import Bonus from "../components/bonus";
 import { useRouter } from "next/router";
 import Depos from "../components/depos";
 
-const Home: NextPage = () => {
+export default function Home({
+  repo,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   type E164Number = string | undefined;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -453,6 +456,17 @@ Explicação do método
       </div>
     </>
   );
+}
+type Repo = {
+  name: string;
+  stargazers_count: number;
 };
 
-export default Home;
+export const getServerSideProps = (async () => {
+  // Fetch data from external API
+  const res = await fetch("https://api.github.com/repos/vercel/next.js");
+  const repo: Repo = await res.json();
+  console.log(repo);
+  // Pass data to the page via props
+  return { props: { repo } };
+}) satisfies GetServerSideProps<{ repo: Repo }>;
