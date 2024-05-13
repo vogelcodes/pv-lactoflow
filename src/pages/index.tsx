@@ -26,6 +26,7 @@ import Footer from "../components/footer";
 import Bonus from "../components/bonus";
 import { useRouter } from "next/router";
 import Depos from "../components/depos";
+import { NextRequest } from "next/server";
 
 export default function Home({
   repo,
@@ -102,7 +103,7 @@ export default function Home({
     });
     setTimeout(() => {
       router.push(
-        `https://pay.hotmart.com/O84147403X?email=${email}&phoneac=${
+        `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
           formatPhoneNumber(value ?? "") || ""
           // value
         }&name=${name}&${utmParams.toString()}`
@@ -464,9 +465,10 @@ type Repo = {
 
 export const getServerSideProps = (async () => {
   // Fetch data from external API
-  const res = await fetch("https://api.github.com/repos/vercel/next.js");
-  const repo: Repo = await res.json();
+  const github = await fetch("https://api.github.com/repos/vercel/next.js");
+  const repo: Repo = await github.json();
   console.log(repo);
+
   // Pass data to the page via props
   return { props: { repo } };
 }) satisfies GetServerSideProps<{ repo: Repo }>;
