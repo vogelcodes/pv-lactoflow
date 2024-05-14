@@ -98,7 +98,7 @@ export const exampleRouter = createTRPCRouter({
           body: formData,
         }),
       ]);
-      console.log(telegramMessage, mailChimpSub, gSheets);
+      // console.log(telegramMessage, mailChimpSub, gSheets);
       console.log("leadSaved");
 
       return lead;

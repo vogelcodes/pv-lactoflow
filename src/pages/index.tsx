@@ -28,9 +28,10 @@ import { useRouter } from "next/router";
 import Depos from "../components/depos";
 import { NextRequest } from "next/server";
 
-export default function Home({
-  repo,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+export default function Home() {
+//   {
+//   repo,
+// }: InferGetServerSidePropsType<typeof getServerSideProps>
   type E164Number = string | undefined;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -463,12 +464,12 @@ type Repo = {
   stargazers_count: number;
 };
 
-export const getServerSideProps = (async () => {
-  // Fetch data from external API
-  const github = await fetch("https://api.github.com/repos/vercel/next.js");
-  const repo: Repo = await github.json();
-  console.log(repo);
+// export const getServerSideProps = (async () => {
+//   // Fetch data from external API
+//   const github = await fetch("https://api.github.com/repos/vercel/next.js");
+//   const repo: Repo = await github.json();
+//   console.log(repo);
 
-  // Pass data to the page via props
-  return { props: { repo } };
-}) satisfies GetServerSideProps<{ repo: Repo }>;
+//   // Pass data to the page via props
+//   return { props: { repo } };
+// }) satisfies GetServerSideProps<{ repo: Repo }>;
