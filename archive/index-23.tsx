@@ -359,7 +359,7 @@ Explicação do método
           <div className="relative h-[60px] w-[60px]">
             <a
               target="_blank"
-              href="https://wa.me/5521986388688?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow."
+              href="https://wa.me/5521978001294?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow."
             >
               <span>
                 <Image

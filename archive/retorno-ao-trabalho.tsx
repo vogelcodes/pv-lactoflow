@@ -125,7 +125,12 @@ const Home: NextPage = () => {
       />
       <div className="flex flex-col items-center justify-center bg-blue py-2 text-cream sm:py-4">
         <div className="w-[180px] sm:w-[300px]">
-          <Image src="/logo-portrait-v2.svg" alt="logo" width={300} height={120} />
+          <Image
+            src="/logo-portrait-v2.svg"
+            alt="logo"
+            width={300}
+            height={120}
+          />
         </div>
         <h4 hidden className="text-center text-3xl text-[#fcfaef]">
           Conheça o Método
@@ -137,16 +142,15 @@ const Home: NextPage = () => {
           Lacto<span className="text-green">Flow</span>{" "}
         </h1>
         <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[18px] font-extrabold uppercase leading-[29px] tracking-[-25] text-cream sm:w-2/3 sm:px-0 sm:text-[24px] sm:leading-[36px]">
-            Monte seu estoque de{" "}
-            <br/><span className="text-[25px] mx-2 text-red-400 sm:text-[35px]">
-              leite materno
-            </span><br/>
-            e volte ao trabalho{" "}
-            <span className="text-[25px] text-green sm:text-[35px]">
-              tranquila.
-            </span>{" "}
-            
-          </h1>
+          Monte seu estoque de <br />
+          <span className="mx-2 text-[25px] text-red-400 sm:text-[35px]">
+            leite materno
+          </span>
+          <br />e volte ao trabalho{" "}
+          <span className="text-[25px] text-green sm:text-[35px]">
+            tranquila.
+          </span>{" "}
+        </h1>
         <p className="mx-auto w-[80%] max-w-[600px] text-center text-[16.67px] font-bold leading-[22.9px] tracking-[-25] sm:mt-7 sm:px-2 lg:mt-5 lg:text-[18.75px]">
           Assista esse vídeo e comece a aumentar a sua produção de leite agora
           mesmo com as técnicas:
@@ -224,27 +228,25 @@ Explicação do método
           </h1>
           <div className="flex flex-col items-center gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
             <div className="w-[340px]">
-          <LiteYouTubeEmbed
-              id="PzxmWmJLjz8"
-              title="Método LactoFlow®️"
-              poster="maxresdefault"
-              thumbnail="/depoimentos/depo-priscila.webp"
-              aspectHeight={500}
-              aspectWidth={280}
-            />
-
-                </div>
-          <div className="w-[340px]">
-          <LiteYouTubeEmbed
-              id="eVpBHlpupu0"
-              title="Método LactoFlow®️"
-              poster="maxresdefault"
-              thumbnail="/depoimentos/depo-raquel.webp"
-              aspectHeight={500}
-              aspectWidth={280}
-            />
-
-                </div>
+              <LiteYouTubeEmbed
+                id="PzxmWmJLjz8"
+                title="Método LactoFlow®️"
+                poster="maxresdefault"
+                thumbnail="/depoimentos/depo-priscila.webp"
+                aspectHeight={500}
+                aspectWidth={280}
+              />
+            </div>
+            <div className="w-[340px]">
+              <LiteYouTubeEmbed
+                id="eVpBHlpupu0"
+                title="Método LactoFlow®️"
+                poster="maxresdefault"
+                thumbnail="/depoimentos/depo-raquel.webp"
+                aspectHeight={500}
+                aspectWidth={280}
+              />
+            </div>
             {[1, 2].map((number) => {
               return (
                 <div className="" key={number}>
@@ -259,7 +261,7 @@ Explicação do método
                 </div>
               );
             })}
-            {[ 3, 4, 5, 6].map((number) => {
+            {[3, 4, 5, 6].map((number) => {
               return (
                 <div className="" key={number}>
                   <Image
@@ -306,7 +308,7 @@ Explicação do método
           <div className="relative h-[60px] w-[60px]">
             <a
               target="_blank"
-              href="https://wa.me/5521986388688?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow."
+              href="https://wa.me/5521978001294?text=Oi%2C+tudo+bem%3F+Eu+tenho+uma+pergunta+sobre+o+curso+LactoFlow."
             >
               <span>
                 <Image

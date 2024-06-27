@@ -30,5 +30,5 @@
     "src/**/*.mjs",
     "src/pages/api/getIP.ts"
   ],
-  "exclude": ["node_modules, lib/*.js"]
+  "exclude": ["node_modules, lib/*.js, archive"]
 }
