@@ -50,9 +50,23 @@ const Bonus = () => {
             />
 
             <p className="text-justify text-lg">
-              Em um desses encontros eu faço uma Oficina sobre os mais diversos
-              temas da maternidade a partir de propostas das próprias alunas.
+              Todos os meses eu faço uma Oficina sobre os mais diversos temas da
+              maternidade a partir de propostas das próprias alunas. <br />
+              Você terá acesso a todas essas Oficinas que já rolaram:
             </p>
+            <ul className="list-disc pl-4 text-lg">
+              <li>🧷 Enxoval Amigo da Amamentação</li>
+              <li>💧 Relactação</li>
+              <li>💊 Métodos Contraceptivos</li>
+              <li>💦 Hiperlactação</li>
+              <li>💉 Cirurgias Mamárias</li>
+              <li>😴 Sono seguro do bebê</li>
+              <li>🍼 Ordenha Exclusiva</li>
+              <li>👶 Parto e Pós Parto c/ Dani Morais</li>
+              <li>👅 Meu bebê tem a língua presa? c/ Juliana Grzeidak</li>
+              <li>🔴 Espectro da Mastite</li>
+              <li>👶 Prematuros</li>
+            </ul>
           </div>
         </div>
 
