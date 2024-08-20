@@ -12,6 +12,28 @@ const Depos = () => {
       <div className="mx-auto my-4 flex max-w-[40rem] flex-col items-center gap-2 text-cream">
         <div className="card bg-cream shadow-lg">
           <div className="card-body flex flex-col items-center">
+            <div className="flex flex-col-reverse items-center gap-6 md:flex-row-reverse md:items-start">
+              <div className="h-[350px] w-[206px]">
+                <LiteYouTubeEmbed
+                  id="JtDPUXTqjLg"
+                  title="Método LactoFlow®️"
+                  poster="maxresdefault"
+                  // thumbnail="/depoimentos/depo-priscila.webp"
+                  aspectHeight={350}
+                  aspectWidth={206}
+                />
+              </div>
+              <p className="text-blue md:w-1/2">
+                Ofereça o seu leite, mesmo que seu bebê não mame no peito. Isso
+                se chama <span className="font-bold">Ordenha Exclusiva,</span> e
+                a Ariane conta como conseguiu montar um estoque de leite materno
+                para oferecer ao seu filho, mesmo ele não pegando o peito.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="card bg-cream shadow-lg">
+          <div className="card-body flex flex-col items-center">
             <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
               <div className="h-[350px] w-[206px]">
                 <LiteYouTubeEmbed
@@ -30,28 +52,6 @@ const Depos = () => {
                 precisasse de fórmula e ouviu da equipe médica: “Mamãe, você é a
                 única que está conseguindo tirar leite aqui. Você é a única que
                 está conseguindo dar 100% de leite materno pro seu filho.”
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="card bg-cream shadow-lg">
-          <div className="card-body flex flex-col items-center">
-            <div className="flex flex-col items-center gap-6 md:flex-row-reverse md:items-start">
-              <div className="h-[350px] w-[206px]">
-                <LiteYouTubeEmbed
-                  id="PzxmWmJLjz8"
-                  title="Método LactoFlow®️"
-                  poster="maxresdefault"
-                  thumbnail="/depoimentos/depo-priscila.webp"
-                  aspectHeight={350}
-                  aspectWidth={206}
-                />
-              </div>
-              <p className="text-blue md:w-1/2">
-                O LactoFlow foi libertador para a Priscila, com o curso ela
-                aprendeu as técnicas corretas para aumentar a sua produção de
-                leite. “Se eu tivesse conhecido a Carol antes, eu tinha evitado
-                tanto estresse!”
               </p>
             </div>
           </div>
