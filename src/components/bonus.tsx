@@ -32,6 +32,13 @@ const Bonus = () => {
               oportunidade de ligar sua câmera e conversar diretamente comigo
               para tirar todas as suas dúvidas sobre o método.
             </p>
+            <Image
+              alt="zoom-comunidade"
+              width={576}
+              height={856}
+              src={"/zoom-24-08.webp"}
+              className="rounded-md"
+            />
             <div className="flex flex-row items-center gap-2 pt-4">
               <Image
                 alt="zoom"
@@ -42,7 +49,7 @@ const Bonus = () => {
               <p className="text-2xl">Oficina mensal no Zoom</p>
             </div>
             <Image
-              alt="telegram-comunidade"
+              alt="zoom-comunidade"
               width={500}
               height={500}
               src={"/oficina.webp"}
@@ -119,7 +126,7 @@ const Bonus = () => {
           </div>
         </div>
         <div className="card bg-blue shadow-lg">
-          <div className="card-body">
+          <div className="card-body px-4">
             <div className="flex flex-col items-center gap-2">
               <div className="flex flex-row items-center gap-2 pt-2">
                 <Image
@@ -134,8 +141,8 @@ const Bonus = () => {
                 alt="telegram-comunidade"
                 width={260}
                 height={500}
-                src={"/telegram-01-24.webp"}
-                className="rounded-md"
+                src={"/telegram-24-08.webp"}
+                className="w-full rounded-md sm:w-[300px]"
               />
               <p className="text-justify text-lg">
                 No Telegram temos a comunidade da família LactoFlow onde você

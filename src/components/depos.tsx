@@ -6,7 +6,7 @@ import LiteYouTubeEmbed from "react-lite-youtube-embed";
 const Depos = () => {
   return (
     <section className="my-2">
-      <h1 className="mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:text-[31.25px]">
+      <h1 className="mx-auto mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:w-[450px] lg:text-[31.25px]">
         Depoimentos das alunas que seguiram o método LactoFlow®️:
       </h1>
       <div className="mx-auto my-4 flex max-w-[40rem] flex-col items-center gap-2 text-cream">
@@ -24,10 +24,14 @@ const Depos = () => {
                 />
               </div>
               <p className="text-blue md:w-1/2">
-                Ofereça o seu leite, mesmo que seu bebê não mame no peito. Isso
-                se chama <span className="font-bold">Ordenha Exclusiva,</span> e
-                a Ariane conta como conseguiu montar um estoque de leite materno
-                para oferecer ao seu filho, mesmo ele não pegando o peito.
+                <span className="pb-4 text-center font-bold">
+                  O bebê da Ariane não pegou o peito.
+                </span>{" "}
+                <br /> Ela nos conta quais técnicas do LactoFlow®️ ela usou para
+                conseguir montar um estoque de leite materno. Hoje ela segue uma
+                amamentação por{" "}
+                <span className="font-bold">Ordenha Exclusiva</span>, descubra o
+                que é no vídeo:
               </p>
             </div>
           </div>
@@ -46,12 +50,15 @@ const Depos = () => {
                 />
               </div>
               <p className="text-blue md:w-1/2">
-                O bebê da Raquel precisou ficar internado na UTI durante 12 dias
-                com bronquiolite. Com as estratégias do LactoFlow, ela conseguiu
-                tirar a cada 2 a 3 horas 100 ml de leite para que ele não
-                precisasse de fórmula e ouviu da equipe médica: “Mamãe, você é a
-                única que está conseguindo tirar leite aqui. Você é a única que
-                está conseguindo dar 100% de leite materno pro seu filho.”
+                <span className="pb-4 text-center font-bold">
+                  O bebê da Raquel precisou ficar internado na UTI
+                </span>{" "}
+                durante 12 dias com bronquiolite. Com as estratégias do
+                LactoFlow, ela conseguiu tirar a cada 2 a 3 horas 100 ml de
+                leite para que ele não precisasse de fórmula e ouviu da equipe
+                médica: “Mamãe, você é a única que está conseguindo tirar leite
+                aqui. Você é a única que está conseguindo dar 100% de leite
+                materno pro seu filho.”
               </p>
             </div>
           </div>

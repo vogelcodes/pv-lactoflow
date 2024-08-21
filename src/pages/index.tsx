@@ -29,9 +29,9 @@ import Depos from "../components/depos";
 import { NextRequest } from "next/server";
 
 export default function Home() {
-//   {
-//   repo,
-// }: InferGetServerSidePropsType<typeof getServerSideProps>
+  //   {
+  //   repo,
+  // }: InferGetServerSidePropsType<typeof getServerSideProps>
   type E164Number = string | undefined;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -286,7 +286,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* <iframe className="w-full aspect-video rounded-md mt-8 mx-auto max-w-[22rem] lg:max-w-[53.25rem]" src="https://youtube.com/embed/IVKkQA9p7go"></iframe> */}
         <div
           data-umami-event="Watch Video"
-          className="mx-auto mb-8 aspect-video w-full lg:max-w-[53.25rem]"
+          className="mx-auto mb-4 aspect-video w-full lg:max-w-[53.25rem]"
         >
           <LiteYouTubeEmbed
             data-umami-event="Watch Video"
@@ -296,7 +296,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </div>
 
-        <CTA ctaOption="1" openModal={openModal} />
         {/* <Image alt="checklist" src={"/checklist.png"} height={762} width={623}></Image> */}
 
         {/* <section>
@@ -306,6 +305,7 @@ Explicação do método
 </h1>
 </section> */}
         <Depos />
+        <CTA ctaOption="1" openModal={openModal} />
         <Furadeira />
 
         <Bonus />
@@ -313,7 +313,6 @@ Explicação do método
           ctaOption="2"
           openModal={openModal}
           label="Tenha acesso a tudo isso agora"
-          price
         />
         <About />
         <Faq />
