@@ -304,20 +304,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 Explicação do método
 </h1>
 </section> */}
-        <Depos />
         <CTA ctaOption="1" openModal={openModal} />
+        <Depos />
+        <CTA
+          ctaOption="2"
+          openModal={openModal}
+          label="Você também pode aumentar a sua produção"
+        />
         <Furadeira />
 
         <Bonus />
         <CTA
-          ctaOption="2"
+          ctaOption="3"
           openModal={openModal}
           label="Tenha acesso a tudo isso agora"
+          price
         />
         <About />
         <Faq />
         <CTA
-          ctaOption="3"
+          ctaOption="4"
           openModal={openModal}
           label="Quero aumentar minha produção de leite"
           price
