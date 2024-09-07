@@ -45,9 +45,11 @@ export const exampleRouter = createTRPCRouter({
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const location: any = JSON.parse(input.location ?? "{}");
       const scriptURL =
+        process.env.SHEET_URL ||
         "https://script.google.com/macros/s/AKfycbw72hugYvfvgDz18Ce4yxv9fU0XMtTcSmsgNV4My6rol2vvtN89OqiBlp7yGgDpAfHoDw/exec";
       const mailchimpUrl =
-        "https://lactoflow.us13.list-manage.com/subscribe/post?u=f2c713cb04fc024e126ae662d&amp;id=96c32b9825&amp;f_id=0034ede7f0";
+        process.env.MCHIMP_URL ||
+        "https://project.us13.list-manage.com/subscribe/post?u=f2c713cb04fc024e126ae662d&amp;id=96c32b9825&amp;f_id=0034ede7f0";
 
       const formData = new FormData();
       formData.append("name", input.name);
