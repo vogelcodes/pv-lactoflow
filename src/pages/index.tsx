@@ -48,6 +48,20 @@ export default function Home() {
   const { mutate } = api.example.saveLead.useMutation();
   const router = useRouter();
   const utmParams = useSearchParams();
+  const utmTags = [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_content",
+    "utm_term",
+  ];
+  const sckValues = utmTags.reduce((acc, curr) => {
+    if (utmParams.get(curr)) {
+      acc = acc + (utmParams.get(curr) || "") + "-";
+    }
+    return acc;
+  }, "");
+  console.log(sckValues.slice(0, sckValues.length - 1));
 
   // useEffect(() => {
   //   setVersion(!versionParam ? "" : versionParam);
@@ -107,7 +121,7 @@ export default function Home() {
         `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
           formatPhoneNumber(value ?? "") || ""
           // value
-        }&name=${name}&${utmParams.toString()}`
+        }&name=${name}&sck=${sckValues}&${utmParams.toString()}`
       );
     }, 1200);
     // window.open(

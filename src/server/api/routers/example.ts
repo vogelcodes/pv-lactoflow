@@ -83,9 +83,8 @@ export const exampleRouter = createTRPCRouter({
             }\n${
               // eslint-disable-next-line @typescript-eslint/restrict-plus-operands, @typescript-eslint/no-unsafe-member-access
               location.countryCode + "-" + location.city + "-" + location.region
-            }\n${input.ip ?? ""}\n${input.agent ?? ""}\n${decodeURIComponent(
-              input.url ?? ""
-            )}\n
+            }
+            \n${input.agent ?? ""}\n${decodeURIComponent(input.url ?? "")}\n
             https://api.whatsapp.com/send?phone=${input.phoneNumber
               .replace("+", "")
               .trim()}&text=${encodeURIComponent(
