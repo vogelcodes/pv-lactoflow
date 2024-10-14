@@ -318,12 +318,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 Explicação do método
 </h1>
 </section> */}
-        <CTA ctaOption="1" openModal={openModal} />
+        <CTA ctaOption="1" openModal={openModal} price />
         <Depos />
         <CTA
           ctaOption="2"
           openModal={openModal}
           label="Você também pode aumentar a sua produção"
+          price
         />
         <Furadeira />
 
