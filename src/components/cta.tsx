@@ -25,7 +25,7 @@ const CTA = ({
         {price ? (
           <>
             <p className="text-[18px] font-extrabold uppercase">
-              só até 15/10 13:59
+              só até hoje 13:59
             </p>
             <p>
               12x
@@ -42,7 +42,7 @@ const CTA = ({
               à vista
             </p>
             <div>
-              * Toque no Código para copiar <br />
+              * Toque no Código para copiar o CUPOM<br />
               <p
                 onClick={() => {
                   void navigator.clipboard.writeText("SOMOS80MIL");
