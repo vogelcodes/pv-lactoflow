@@ -88,7 +88,7 @@ export const exampleRouter = createTRPCRouter({
             https://api.whatsapp.com/send?phone=${input.phoneNumber
               .replace("+", "")
               .trim()}&text=${encodeURIComponent(
-              `Oi ${input.name}! Tudo bem?❤\n\nAqui é a Carolina Procaci.🥰\n\nVi que você se interessou pelo curso Lactoflow.\n\nVocê está com alguma dificuldade com a sua amamentação?`
+              `Oi ${input.name}! Tudo bem?❤\n\nAqui é a Bárbara e faço parte da equipe do Lactoflow.🥰\n\nVi que você se interessou pelo curso Lactoflow.\n\nVocê está com alguma dificuldade com a sua amamentação?`
             )}
             `
           )}`

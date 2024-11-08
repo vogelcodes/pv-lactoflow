@@ -118,7 +118,7 @@ export default function Home() {
     });
     setTimeout(() => {
       router.push(
-        `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
+        `https://pay.hotmart.com/O84147403X?off=ce7e1vw6&email=${email}&phoneac=${
           formatPhoneNumber(value ?? "") || ""
           // value
         }&name=${name}&sck=${sckValues}&${utmParams.toString()}`
@@ -318,12 +318,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 Explicação do método
 </h1>
 </section> */}
-        <CTA ctaOption="1" openModal={openModal} />
+        <CTA ctaOption="1" openModal={openModal} price />
         <Depos />
         <CTA
           ctaOption="2"
           openModal={openModal}
           label="Você também pode aumentar a sua produção"
+          price
         />
         <Furadeira />
 
