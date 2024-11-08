@@ -33,9 +33,10 @@ const CTA = ({
           <p>
             12x
             <span className="mb-[14.4px] ml-1 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-              R$29,64
+              R$19,66
             </span>{" "}
-            <br /> ou R$297,00 à vista
+            <br /> ou R$197,00 à vista (30% OFF - BlackFriday) <br /> +
+            Workshops Gestante & Desmame Noturno/Gentil
           </p>
         ) : (
           <></>
