@@ -19,43 +19,6 @@ const CTA = ({
         {/* <a href="https://instagram.com/carolina.procaci"> */}
         {/* <a href="https://pay.hotmart.com/O84147403X"> */}
 
-        {/* </a> */}
-
-        {/* </a> */}
-        {price ? (
-          <>
-            <p className="text-[18px] font-extrabold uppercase">
-              só até hoje 13:59
-            </p>
-            <p>
-              12x
-              <span className="mb-[14.4px] ml-1 mt-6 text-center  uppercase leading-[29.17px] tracking-[-25] line-through lg:text-[31.25px]">
-                R$29,64
-              </span>
-              <span className="mb-[14.4px] ml-1 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-                R$18,82*
-              </span>{" "}
-              <br /> ou <span className="line-through">R$297,00</span>{" "}
-              <span className="font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-                R$148,50*
-              </span>{" "}
-              à vista
-            </p>
-            <div>
-              * Toque no Código para copiar o CUPOM<br />
-              <p
-                onClick={() => {
-                  void navigator.clipboard.writeText("SOMOS80MIL");
-                }}
-                className="monospace mx-auto my-2 max-w-[150px] border-4 border-b-[#236C0F] bg-[#d3d7db] p-2 text-lg text-[#236C0F]"
-              >
-                SOMOS80MIL
-              </p>
-            </div>
-          </>
-        ) : (
-          <></>
-        )}
         <button
           onClick={(e) => openModal(ctaOption)}
           data-umami-event={`cta-${ctaOption}-click`}
@@ -63,6 +26,20 @@ const CTA = ({
         >
           {label}
         </button>
+        {/* </a> */}
+
+        {/* </a> */}
+        {price ? (
+          <p>
+            12x
+            <span className="mb-[14.4px] ml-1 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
+              R$29,64
+            </span>{" "}
+            <br /> ou R$297,00 à vista
+          </p>
+        ) : (
+          <></>
+        )}
         <div className="">
           <Image
             className="mx-auto h-10 px-4"
