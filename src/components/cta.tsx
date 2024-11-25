@@ -35,6 +35,8 @@ const CTA = ({
               <span className="mb-[14.4px] ml-1 mt-6 text-center text-[18px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[24.25px]">
                 Promoção de BlackFriday
               </span>{" "}
+              <br />
+              <span className="text-red-400"> Últimos dias!!!</span>
               <p className="pl-6 text-center font-bold">
                 <br />
                 LactoFlow + 2 Workshops:{" "}
