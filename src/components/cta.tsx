@@ -54,7 +54,10 @@ const CTA = ({
                 R$19,66
               </span>{" "}
               <br /> ou R$197,00 à vista{" "}
-              <span className="font-bold text-red-400">(30% OFF)</span> <br />
+              <span className="font-bold text-red-400">
+                (DESCONTO DE R$100)
+              </span>{" "}
+              <br />
             </p>
           </div>
         ) : (
