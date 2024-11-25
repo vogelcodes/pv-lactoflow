@@ -19,34 +19,26 @@ const CTA = ({
         {/* <a href="https://instagram.com/carolina.procaci"> */}
         {/* <a href="https://pay.hotmart.com/O84147403X"> */}
 
-        <button
-          onClick={(e) => openModal(ctaOption)}
-          data-umami-event={`cta-${ctaOption}-click`}
-          className="text-white my-2 max-w-[250px] rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-4 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:max-w-md lg:py-5 lg:text-[22.6px]"
-        >
-          {label}
-        </button>
         {/* </a> */}
 
         {/* </a> */}
         {price ? (
           <div className="mx-auto max-w-[450px]">
-            <p className="pb-4">
+            <p className="">
               <span className="mb-[14.4px] ml-1 mt-6 text-center text-[18px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[24.25px]">
                 Promoção de BlackFriday
               </span>{" "}
               <br />
               <span className="text-red-400"> Últimos dias!!!</span>
-              <p className="pl-6 text-center font-bold">
-                <br />
-                LactoFlow + 2 Workshops:{" "}
-              </p>{" "}
-              <p className="pl-4 text-left">
-                - A Amamentação começa na Gestação <br />
-                - Desmame Noturno/Gentil
-                <br />
-              </p>
-              <br />
+            </p>
+            <p className="pl-6 text-center font-bold">
+              LactoFlow + 2 Workshops:{" "}
+            </p>{" "}
+            <p className="pl-4 text-left">
+              - A Amamentação começa na Gestação 🤰
+              <br />- Desmame Noturno/Gentil 🌙🤱
+            </p>
+            <p className="pt-2">
               Por apenas:
               <br />
               12x
@@ -63,6 +55,13 @@ const CTA = ({
         ) : (
           <></>
         )}
+        <button
+          onClick={(e) => openModal(ctaOption)}
+          data-umami-event={`cta-${ctaOption}-click`}
+          className="text-white my-2 max-w-[250px] rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-4 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:max-w-md lg:py-5 lg:text-[22.6px]"
+        >
+          {label}
+        </button>
         <div className="">
           <Image
             className="mx-auto h-10 px-4"
