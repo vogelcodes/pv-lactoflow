@@ -31,7 +31,7 @@ const CTA = ({
               <br />
               <span className="font-semibold text-red-400">
                 {" "}
-                Últimas <span className="font-bold">48 Horas!</span>
+                Últimas <span className="font-bold">Horas!</span>
               </span>
             </p>
             <p className="pl-6 text-center font-bold">
@@ -48,7 +48,7 @@ const CTA = ({
               <span className="mb-[14.4px] ml-1 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
                 R$19,66
               </span>{" "}
-              <br /> ou R$197,00 à vista{" "}
+              <br /> ou R$197,00 à vista <br />
               <span className="font-bold text-red-400">
                 (DESCONTO DE R$100)
               </span>{" "}

@@ -7,7 +7,7 @@ const Depos = () => {
   return (
     <section className="my-2">
       <h1 className="mx-auto mb-[14.4px] mt-6 px-4 text-center text-[25px] font-extrabold leading-[29.17px] tracking-[-25] sm:px-2 lg:w-[450px] lg:text-[31.25px]">
-        Depoimentos das alunas que seguiram o método LactoFlow®️:
+        Depoimentos das alunas que seguiram o método LactoFlow®:
       </h1>
       <div className="mx-auto my-4 flex max-w-[40rem] flex-col items-center gap-2 text-cream">
         <div className="card bg-cream shadow-lg">

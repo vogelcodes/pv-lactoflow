@@ -80,8 +80,8 @@ const About = () => {
               <p className="text-justify">
                 Com as estratégias pessoais desenvolvidas e com a capacitação
                 profissional na área de baixa produção de leite, desenvolveu o{" "}
-                <span className="text-2xl text-red">Método LactoFlow®️</span>:
-                um passo a passo estratégico e simples do que é necessário fazer
+                <span className="text-2xl text-red">Método LactoFlow®</span>: um
+                passo a passo estratégico e simples do que é necessário fazer
                 para aumentar a produção de leite e não precisar de fórmula
                 infantil.
               </p>
