@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 type CtaProps = {
   ctaOption?: string;
@@ -13,6 +14,33 @@ const CTA = ({
   label = "Quero aumentar minha produção de leite",
   ctaOption = "0",
 }: CtaProps) => {
+  const calculateTimeLeft = () => {
+    const targetDate = new Date("2024-11-29T21:00:00-03:00").getTime();
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+    let timeLeft: { hours: number; minutes: number; seconds: number } = {
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
+    if (difference > 0) {
+      timeLeft = {
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    } else {
+      timeLeft = { hours: 0, minutes: 0, seconds: 0 };
+    }
+    return timeLeft;
+  };
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
   return (
     <div className="flex w-full flex-col items-center rounded-sm bg-cream text-blue">
       <div className="mt-5 w-full text-center">
@@ -28,10 +56,11 @@ const CTA = ({
               <span className="mb-[14.4px] ml-1 mt-6 text-center text-[18px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[24.25px]">
                 Promoção de BlackFriday
               </span>{" "}
+              <br />A promoção acaba em
               <br />
               <span className="font-semibold text-red-400">
-                {" "}
-                Últimas <span className="font-bold">Horas!</span>
+                {timeLeft.hours} horas, {timeLeft.minutes} minutos e{" "}
+                {timeLeft.seconds} segundos
               </span>
             </p>
             <p className="pl-6 text-center font-bold">
