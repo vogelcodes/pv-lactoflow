@@ -29,7 +29,7 @@ const CTA = ({
                 Promoção de BlackFriday
               </span>{" "}
               <br />
-              <span className="text-red-400"> Últimos dias!!!</span>
+              <span className="text-red-400"> Últimas 48 Horas!</span>
             </p>
             <p className="pl-6 text-center font-bold">
               LactoFlow + 2 Workshops:{" "}
