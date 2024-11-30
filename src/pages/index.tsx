@@ -118,7 +118,7 @@ export default function Home() {
     });
     setTimeout(() => {
       router.push(
-        `https://pay.hotmart.com/O84147403X?checkoutMode=10&email=${email}&phoneac=${
+        `https://pay.hotmart.com/O84147403X?off=w49bayjs&checkoutMode=10&email=${email}&phoneac=${
           formatPhoneNumber(value ?? "") || ""
           // value
         }&name=${name}&sck=${sckValues}&${utmParams.toString()}`
