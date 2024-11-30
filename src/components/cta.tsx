@@ -14,33 +14,33 @@ const CTA = ({
   label = "Quero aumentar minha produção de leite",
   ctaOption = "0",
 }: CtaProps) => {
-  const calculateTimeLeft = () => {
-    const targetDate = new Date("2024-11-29T21:00:00-03:00").getTime();
-    const now = new Date().getTime();
-    const difference = targetDate - now;
-    let timeLeft: { hours: number; minutes: number; seconds: number } = {
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-    };
-    if (difference > 0) {
-      timeLeft = {
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    } else {
-      timeLeft = { hours: 0, minutes: 0, seconds: 0 };
-    }
-    return timeLeft;
-  };
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
+  // const calculateTimeLeft = () => {
+  //   const targetDate = new Date("2024-11-29T21:00:00-03:00").getTime();
+  //   const now = new Date().getTime();
+  //   const difference = targetDate - now;
+  //   let timeLeft: { hours: number; minutes: number; seconds: number } = {
+  //     hours: 0,
+  //     minutes: 0,
+  //     seconds: 0,
+  //   };
+  //   if (difference > 0) {
+  //     timeLeft = {
+  //       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+  //       minutes: Math.floor((difference / 1000 / 60) % 60),
+  //       seconds: Math.floor((difference / 1000) % 60),
+  //     };
+  //   } else {
+  //     timeLeft = { hours: 0, minutes: 0, seconds: 0 };
+  //   }
+  //   return timeLeft;
+  // };
+  // const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setTimeLeft(calculateTimeLeft());
+  //   }, 1000);
+  //   return () => clearInterval(timer);
+  // }, []);
   return (
     <div className="flex w-full flex-col items-center rounded-sm bg-cream text-blue">
       <div className="mt-5 w-full text-center">
@@ -50,17 +50,6 @@ const CTA = ({
         {/* </a> */}
 
         {/* </a> */}
-        {price ? (
-          <p>
-            12x
-            <span className="mb-[14.4px] ml-1 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-              R$29,64
-            </span>{" "}
-            <br /> ou R$297,00 à vista
-          </p>
-        ) : (
-          <></>
-        )}
         <button
           onClick={(e) => openModal(ctaOption)}
           data-umami-event={`cta-${ctaOption}-click`}
@@ -78,6 +67,17 @@ const CTA = ({
           ></Image>
         </div>
       </div>
+      {price ? (
+        <p className="pt-4">
+          12x
+          <span className="mb-[14.4px] ml-1 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
+            R$29,64
+          </span>{" "}
+          <br /> ou R$297,00 à vista
+        </p>
+      ) : (
+        <></>
+      )}
       <div className="m-4 grid w-full max-w-sm grid-cols-3 px-4 lg:max-w-3xl">
         <div className="flex flex-col items-center">
           <Image
