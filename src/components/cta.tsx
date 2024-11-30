@@ -51,39 +51,13 @@ const CTA = ({
 
         {/* </a> */}
         {price ? (
-          <div className="mx-auto max-w-[450px]">
-            <p className="">
-              <span className="mb-[14.4px] ml-1 mt-6 text-center text-[18px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[24.25px]">
-                Promoção de BlackFriday
-              </span>{" "}
-              <br />A promoção acaba em
-              <br />
-              <span className="font-semibold text-red-400">
-                {timeLeft.hours} horas, {timeLeft.minutes} minutos e{" "}
-                {timeLeft.seconds} segundos
-              </span>
-            </p>
-            <p className="pl-6 text-center font-bold">
-              LactoFlow + 2 Workshops:{" "}
-            </p>{" "}
-            <p className="pl-4 text-left">
-              - A Amamentação começa na Gestação 🤰
-              <br />- Desmame Noturno/Gentil 🌙🤱
-            </p>
-            <p className="pt-2">
-              Por apenas:
-              <br />
-              12x
-              <span className="mb-[14.4px] ml-1 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-                R$19,66
-              </span>{" "}
-              <br /> ou R$197,00 à vista <br />
-              <span className="font-bold text-red-400">
-                (DESCONTO DE R$100)
-              </span>{" "}
-              <br />
-            </p>
-          </div>
+          <p>
+            12x
+            <span className="mb-[14.4px] ml-1 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
+              R$29,64
+            </span>{" "}
+            <br /> ou R$297,00 à vista
+          </p>
         ) : (
           <></>
         )}
