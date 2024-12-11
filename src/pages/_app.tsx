@@ -1,3 +1,4 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import { type AppType } from "next/app";
 import { type Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
@@ -41,20 +42,15 @@ const MyApp: AppType<{ session: Session | null }> = ({
         }
       `}</style>
       <Script
-        async
-        src="https://umami-production-bb17.up.railway.app/script.js"
-        data-website-id="d794a2e3-7454-4150-add4-b2578e44b3d4"
-      />
-      <Script
         type="text/javascript"
         id="MSClarity"
         dangerouslySetInnerHTML={{
           __html: `
-                (function(c,l,a,r,i,t,y){
-                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-                })(window, document, "clarity", "script", "kj8oov4zlu");`,
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "kj8oov4zlu");`,
         }}
       />
 
@@ -62,6 +58,7 @@ const MyApp: AppType<{ session: Session | null }> = ({
         className={`${metro.variable} flex min-h-screen flex-col items-center bg-[#122e49] font-sans`}
       >
         <Component {...pageProps} />
+        <GoogleTagManager gtmId="GTM-WDWRL83P" />
       </main>
     </SessionProvider>
   );

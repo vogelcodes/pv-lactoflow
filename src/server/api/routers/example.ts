@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/restrict-plus-operands */
+
 import { z } from "zod";
 
 import {
@@ -70,35 +73,41 @@ export const exampleRouter = createTRPCRouter({
       mcForm.append("tags", "7067103");
       mcForm.append("b_f2c713cb04fc024e126ae662d_96c32b9825", "");
 
-      const [telegramMessage, gSheets] = await Promise.all([
-        // fetch(mailchimpUrl, {
-        //   method: "POST",
-        //   headers: {},
-        //   body: mcForm,
-        // }),
-        fetch(
-          `https://api.telegram.org/bot6798939077:AAEhMt8W_okiJ1PYw4ySWyUxRG-uHTP7a_8/sendMessage?chat_id=-1002059061283&text=${encodeURIComponent(
-            `Nova Lead:\n${input.name}\n${input.email}\n${input.phoneNumber}\n${
-              input.ctaOption ?? ""
-            }\n${
-              // eslint-disable-next-line @typescript-eslint/restrict-plus-operands, @typescript-eslint/no-unsafe-member-access
-              location.countryCode + "-" + location.city + "-" + location.region
-            }
+      if (process.env.NODE_ENV !== "development") {
+        const [telegramMessage, gSheets] = await Promise.all([
+          // fetch(mailchimpUrl, {
+          //   method: "POST",
+          //   headers: {},
+          //   body: mcForm,
+          // }),
+          fetch(
+            `https://api.telegram.org/bot6798939077:AAEhMt8W_okiJ1PYw4ySWyUxRG-uHTP7a_8/sendMessage?chat_id=-1002059061283&text=${encodeURIComponent(
+              `Nova Lead:\n${input.name}\n${input.email}\n${
+                input.phoneNumber
+              }\n${input.ctaOption ?? ""}\n${
+                // eslint-disable-next-line @typescript-eslint/restrict-plus-operands, @typescript-eslint/no-unsafe-member-access
+                location.countryCode +
+                "-" +
+                location.city +
+                "-" +
+                location.region
+              }
             \n${input.agent ?? ""}\n${decodeURIComponent(input.url ?? "")}\n
             https://api.whatsapp.com/send?phone=${input.phoneNumber
               .replace("+", "")
               .trim()}&text=${encodeURIComponent(
-              `Oi ${input.name}! Tudo bem?❤\n\nAqui é a Bárbara e faço parte da equipe do Lactoflow.🥰\n\nVi que você se interessou pelo curso Lactoflow.\n\nVocê está com alguma dificuldade com a sua amamentação?`
-            )}
+                `Oi ${input.name}! Tudo bem?❤\n\nAqui é a Bárbara e faço parte da equipe do Lactoflow.🥰\n\nVi que você se interessou pelo curso Lactoflow.\n\nVocê está com alguma dificuldade com a sua amamentação?`
+              )}
             `
-          )}`
-        ),
-        fetch(scriptURL, {
-          method: "POST",
-          headers: {},
-          body: formData,
-        }),
-      ]);
+            )}`
+          ),
+          fetch(scriptURL, {
+            method: "POST",
+            headers: {},
+            body: formData,
+          }),
+        ]);
+      }
       // console.log(telegramMessage, mailChimpSub, gSheets);
       console.log("leadSaved");
 

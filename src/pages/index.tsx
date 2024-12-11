@@ -159,50 +159,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <Script
-        id="hj"
-        dangerouslySetInnerHTML={{
-          __html: `
-                  (function(h,o,t,j,a,r){
-                      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                      h._hjSettings={hjid:3570841,hjsv:6};
-                      a=o.getElementsByTagName('head')[0];
-                      r=o.createElement('script');r.async=1;
-                      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                      a.appendChild(r);
-                  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
-        }}
-      /> */}
-      {/* <Script
-        id="fb-pixel"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', ${process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || ""});
-            fbq('track', 'PageView');
-            `,
-        }}
-      /> */}
-      <Script
-        id="google-analytics"
-        dangerouslySetInnerHTML={{
-          __html: `
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TL9M2H7Z')`,
-        }}
-      />
-
       <Script
         id="hotmart_launcher_script"
         dangerouslySetInnerHTML={{
@@ -415,12 +371,14 @@ Explicação do método
                       </Dialog.Title>
                       <div className="mt-2">
                         <form
+                          id="lead-pv-lf"
                           onSubmit={(e) => handleSubmit(e)}
                           className="flex flex-col text-blue"
                         >
                           <label htmlFor="celular">Nome</label>
                           <input
                             className="pl-2 dark:bg-cream"
+                            id="lead-name"
                             type="text"
                             name="name"
                             value={name}
@@ -432,6 +390,7 @@ Explicação do método
                             className="pl-2 dark:bg-cream"
                             type="text"
                             name="email"
+                            id="lead-email"
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
@@ -440,6 +399,7 @@ Explicação do método
                           <label htmlFor="celular">Celular</label>
                           <PhoneInput
                             className="bg-cream"
+                            id="lead-phone"
                             type="phone"
                             required
                             labels={ptBR}

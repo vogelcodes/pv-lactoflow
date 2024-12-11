@@ -51,6 +51,7 @@ const CTA = ({
 
         {/* </a> */}
         <button
+          id={"CTA-" + ctaOption}
           onClick={(e) => openModal(ctaOption)}
           data-umami-event={`cta-${ctaOption}-click`}
           className="text-white my-2 max-w-[250px] rounded-lg border-b-4 border-b-[#236C0F] bg-[#40C351] px-4 py-3 text-[13.6px] font-extrabold uppercase text-cream hover:scale-[104%] hover:border-b-[#44972d] hover:bg-[#236C0F] lg:max-w-md lg:py-5 lg:text-[22.6px]"
