@@ -274,7 +274,7 @@ export default function Home() {
 Explicação do método
 </h1>
 </section> */}
-        <CTA ctaOption="1" openModal={openModal} price />
+        <CTA ctaOption="1" openModal={openModal}/>
         <Depos />
         <CTA
           ctaOption="2"
