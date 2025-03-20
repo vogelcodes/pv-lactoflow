@@ -118,7 +118,7 @@ export default function Home() {
     });
     setTimeout(() => {
       router.push(
-        `https://pay.hotmart.com/O84147403X?off=32k5pbhv&checkoutMode=10&email=${email}&phoneac=${
+        `https://pay.hotmart.com/O84147403X?off=w49bayjs&checkoutMode=10&email=${email}&phoneac=${
           formatPhoneNumber(value ?? "") || ""
           // value
         }&name=${name}&sck=${sckValues}&${utmParams.toString()}`
@@ -274,7 +274,7 @@ export default function Home() {
 Explicação do método
 </h1>
 </section> */}
-        <CTA ctaOption="1" openModal={openModal}/>
+        <CTA ctaOption="1" openModal={openModal} />
         <Depos />
         <CTA
           ctaOption="2"

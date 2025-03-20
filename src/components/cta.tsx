@@ -71,10 +71,10 @@ const CTA = ({
       {price ? (
         <p className="pt-4">
           12x
-          <span className="mb-[14.4px] ml-1 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
-            R$24,65
+          <span className="mb-[14.4px] ml-4 mt-6 text-center text-[25px] font-extrabold uppercase leading-[29.17px] tracking-[-25] lg:text-[31.25px]">
+            30,72
           </span>{" "}
-          <br /> ou R$247,00 à vista
+          <br /> ou R$296,00 à vista
         </p>
       ) : (
         <></>
