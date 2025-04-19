@@ -199,7 +199,12 @@ const Page: NextPage = () => {
           poster="maxresdefault"
         />
       </div>
-      <div className="flex items-center">
+      <div className="flex flex-col items-center">
+        <p className="text-3xl font-bold">Gostou desta aula?</p>
+        <p className="text-3xl font-bold">
+          Acesse o <span className="uppercase text-green">curso completo</span>{" "}
+          abaixo.
+        </p>
         <div className="m-2">
           <Image
             className="ml-2 animate-bounce"
