@@ -90,7 +90,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    router.push("https://prog.lactoflow.com.br/promo-05-25");
+    router.push("https://prog.lactoflow.com.br/promo-25-05");
   }, [router]);
 
   // console.log(version);
