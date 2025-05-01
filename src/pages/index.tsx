@@ -90,8 +90,10 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    router.push("https://prog.lactoflow.com.br/promo-25-05");
-  }, [router]);
+    router.push(
+      `https://prog.lactoflow.com.br/promo-25-05?${utmParams.toString()}`
+    );
+  }, [router, utmParams]);
 
   // console.log(version);
 
